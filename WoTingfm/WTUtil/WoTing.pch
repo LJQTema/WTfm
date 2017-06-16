@@ -1,0 +1,191 @@
+//
+//  WoTing.pch
+//  WOTING
+//
+//  Created by jq on 2016/11/21.
+//  Copyright © 2016年 jq. All rights reserved.
+//
+
+#ifndef WoTing_pch
+#define WoTing_pch
+
+
+
+
+
+/**
+ 引导页定制
+ */
+#define Guidance @[@"timg-7.jpeg",@"timg-8.jpeg",@"timg-9.jpeg",@"timg-10.jpeg"]
+
+
+//刷新通讯录
+#define RELOADCONTACTSTABLEVIEW @"RELOADCONTACTSTABLEVIEW"
+
+//定时器设置
+#define KEYHYC_______HYCKEY @"HYCHYCHYHYCSDFGHJKLERTYUCVBNMRTHJ"
+#define KEYHYCBOOL_______HYCKEY @"HHHHHYCHYCHYHYCSDFGHJKLERTYUCVBNMRTHJ"
+
+
+// 获取本地保存路径
+#define kDocumentPath  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES) firstObject]
+
+//拼接plist的文件名  managerName为文件名  不需要带.plist
+#define JQ__Plist_managerName(managerName) [NSString stringWithFormat:@"%@/%@.plist",kDocumentPath,managerName]
+
+//  获取沙箱文件
+#define GetFileInAppData(file) [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/AppData/%@",file]]
+#define GetFileInLogData(file) [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Logs/%@",file]]
+#define GetFileInImgData(file) [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/ImgData/%@",file]]
+#define GetFileInAppModuleData(module,file) [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/AppData/%@/%@",module,file]]
+
+//  获取沙箱路径
+#define GetAppDataDirectory [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/AppData"]
+#define GetLogDataDirectory [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Logs"]
+#define GetImgDataDirectory [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/ImgData"]
+#define GetAppModuleDirectory(module) [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/AppData/%@",module]]
+
+/**屏幕宽度*/
+#define K_Screen_Width [UIScreen mainScreen].bounds.size.width
+/**屏幕高度*/
+#define K_Screen_Height [UIScreen mainScreen].bounds.size.height
+/**状态栏和导航栏的总高度*/
+#define K_Status_NavBar_Height 64
+/** 比例适配 */
+#define Ratio_Y [UIScreen mainScreen].bounds.size.height / (1334.0/2)
+#define Ratio_X [UIScreen mainScreen].bounds.size.width / (750.0/2)
+#define POINT_X(x) (x/2 * Ratio_X)
+#define POINT_Y(y) (y/2 * Ratio_Y)
+
+#define FONT_SIZE_OF_PX(px) ((K_Screen_Width > 320) ? (px / 2.0) : (0.8 * (px / 2.0)))
+
+#import "UIView+Layout.h"
+//#import "UIView+SKFrame.h"
+//#import "UIColor+SKHexColor.h"      //16进制颜色转换
+//#import "NSString+NullOfString.h"
+//#import "WKProgressHUD.h"
+//#import "E_HUDView.h"
+//#import "AutomatePlist.h"
+////#import "MediaManager.h"
+//#import "FMDBTool.h"
+//#import "HMSegmentedControl.h"  //可滑动的切换条
+//#import "YZDisplayViewController.h"
+//#import "MCDownloadManager.h"   //新下载器
+//#import "YXDownLoadFileManager.h"   //最新下载器
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "YYModel.h"
+//#import <UMSocialCore/UMSocialCore.h>
+#import <AVFoundation/AVFoundation.h>
+//#import "MarqueeLabel.h"
+//#import "BoFangTabbarView.h"
+#import "ZCBNetworking.h"
+//#import "AppDelegate.h"
+//#import "WTPopTool.h"
+
+
+
+
+
+#import "httpHeader.h"
+
+///////////////////////////////////框架基本信息///////////////////////////////////////////
+
+//定时器设置
+#define KEYHYC_______HYCKEY @"HYCHYCHYHYCSDFGHJKLERTYUCVBNMRTHJ"
+#define KEYHYCBOOL_______HYCKEY @"HHHHHYCHYCHYHYCSDFGHJKLERTYUCVBNMRTHJ"
+/**
+ 屏幕高宽宏定义
+ */
+//需要横屏或者竖屏，获取屏幕宽度与高度
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当前Xcode支持iOS8及以上
+
+#define WWWWW ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
+#define HHHHH ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
+#define SCREEN_SIZE ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)
+#else
+#define WWWWW [UIScreen mainScreen].bounds.size.width
+#define HHHHH [UIScreen mainScreen].bounds.size.height
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+#endif
+
+
+
+//NSLog的重定义
+#define NSLog(format, ...) do {                                                                          \
+fprintf(stderr, "<%s : %d> %s\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
+
+
+
+
+//随机颜色设置
+#define HYC__COLOR_SUIJI [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+//RGBL颜色设置
+#define HYC__COLOR_RGBL(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+//16进制颜色设置
+#define HYC__COLOR_HEX(s)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]
+//16进制颜色设置加透明度
+#define HYC__COLOR_HEX_A(s, a)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:a]
+
+//设置边角
+#define HYC__Layer(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+//获取当前语言
+#define HYC__Language ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+
+
+//获取temp
+#define HYC__PathTemp NSTemporaryDirectory()
+//获取沙盒 Document
+#define HYC__PathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒 Cache
+#define HYC__PathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+
+//GCD - 一次性执行
+#define HYC__GCD_ONE(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
+//GCD - 在Main线程上运行
+#define HYC__GCD_MAIN(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
+//GCD - 开启异步线程
+#define HYC__GCD_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
+
+
+/** 比例适配 */
+#define Ratio_Y [UIScreen mainScreen].bounds.size.height / (1334.0/2)
+#define Ratio_X [UIScreen mainScreen].bounds.size.width / (750.0/2)
+#define HYC__POINT_X(x) (x/2 * Ratio_X)
+#define HYC__POINT_Y(y) (y/2 * Ratio_Y)
+
+
+/**
+ 提示确定
+ */
+#define HYC__SHOW_AlertAtView(msg) [[[UIAlertView alloc] initWithTitle:@"温馨提示：" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+
+/**
+ 大小设置
+ */
+#define HYC__FontSize(fontSize) [UIFont systemFontOfSize:fontSize]
+
+
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* WoTing_pch */

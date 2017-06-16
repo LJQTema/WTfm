@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B0C58BE8E79CFD0202697160B8032A299231F98A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B0C58BE8E79CFD0202697160B8032A299231F98A" : 9223372036854775807,
+    "7BDFB9A9E20E03282FAEC1DC9FADC75C8BDAE28D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0E03146B-86DB-447D-A9AE-AC116CC19464",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B0C58BE8E79CFD0202697160B8032A299231F98A" : "WoTingfm\/",
+    "7BDFB9A9E20E03282FAEC1DC9FADC75C8BDAE28D" : "WOTING\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WoTingfm",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WoTingfm.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/woting2015\/WoTing-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7BDFB9A9E20E03282FAEC1DC9FADC75C8BDAE28D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LJQNAME\/WoTingfm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B0C58BE8E79CFD0202697160B8032A299231F98A"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>游戏动漫</key>
+	<string>type_icon_game_n</string>
+	<key>方言播报</key>
+	<string>type_icon_dialect_n</string>
+	<key>亚文化区</key>
+	<string>图书</string>
+	<key>军事</key>
+	<string>军事</string>
+	<key>实事法政</key>
+	<string>type_icon_politics _n</string>
+	<key>宗教</key>
+	<string>type_icon_religious_n</string>
+	<key>心理推理</key>
+	<string>type_icon_psychology_n</string>
+	<key>小说故事</key>
+	<string>type_icon_novel_n</string>
+	<key>新闻</key>
+	<string>type_icon_news_n</string>
+	<key>相声小品</key>
+	<string>type_icon_crosstalk_n</string>
+	<key>脱口秀</key>
+	<string>Rectangle 2</string>
+	<key>两性</key>
+	<string>type_icon_emotion_n</string>
+	<key>亲子</key>
+	<string>type_icon_child_n</string>
+	<key>综艺娱乐</key>
+	<string>type_icon_entertainment_n</string>
+	<key>搞笑</key>
+	<string>type_icon_joke_n</string>
+	<key>电视电影</key>
+	<string>type_icon_movie_n</string>
+	<key>戏曲艺术</key>
+	<string>type_icon_opera_n</string>
+	<key>电台丛林</key>
+	<string>type_icon_radio_n</string>
+	<key>学习</key>
+	<string>type_icon_education_n</string>
+	<key>外语进阶</key>
+	<string>type_icon_foreign languages_n</string>
+	<key>公开课堂</key>
+	<string>type_icon_open class_n</string>
+	<key>名牌大家</key>
+	<string>type_icon_famous_n</string>
+	<key>地理</key>
+	<string>type_icon_history_n</string>
+	<key>艺术人文</key>
+	<string>type_icon_art_n</string>
+	<key>戏曲评书</key>
+	<string>type_icon_storytelling_n</string>
+	<key>广播剧院</key>
+	<string>type_icon_radio play_n</string>
+	<key>商业财经</key>
+	<string>type_icon_finance_n</string>
+	<key>科技动态</key>
+	<string>科技</string>
+	<key>汽车天下</key>
+	<string>type_icon_car_n</string>
+	<key>体育</key>
+	<string>体育</string>
+	<key>旅行</key>
+	<string>type_icon_trip_n</string>
+	<key>女性时尚</key>
+	<string>type_icon_female_n</string>
+	<key>生活百科</key>
+	<string>type_icon_life_n</string>
+	<key>健康养生</key>
+	<string>type_icon_healthy_n</string>
+	<key>星座运势</key>
+	<string>type_icon_constellation_n</string>
+	<key>音乐</key>
+	<string>type_icon_music_n</string>
+</dict>
+</plist>

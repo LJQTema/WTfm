@@ -1,0 +1,6 @@
+framework module BDCloudMediaUtils {
+  umbrella header "BDCloudMediaUtils.h"
+
+  export *
+  module * { export * }
+}

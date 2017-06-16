@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="158" id="KGk-i7-Jjw" customClass="WTFoundContentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg-7" translatesAutoresizingMaskIntoConstraints="NO" id="c01-EA-DJc">
+                        <rect key="frame" x="12" y="0.0" width="92" height="92"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="c01-EA-DJc" secondAttribute="height" multiplier="1:1" id="5Sc-LG-TpQ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg-8" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-8b-YF9">
+                        <rect key="frame" x="114" y="0.0" width="92" height="92"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg-10" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-KO-j7A">
+                        <rect key="frame" x="216" y="0.0" width="92" height="92"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phg-K3-vfS">
+                        <rect key="frame" x="0.0" y="147" width="320" height="10"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="gjB-xf-ZJp"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="混沌剑神之最终审判" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THb-Pa-0qu">
+                        <rect key="frame" x="12" y="104" width="92" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="vPz-Ny-Hei"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="混沌剑神之最终审判" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnA-2D-ON9">
+                        <rect key="frame" x="114" y="104" width="92" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="O3V-aR-fvg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="混沌剑神之最终审判" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-df-gy7">
+                        <rect key="frame" x="216" y="104" width="92" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="nEP-KQ-vj9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Lnu-KO-j7A" firstAttribute="height" secondItem="rfr-8b-YF9" secondAttribute="height" id="1CR-hJ-3BL"/>
+                    <constraint firstItem="SnA-2D-ON9" firstAttribute="centerX" secondItem="rfr-8b-YF9" secondAttribute="centerX" id="212-Rz-tfd"/>
+                    <constraint firstItem="rfr-8b-YF9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Amm-KF-u6F"/>
+                    <constraint firstItem="cb0-df-gy7" firstAttribute="top" secondItem="Lnu-KO-j7A" secondAttribute="bottom" constant="12" id="FT5-bN-dcU"/>
+                    <constraint firstItem="THb-Pa-0qu" firstAttribute="centerX" secondItem="c01-EA-DJc" secondAttribute="centerX" id="IdR-7J-w4e"/>
+                    <constraint firstItem="SnA-2D-ON9" firstAttribute="top" secondItem="rfr-8b-YF9" secondAttribute="bottom" constant="12" id="JYR-uz-8hR"/>
+                    <constraint firstItem="phg-K3-vfS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K16-fW-qCb"/>
+                    <constraint firstAttribute="bottom" secondItem="phg-K3-vfS" secondAttribute="bottom" id="KAv-i3-z8P"/>
+                    <constraint firstAttribute="trailing" secondItem="phg-K3-vfS" secondAttribute="trailing" id="N4b-Rp-Qoq"/>
+                    <constraint firstItem="Lnu-KO-j7A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TZA-PE-wWg"/>
+                    <constraint firstItem="rfr-8b-YF9" firstAttribute="leading" secondItem="c01-EA-DJc" secondAttribute="trailing" constant="10" id="ViW-0k-EBA"/>
+                    <constraint firstItem="Lnu-KO-j7A" firstAttribute="leading" secondItem="rfr-8b-YF9" secondAttribute="trailing" constant="10" id="W7C-Qd-31N"/>
+                    <constraint firstItem="c01-EA-DJc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WNh-fT-R7U"/>
+                    <constraint firstItem="cb0-df-gy7" firstAttribute="centerX" secondItem="Lnu-KO-j7A" secondAttribute="centerX" id="bdr-gU-Qbk"/>
+                    <constraint firstItem="rfr-8b-YF9" firstAttribute="leading" secondItem="c01-EA-DJc" secondAttribute="trailing" constant="10" id="ce0-MR-XPz"/>
+                    <constraint firstItem="c01-EA-DJc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="gpI-QK-1ve"/>
+                    <constraint firstItem="Lnu-KO-j7A" firstAttribute="leading" secondItem="rfr-8b-YF9" secondAttribute="trailing" constant="10" id="jmS-ZW-5x4"/>
+                    <constraint firstItem="rfr-8b-YF9" firstAttribute="width" secondItem="c01-EA-DJc" secondAttribute="width" id="m2C-a0-bwF"/>
+                    <constraint firstItem="cb0-df-gy7" firstAttribute="width" secondItem="Lnu-KO-j7A" secondAttribute="width" id="mOp-uQ-Jfi"/>
+                    <constraint firstAttribute="trailing" secondItem="Lnu-KO-j7A" secondAttribute="trailing" constant="12" id="nch-J1-QQt"/>
+                    <constraint firstItem="SnA-2D-ON9" firstAttribute="width" secondItem="rfr-8b-YF9" secondAttribute="width" id="qsh-X0-4jS"/>
+                    <constraint firstItem="rfr-8b-YF9" firstAttribute="height" secondItem="c01-EA-DJc" secondAttribute="height" id="rD8-9N-ZNp"/>
+                    <constraint firstItem="THb-Pa-0qu" firstAttribute="width" secondItem="c01-EA-DJc" secondAttribute="width" id="rZD-Pm-Amh"/>
+                    <constraint firstItem="THb-Pa-0qu" firstAttribute="top" secondItem="c01-EA-DJc" secondAttribute="bottom" constant="12" id="xov-L4-XaB"/>
+                    <constraint firstItem="Lnu-KO-j7A" firstAttribute="width" secondItem="rfr-8b-YF9" secondAttribute="width" id="zZh-Jc-0Hv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CenterImgV" destination="rfr-8b-YF9" id="7Em-lB-016"/>
+                <outlet property="centerLab" destination="SnA-2D-ON9" id="lj5-vH-URv"/>
+                <outlet property="leftImgV" destination="c01-EA-DJc" id="ysg-xh-yHj"/>
+                <outlet property="leftLab" destination="THb-Pa-0qu" id="Mqm-1j-a8I"/>
+                <outlet property="rightImgV" destination="Lnu-KO-j7A" id="Gzk-lJ-OSE"/>
+                <outlet property="rightLab" destination="cb0-df-gy7" id="WmR-Pb-xOc"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="111"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="timg-10" width="600" height="900"/>
+        <image name="timg-7" width="275" height="515"/>
+        <image name="timg-8" width="320" height="480"/>
+    </resources>
+</document>
