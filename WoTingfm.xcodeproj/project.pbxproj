@@ -29,6 +29,8 @@
 		0B1C2BEA1EF76DD3000DC74C /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C2BDD1EF76DD3000DC74C /* SDCollectionViewCell.m */; };
 		0B1C2BEB1EF76DD3000DC74C /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C2BDF1EF76DD3000DC74C /* SDCycleScrollView.m */; };
 		0B1C2BEC1EF76DD3000DC74C /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C2BE11EF76DD3000DC74C /* UIView+SDExtension.m */; };
+		0B1C2BF11EF7829E000DC74C /* WTLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C2BEF1EF7829E000DC74C /* WTLiveCell.m */; };
+		0B1C2BF21EF7829E000DC74C /* WTLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C2BF01EF7829E000DC74C /* WTLiveCell.xib */; };
 		0B1F35C31ED2931C007D26D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35C21ED2931C007D26D9 /* main.m */; };
 		0B1F35C61ED2931C007D26D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35C51ED2931C007D26D9 /* AppDelegate.m */; };
 		0B1F35D11ED2931C007D26D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1F35CF1ED2931C007D26D9 /* LaunchScreen.storyboard */; };
@@ -130,6 +132,9 @@
 		0B1C2BDF1EF76DD3000DC74C /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		0B1C2BE01EF76DD3000DC74C /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		0B1C2BE11EF76DD3000DC74C /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		0B1C2BEE1EF7829E000DC74C /* WTLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLiveCell.h; sourceTree = "<group>"; };
+		0B1C2BEF1EF7829E000DC74C /* WTLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLiveCell.m; sourceTree = "<group>"; };
+		0B1C2BF01EF7829E000DC74C /* WTLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTLiveCell.xib; sourceTree = "<group>"; };
 		0B1F35BE1ED2931C007D26D9 /* WoTingfm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoTingfm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F35C21ED2931C007D26D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1F35C41ED2931C007D26D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -346,6 +351,16 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		0B1C2BED1EF7827D000DC74C /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				0B1C2BEE1EF7829E000DC74C /* WTLiveCell.h */,
+				0B1C2BEF1EF7829E000DC74C /* WTLiveCell.m */,
+				0B1C2BF01EF7829E000DC74C /* WTLiveCell.xib */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		0B1F35B51ED2931C007D26D9 = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +531,7 @@
 				0BEC4D9E1EF14BE000D2BB01 /* Player */,
 				0B33A2BF1EEA4315005BA3EA /* Found */,
 				0B14CA781EF38B1C00C345FC /* Radio */,
+				0B1C2BED1EF7827D000DC74C /* Live */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -712,6 +728,7 @@
 				0CFA04581EF0E4450046A773 /* imageNameAndURLDD.plist in Resources */,
 				0B15409B1EE6519100C6E52F /* WTForgotPsd.xib in Resources */,
 				0B33A2B01EE928BC005BA3EA /* WTSortVC.xib in Resources */,
+				0B1C2BF21EF7829E000DC74C /* WTLiveCell.xib in Resources */,
 				0B33A2BA1EE928F0005BA3EA /* WTLiveVC.xib in Resources */,
 				0B33A2D21EEA76B7005BA3EA /* WTFoundContentCell.xib in Resources */,
 				0B1C2BE91EF76DD3000DC74C /* pageControlDot@3x.png in Resources */,
@@ -833,6 +850,7 @@
 				0B4ED7471EEFB4C100EAA123 /* RuntimeKit.m in Sources */,
 				0B33A2BE1EE92B62005BA3EA /* SKMainScrollView.m in Sources */,
 				0B14CA701EF22AB800C345FC /* CALayer+Layout.m in Sources */,
+				0B1C2BF11EF7829E000DC74C /* WTLiveCell.m in Sources */,
 				0B4ED74B1EEFBFC000EAA123 /* WTMoreView.m in Sources */,
 				0CB27B551EE59448006DF52B /* WTReadyVC.m in Sources */,
 				0BEC4DA61EF14BEB00D2BB01 /* SnailSheetView.m in Sources */,
