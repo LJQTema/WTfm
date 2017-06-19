@@ -109,6 +109,8 @@
     contentScrollView.bounces = NO;
     contentScrollView.contentOffset = CGPointMake(0, 0);
     contentScrollView.delegate = self;
+//    contentScrollView.showsHorizontalScrollIndicator=true;
+//    contentScrollView.showsVerticalScrollIndicator=false;
     
     for (int i = 0; i < 4; i ++) {
         
@@ -194,11 +196,13 @@
                 
             }else{
                 
-                [aBtn setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
                 
-                contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (i - 1221), 0);
+                
+                //contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (i - 1221), 0);
                 
                 [UIView animateWithDuration:0.3 animations:^{
+                    
+                    [aBtn setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
                     
                     barLineImageView.frame = 
                     
@@ -206,26 +210,17 @@
                     
                     (
                      
-                     (aBtn.tag - 1221) * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00, 
+                     (aBtn.tag - 1221) * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00,
                      self.ContentView.frame.size.height - 1, 
-                     barLineImageViewWigth, 
+                     barLineImageViewWigth,
                      1
                      
                      );
                     
-                    
-                    
-                    
-                }];
-                
-                
-            
-                
+                     [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
+                }]; 
             }
-            
         }
-    
-   contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0);
 
 }
 

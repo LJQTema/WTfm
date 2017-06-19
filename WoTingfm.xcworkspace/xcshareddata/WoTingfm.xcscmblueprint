@@ -5,12 +5,21 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "7BDFB9A9E20E03282FAEC1DC9FADC75C8BDAE28D" : 9223372036854775807,
+<<<<<<< Updated upstream
+=======
+    "B0C58BE8E79CFD0202697160B8032A299231F98A" : 9223372036854775807,
+>>>>>>> Stashed changes
     "BBDFE903424C217660E5AE31732826FFE468C8E1" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0E03146B-86DB-447D-A9AE-AC116CC19464",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "7BDFB9A9E20E03282FAEC1DC9FADC75C8BDAE28D" : "WOTING\/",
+<<<<<<< Updated upstream
     "BBDFE903424C217660E5AE31732826FFE468C8E1" : "WoTingfm\/"
+=======
+    "B0C58BE8E79CFD0202697160B8032A299231F98A" : "WoTingfm\/",
+    "BBDFE903424C217660E5AE31732826FFE468C8E1" : "WTfm\/"
+>>>>>>> Stashed changes
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "WoTingfm",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -24,6 +33,14 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LJQNAME\/WoTingfm.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+<<<<<<< Updated upstream
+=======
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B0C58BE8E79CFD0202697160B8032A299231F98A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LJQTema\/WTfm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+>>>>>>> Stashed changes
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BBDFE903424C217660E5AE31732826FFE468C8E1"
     }
   ]

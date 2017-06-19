@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SnailPopupController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>YYModel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1303CDAA390D99BB9052B18DFE4C551B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>464E1E293F44D7DC8303E4E65EED3E4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +88,16 @@
 			<true/>
 		</dict>
 		<key>B611EF823F17D9624C48B9FA3864CB9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9E06072E6C03FD291A821BB6A10F435</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F19EED118A3EB3FE982E3BA003F6858D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
