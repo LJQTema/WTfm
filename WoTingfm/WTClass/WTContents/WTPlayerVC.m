@@ -123,7 +123,10 @@
             
         }else if ([ReturnType isEqualToString:@"T"]){
             
-           
+            [self creatPicRollView];
+        }else{
+            
+            [self creatPicRollView];
         }
         
     } fail:^(NSError *error) {

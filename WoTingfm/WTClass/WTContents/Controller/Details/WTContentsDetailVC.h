@@ -18,4 +18,10 @@
 
 @property (nonatomic, copy) NSString *LabText;
 
+
+/**
+    ContentType: 各种类型传不同的值, 具体再定
+ */
+@property (nonatomic, assign) NSInteger ContetType;
+
 @end

@@ -83,7 +83,7 @@
 //#import "MarqueeLabel.h"
 //#import "BoFangTabbarView.h"
 #import "ZCBNetworking.h"
-//#import "AppDelegate.h"
+#import "SDCycleScrollView.h"
 //#import "WTPopTool.h"
 
 
