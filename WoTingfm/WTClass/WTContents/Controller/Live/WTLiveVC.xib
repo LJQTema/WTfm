@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTLiveVC">
             <connections>
-                <outlet property="LiveTableV" destination="sRA-fm-j9Q" id="hRY-WE-6JO"/>
+                <outlet property="LiveCollectionView" destination="92W-Ss-8oA" id="xRR-Bv-a2m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,17 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sRA-fm-j9Q">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="92W-Ss-8oA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3t8-7Q-BvN">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="sRA-fm-j9Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dA3-76-E3R"/>
-                <constraint firstItem="sRA-fm-j9Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dUt-f9-q6I"/>
-                <constraint firstAttribute="trailing" secondItem="sRA-fm-j9Q" secondAttribute="trailing" id="dxF-mc-Dbd"/>
-                <constraint firstAttribute="bottom" secondItem="sRA-fm-j9Q" secondAttribute="bottom" id="hf6-bs-IMK"/>
+                <constraint firstAttribute="bottom" secondItem="92W-Ss-8oA" secondAttribute="bottom" id="80J-R0-qru"/>
+                <constraint firstItem="92W-Ss-8oA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gLg-tH-3Ux"/>
+                <constraint firstItem="92W-Ss-8oA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sRI-Lc-W1C"/>
+                <constraint firstAttribute="trailing" secondItem="92W-Ss-8oA" secondAttribute="trailing" id="xiZ-eK-d5I"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="76.5"/>
         </view>
