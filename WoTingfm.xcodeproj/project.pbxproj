@@ -38,6 +38,18 @@
 		0B1F35D11ED2931C007D26D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1F35CF1ED2931C007D26D9 /* LaunchScreen.storyboard */; };
 		0B1F35DC1ED2931C007D26D9 /* WoTingfmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35DB1ED2931C007D26D9 /* WoTingfmTests.m */; };
 		0B1F35E71ED2931C007D26D9 /* WoTingfmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35E61ED2931C007D26D9 /* WoTingfmUITests.m */; };
+		0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E64D1EFA70BE00A6630E /* WTReportVC.m */; };
+		0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */; };
+		0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */; };
+		0B31E6551EFA70EE00A6630E /* WTDownLoadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6531EFA70EE00A6630E /* WTDownLoadVC.xib */; };
+		0B31E6591EFA710400A6630E /* WTAnchorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6571EFA710400A6630E /* WTAnchorVC.m */; };
+		0B31E65A1EFA710400A6630E /* WTAnchorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6581EFA710400A6630E /* WTAnchorVC.xib */; };
+		0B31E65E1EFA711800A6630E /* WTAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E65C1EFA711800A6630E /* WTAlbumVC.m */; };
+		0B31E65F1EFA711800A6630E /* WTAlbumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E65D1EFA711800A6630E /* WTAlbumVC.xib */; };
+		0B31E6641EFA764900A6630E /* WTReportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6621EFA764900A6630E /* WTReportCell.m */; };
+		0B31E6651EFA764900A6630E /* WTReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6631EFA764900A6630E /* WTReportCell.xib */; };
+		0B31E6691EFB6A4200A6630E /* WTReportTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6671EFB6A4200A6630E /* WTReportTextCell.m */; };
+		0B31E66A1EFB6A4200A6630E /* WTReportTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6681EFB6A4200A6630E /* WTReportTextCell.xib */; };
 		0B33A29A1EE9256C005BA3EA /* WTContentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33A2981EE9256C005BA3EA /* WTContentsVC.m */; };
 		0B33A29B1EE9256C005BA3EA /* WTContentsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B33A2991EE9256C005BA3EA /* WTContentsVC.xib */; };
 		0B33A2AA1EE9289F005BA3EA /* WTFoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33A2A81EE9289F005BA3EA /* WTFoundVC.m */; };
@@ -134,12 +146,12 @@
 		0B1C2BDF1EF76DD3000DC74C /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		0B1C2BE01EF76DD3000DC74C /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		0B1C2BE11EF76DD3000DC74C /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVCell.h; path = ../../Controller/Live/WTLiveCollVCell.h; sourceTree = "<group>"; };
-		0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVCell.m; path = ../../Controller/Live/WTLiveCollVCell.m; sourceTree = "<group>"; };
-		0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVCell.xib; path = ../../Controller/Live/WTLiveCollVCell.xib; sourceTree = "<group>"; };
-		0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLiveCollVRightCell.h; sourceTree = "<group>"; };
-		0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLiveCollVRightCell.m; sourceTree = "<group>"; };
-		0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTLiveCollVRightCell.xib; sourceTree = "<group>"; };
+		0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVCell.h; path = ../Controller/Live/WTLiveCollVCell.h; sourceTree = "<group>"; };
+		0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVCell.m; path = ../Controller/Live/WTLiveCollVCell.m; sourceTree = "<group>"; };
+		0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVCell.xib; path = ../Controller/Live/WTLiveCollVCell.xib; sourceTree = "<group>"; };
+		0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVRightCell.h; path = Live/WTLiveCollVRightCell.h; sourceTree = "<group>"; };
+		0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVRightCell.m; path = Live/WTLiveCollVRightCell.m; sourceTree = "<group>"; };
+		0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVRightCell.xib; path = Live/WTLiveCollVRightCell.xib; sourceTree = "<group>"; };
 		0B1F35BE1ED2931C007D26D9 /* WoTingfm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoTingfm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F35C21ED2931C007D26D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1F35C41ED2931C007D26D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +165,24 @@
 		0B1F35E61ED2931C007D26D9 /* WoTingfmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoTingfmUITests.m; sourceTree = "<group>"; };
 		0B1F35E81ED2931C007D26D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B28CFF41EE19794001E16C7 /* WoTing.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoTing.pch; sourceTree = "<group>"; };
+		0B31E64C1EFA70BE00A6630E /* WTReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportVC.h; sourceTree = "<group>"; };
+		0B31E64D1EFA70BE00A6630E /* WTReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportVC.m; sourceTree = "<group>"; };
+		0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTReportVC.xib; sourceTree = "<group>"; };
+		0B31E6511EFA70EE00A6630E /* WTDownLoadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDownLoadVC.h; sourceTree = "<group>"; };
+		0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDownLoadVC.m; sourceTree = "<group>"; };
+		0B31E6531EFA70EE00A6630E /* WTDownLoadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDownLoadVC.xib; sourceTree = "<group>"; };
+		0B31E6561EFA710400A6630E /* WTAnchorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAnchorVC.h; sourceTree = "<group>"; };
+		0B31E6571EFA710400A6630E /* WTAnchorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAnchorVC.m; sourceTree = "<group>"; };
+		0B31E6581EFA710400A6630E /* WTAnchorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAnchorVC.xib; sourceTree = "<group>"; };
+		0B31E65B1EFA711800A6630E /* WTAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumVC.h; sourceTree = "<group>"; };
+		0B31E65C1EFA711800A6630E /* WTAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumVC.m; sourceTree = "<group>"; };
+		0B31E65D1EFA711800A6630E /* WTAlbumVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumVC.xib; sourceTree = "<group>"; };
+		0B31E6611EFA764900A6630E /* WTReportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportCell.h; sourceTree = "<group>"; };
+		0B31E6621EFA764900A6630E /* WTReportCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportCell.m; sourceTree = "<group>"; };
+		0B31E6631EFA764900A6630E /* WTReportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTReportCell.xib; sourceTree = "<group>"; };
+		0B31E6661EFB6A4200A6630E /* WTReportTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportTextCell.h; sourceTree = "<group>"; };
+		0B31E6671EFB6A4200A6630E /* WTReportTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportTextCell.m; sourceTree = "<group>"; };
+		0B31E6681EFB6A4200A6630E /* WTReportTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTReportTextCell.xib; sourceTree = "<group>"; };
 		0B33A2971EE9256C005BA3EA /* WTContentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTContentsVC.h; path = ../WTContentsVC.h; sourceTree = "<group>"; };
 		0B33A2981EE9256C005BA3EA /* WTContentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTContentsVC.m; path = ../WTContentsVC.m; sourceTree = "<group>"; };
 		0B33A2991EE9256C005BA3EA /* WTContentsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTContentsVC.xib; path = ../WTContentsVC.xib; sourceTree = "<group>"; };
@@ -170,17 +200,17 @@
 		0B33A2B81EE928F0005BA3EA /* WTLiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTLiveVC.xib; sourceTree = "<group>"; };
 		0B33A2BC1EE92B62005BA3EA /* SKMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMainScrollView.h; sourceTree = "<group>"; };
 		0B33A2BD1EE92B62005BA3EA /* SKMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainScrollView.m; sourceTree = "<group>"; };
-		0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundListCell.h; sourceTree = "<group>"; };
-		0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundListCell.m; sourceTree = "<group>"; };
-		0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundListCell.xib; sourceTree = "<group>"; };
-		0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundCellView.h; sourceTree = "<group>"; };
-		0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundCellView.m; sourceTree = "<group>"; };
+		0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundListCell.h; path = Found/WTFoundListCell.h; sourceTree = "<group>"; };
+		0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundListCell.m; path = Found/WTFoundListCell.m; sourceTree = "<group>"; };
+		0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTFoundListCell.xib; path = Found/WTFoundListCell.xib; sourceTree = "<group>"; };
+		0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundCellView.h; path = Found/WTFoundCellView.h; sourceTree = "<group>"; };
+		0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundCellView.m; path = Found/WTFoundCellView.m; sourceTree = "<group>"; };
 		0B33A2C91EEA7069005BA3EA /* WTFoundDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundDetailVC.h; sourceTree = "<group>"; };
 		0B33A2CA1EEA7069005BA3EA /* WTFoundDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundDetailVC.m; sourceTree = "<group>"; };
 		0B33A2CB1EEA7069005BA3EA /* WTFoundDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundDetailVC.xib; sourceTree = "<group>"; };
-		0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundContentCell.h; sourceTree = "<group>"; };
-		0B33A2CF1EEA76B7005BA3EA /* WTFoundContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundContentCell.m; sourceTree = "<group>"; };
-		0B33A2D01EEA76B7005BA3EA /* WTFoundContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundContentCell.xib; sourceTree = "<group>"; };
+		0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundContentCell.h; path = Found/WTFoundContentCell.h; sourceTree = "<group>"; };
+		0B33A2CF1EEA76B7005BA3EA /* WTFoundContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundContentCell.m; path = Found/WTFoundContentCell.m; sourceTree = "<group>"; };
+		0B33A2D01EEA76B7005BA3EA /* WTFoundContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTFoundContentCell.xib; path = Found/WTFoundContentCell.xib; sourceTree = "<group>"; };
 		0B33A2D31EEAA665005BA3EA /* WTSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchView.h; sourceTree = "<group>"; };
 		0B33A2D41EEAA665005BA3EA /* WTSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchView.m; sourceTree = "<group>"; };
 		0B4ED7431EEFB4C100EAA123 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
@@ -359,12 +389,6 @@
 		0B1C2BED1EF7827D000DC74C /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */,
-				0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */,
-				0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */,
-				0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */,
-				0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */,
-				0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -457,10 +481,66 @@
 			path = WTUtil;
 			sourceTree = "<group>";
 		};
+		0B31E6481EFA700000A6630E /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				0B31E65B1EFA711800A6630E /* WTAlbumVC.h */,
+				0B31E65C1EFA711800A6630E /* WTAlbumVC.m */,
+				0B31E65D1EFA711800A6630E /* WTAlbumVC.xib */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		0B31E6491EFA702500A6630E /* Anchor */ = {
+			isa = PBXGroup;
+			children = (
+				0B31E6561EFA710400A6630E /* WTAnchorVC.h */,
+				0B31E6571EFA710400A6630E /* WTAnchorVC.m */,
+				0B31E6581EFA710400A6630E /* WTAnchorVC.xib */,
+			);
+			path = Anchor;
+			sourceTree = "<group>";
+		};
+		0B31E64A1EFA704200A6630E /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				0B31E64C1EFA70BE00A6630E /* WTReportVC.h */,
+				0B31E64D1EFA70BE00A6630E /* WTReportVC.m */,
+				0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		0B31E64B1EFA705A00A6630E /* DownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				0B31E6511EFA70EE00A6630E /* WTDownLoadVC.h */,
+				0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */,
+				0B31E6531EFA70EE00A6630E /* WTDownLoadVC.xib */,
+			);
+			path = DownLoad;
+			sourceTree = "<group>";
+		};
+		0B31E6601EFA761600A6630E /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				0B31E6611EFA764900A6630E /* WTReportCell.h */,
+				0B31E6621EFA764900A6630E /* WTReportCell.m */,
+				0B31E6631EFA764900A6630E /* WTReportCell.xib */,
+				0B31E6661EFB6A4200A6630E /* WTReportTextCell.h */,
+				0B31E6671EFB6A4200A6630E /* WTReportTextCell.m */,
+				0B31E6681EFB6A4200A6630E /* WTReportTextCell.xib */,
+			);
+			path = MoreView;
+			sourceTree = "<group>";
+		};
 		0B33A2A11EE92769005BA3EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0B33A2A21EE927B7005BA3EA /* Player */,
+				0C091FC61EE93ADA00878EF5 /* WTPlayerVC.h */,
+				0C091FC71EE93ADA00878EF5 /* WTPlayerVC.m */,
+				0C091FCD1EE93CAE00878EF5 /* WTPlayerVC.xib */,
 				0B33A2971EE9256C005BA3EA /* WTContentsVC.h */,
 				0B33A2981EE9256C005BA3EA /* WTContentsVC.m */,
 				0B33A2991EE9256C005BA3EA /* WTContentsVC.xib */,
@@ -469,6 +549,10 @@
 				0B33A2A51EE9281E005BA3EA /* Radio */,
 				0B33A2A41EE927EA005BA3EA /* Live */,
 				0B33A2C81EEA6FEF005BA3EA /* Details */,
+				0B31E64B1EFA705A00A6630E /* DownLoad */,
+				0B31E64A1EFA704200A6630E /* Report */,
+				0B31E6491EFA702500A6630E /* Anchor */,
+				0B31E6481EFA700000A6630E /* Album */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,9 +560,6 @@
 		0B33A2A21EE927B7005BA3EA /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				0C091FC61EE93ADA00878EF5 /* WTPlayerVC.h */,
-				0C091FC71EE93ADA00878EF5 /* WTPlayerVC.m */,
-				0C091FCD1EE93CAE00878EF5 /* WTPlayerVC.xib */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -538,15 +619,6 @@
 				0CFA045B1EF104E20046A773 /* fenleiCollectionCell.xib */,
 				0BEC4D9E1EF14BE000D2BB01 /* Player */,
 				0B33A2BF1EEA4315005BA3EA /* Found */,
-				0B14CA781EF38B1C00C345FC /* Radio */,
-				0B1C2BED1EF7827D000DC74C /* Live */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0B33A2BF1EEA4315005BA3EA /* Found */ = {
-			isa = PBXGroup;
-			children = (
 				0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */,
 				0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */,
 				0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */,
@@ -555,6 +627,22 @@
 				0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */,
 				0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */,
 				0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */,
+				0B14CA781EF38B1C00C345FC /* Radio */,
+				0B1C2BED1EF7827D000DC74C /* Live */,
+				0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */,
+				0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */,
+				0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */,
+				0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */,
+				0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */,
+				0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */,
+				0B31E6601EFA761600A6630E /* MoreView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B33A2BF1EEA4315005BA3EA /* Found */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Found;
 			sourceTree = "<group>";
@@ -745,17 +833,23 @@
 				0CFA045D1EF104E20046A773 /* fenleiCollectionCell.xib in Resources */,
 				0C3C696C1EE54D810033DB1F /* Assets.xcassets in Resources */,
 				0B14CA761EF253B900C345FC /* WTContentsDetailVC.xib in Resources */,
+				0B31E6551EFA70EE00A6630E /* WTDownLoadVC.xib in Resources */,
 				0B1540881EE5434400C6E52F /* WTLoginVC.xib in Resources */,
+				0B31E65F1EFA711800A6630E /* WTAlbumVC.xib in Resources */,
 				0B1C2BE61EF76DD3000DC74C /* pageControlCurrentDot@2x.png in Resources */,
 				0B33A2AB1EE9289F005BA3EA /* WTFoundVC.xib in Resources */,
 				0B1C2BE71EF76DD3000DC74C /* pageControlCurrentDot@3x.png in Resources */,
 				0B33A2CD1EEA7069005BA3EA /* WTFoundDetailVC.xib in Resources */,
 				0C091FCE1EE93CAE00878EF5 /* WTPlayerVC.xib in Resources */,
 				0B33A29B1EE9256C005BA3EA /* WTContentsVC.xib in Resources */,
+				0B31E6651EFA764900A6630E /* WTReportCell.xib in Resources */,
+				0B31E65A1EFA710400A6630E /* WTAnchorVC.xib in Resources */,
 				0B33A2C41EEA4353005BA3EA /* WTFoundListCell.xib in Resources */,
+				0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */,
 				0B1C2BFC1EFA1475000DC74C /* WTLiveCollVRightCell.xib in Resources */,
 				0B14CA7D1EF38B4E00C345FC /* WTRadioHeaCell.xib in Resources */,
 				0B1C2BF71EF7E1CA000DC74C /* WTLiveCollVCell.xib in Resources */,
+				0B31E66A1EFB6A4200A6630E /* WTReportTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +926,7 @@
 				0B4ED7481EEFB4C100EAA123 /* UIButton+Timer.m in Sources */,
 				0B14CA751EF253B900C345FC /* WTContentsDetailVC.m in Sources */,
 				0C091FC91EE93ADA00878EF5 /* WTPlayerVC.m in Sources */,
+				0B31E6641EFA764900A6630E /* WTReportCell.m in Sources */,
 				0BEC4DA51EF14BEB00D2BB01 /* SnailSheetCell.m in Sources */,
 				0B4ED7501EEFFF7300EAA123 /* JQMusicTool.m in Sources */,
 				0B14CA7C1EF38B4E00C345FC /* WTRadioHeaCell.m in Sources */,
@@ -842,6 +937,8 @@
 				0B1C2BE31EF76DD3000DC74C /* TAAnimatedDotView.m in Sources */,
 				0B1F35C61ED2931C007D26D9 /* AppDelegate.m in Sources */,
 				0B1C2BEC1EF76DD3000DC74C /* UIView+SDExtension.m in Sources */,
+				0B31E6691EFB6A4200A6630E /* WTReportTextCell.m in Sources */,
+				0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */,
 				0B33A2AF1EE928BC005BA3EA /* WTSortVC.m in Sources */,
 				0C68CBB21EE698CB002355DC /* GuidanceViewController.m in Sources */,
 				0B14CA711EF22AB800C345FC /* UIView+Layout.m in Sources */,
@@ -853,6 +950,8 @@
 				0B1F35C31ED2931C007D26D9 /* main.m in Sources */,
 				0B33A2D11EEA76B7005BA3EA /* WTFoundContentCell.m in Sources */,
 				0B33A29A1EE9256C005BA3EA /* WTContentsVC.m in Sources */,
+				0B31E6591EFA710400A6630E /* WTAnchorVC.m in Sources */,
+				0B31E65E1EFA711800A6630E /* WTAlbumVC.m in Sources */,
 				0B33A2C71EEA4FAA005BA3EA /* WTFoundCellView.m in Sources */,
 				0B33A2D51EEAA665005BA3EA /* WTSearchView.m in Sources */,
 				0BEC4D971EF1200500D2BB01 /* ZCBNetworking.m in Sources */,
@@ -862,6 +961,7 @@
 				0B4ED74B1EEFBFC000EAA123 /* WTMoreView.m in Sources */,
 				0CB27B551EE59448006DF52B /* WTReadyVC.m in Sources */,
 				0BEC4DA61EF14BEB00D2BB01 /* SnailSheetView.m in Sources */,
+				0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */,
 				0B1C2BF61EF7E1CA000DC74C /* WTLiveCollVCell.m in Sources */,
 				0C68CBB31EE698CB002355DC /* Stotage.m in Sources */,
 				0B1C2BFB1EFA1475000DC74C /* WTLiveCollVRightCell.m in Sources */,

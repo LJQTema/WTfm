@@ -17,6 +17,7 @@
 #import "WTContentsVC.h"
 #import "WTContentsDetailVC.h"  //各种详情页
 
+#import "WTReportVC.h"          //举报页
 
 @interface WTPlayerVC ()<RollViewDelegate,  SnailSheetViewConfigDelegate, SnailSheetViewDelegate>{
     
@@ -417,6 +418,16 @@
             [self.navigationController pushViewController:wtConDVC animated:YES];
             [self.sl_popupController dismiss];
         }
+    }else if (section == 0){
+        
+        if (index == 3) {   //举报
+            
+            WTReportVC  *wtReportVC = [[WTReportVC alloc] init];
+            
+            [self.navigationController pushViewController:wtReportVC animated:YES];
+            [self.sl_popupController dismiss];
+        }
+        
     }
     
 }

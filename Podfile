@@ -11,6 +11,7 @@ pod 'MJRefresh', '~> 3.1.12'
 pod 'BaiduBCEPlayerLSS', '~> 2.0.1'
 pod 'YYModel'
 pod 'SnailPopupController', '~> 2.0.5'
+pod 'AMapLocation'
 
 end
 
