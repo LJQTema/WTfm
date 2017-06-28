@@ -20,7 +20,7 @@
 
 
 /**
-    ContentType: 各种类型传不同的值, 具体再定
+    ContentType:  1,:电台-本地台
  */
 @property (nonatomic, assign) NSInteger ContetType;
 

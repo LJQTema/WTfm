@@ -30,8 +30,6 @@ singleton_implementation(JQMusicTool)
     _BDplayer = [[BDCloudMediaPlayerController alloc] initWithContentURL:musicURL];
      _BDplayer.shouldAutoplay = NO;  //等待播放指令
     [_BDplayer prepareToPlay];
-   
-    
 
 //    if ([_musicStr hasSuffix:@"flv"] || [_musicStr hasSuffix:@"flv:fm"]) {
 //
@@ -78,7 +76,18 @@ singleton_implementation(JQMusicTool)
 //                }
 //            }
 
+}
+
+
+- (void)ToChangeMusic:(WTModel *)model{
     
+    [_BDplayer stop];
+    [_BDplayer reset];
+    NSURL *musicURL = [NSURL URLWithString:model.ContentPlay];
+    
+    _BDplayer = [[BDCloudMediaPlayerController alloc] initWithContentURL:musicURL];
+    _BDplayer.shouldAutoplay = YES;  //直接播放指令
+    [_BDplayer prepareToPlay];
 }
 
 

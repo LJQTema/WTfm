@@ -14,7 +14,7 @@
 #import "WTFoundListCell.h"     //list样式
 
 
-@interface WTFoundVC ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>{
+@interface WTFoundVC ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate, WTFoundContetDelegate>{
     
     NSMutableArray  *dataFoundListArr;
     UIView  *HeaderView;    //轮播背景
@@ -137,8 +137,8 @@
             cell = [[WTFoundContentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
         
-//        NSDictionary *dict = dataTuiJArray[indexPath.row];
-//        [cell setCellWithDict:dict];
+        cell.delegate = self;   //cell代理
+        
         
         
         return cell;
@@ -151,10 +151,7 @@
         if (!cell) {
             cell = [[WTFoundListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
-//        
-//        NSDictionary *dict = dataTuiJArray[indexPath.row];
-//        [cell setCellWithDict:dict];
-//        
+       
         
         return cell;
 
@@ -172,6 +169,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - cell代理
+- (void)ImgandLabClick:(ImgandLabType)ImgType{
+    
+    switch (ImgType) {
+        case leftType://左边
+            
+            NSLog(@"左");
+            break;
+        case centerType://中间
+            
+            NSLog(@"中");
+            break;
+        case rightType://右边
+            
+            NSLog(@"右");
+            break;
+    }
 }
 
 #pragma mark - 轮播 - Delegate && DateSource

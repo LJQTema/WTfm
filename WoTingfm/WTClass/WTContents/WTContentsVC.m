@@ -26,12 +26,6 @@
     UIView              *blackView;     //语音搜索黑背景
     WTSearchView        *YuyinView; //语音view
     
-    
-    
-    
-    //  _________________________________________________________________________________________________HYC_________________________________________________________________________________ 
-    //菜单应该这么写  这叫封装度
-    
     NSArray *_munuNameArray;
     
 }
@@ -73,7 +67,7 @@
         buttonMune.tag = 1221 + i;
         [buttonMune setTitle:_munuNameArray[i] forState:UIControlStateNormal];
         [buttonMune setTitleColor:[UIColor blackColor] forState:0];
-        buttonMune.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+        buttonMune.titleLabel.font = [UIFont systemFontOfSize:16];
         [_ContentView addSubview:buttonMune];
         
         
@@ -197,9 +191,6 @@
             }else{
                 
                 
-                
-                //contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (i - 1221), 0);
-                
                 [UIView animateWithDuration:0.3 animations:^{
                     
                     [aBtn setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
@@ -217,8 +208,13 @@
                      
                      );
                     
-                     [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
-                }]; 
+//                    [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
+                    
+                }];
+                
+                contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (i - 1221), 0);
+                
+                
             }
         }
 
@@ -314,10 +310,6 @@
     [blackView addSubview:YuyinView];
     
     
-    //  _________________________________________________________________________________________________HYC_________________________________________________________________________________ 
-    //看好了 小伙子  动画应该这么写  
-    
-    
     [UIView animateWithDuration:0.3 animations:^{
         
         
@@ -341,19 +333,13 @@
         
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        
-        [blackView removeFromSuperview];
-        
-        
-        
-    });
-    
-    //[blackView removeFromSuperview];
+    [self performSelector:@selector(removeView) withObject:nil afterDelay:0.3];
 }
 
-
+- (void)removeView{
+    
+    [blackView removeFromSuperview];
+}
 
 
 

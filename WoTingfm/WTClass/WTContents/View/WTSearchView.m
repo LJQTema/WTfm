@@ -277,11 +277,6 @@
     NSMutableDictionary  *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:targetString forKey:@"Search"];
     
-    NSDictionary *dictT = [NSDictionary dictionaryWithDictionary:dict];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"TABLEVIEWCLICK" object:nil userInfo:dictT];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"YUYINNOTIFICATION" object:nil];    //关闭蒙板
-    
     labName.text = @"请按住讲话";
 }
 

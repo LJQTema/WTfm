@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *scrViewH;
 
 @property (weak, nonatomic) IBOutlet UIButton *NextBtn;
-@property (weak, nonatomic) IBOutlet UIButton *PlayBtn;
+@property (weak, nonatomic) IBOutlet UIButton *PlayBtn; //播放,暂停
 @property (weak, nonatomic) IBOutlet UIButton *beforeBtn;
 
 @property (weak, nonatomic) IBOutlet UISlider *wtSlider;

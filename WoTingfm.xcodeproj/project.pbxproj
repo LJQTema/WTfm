@@ -50,6 +50,12 @@
 		0B31E6651EFA764900A6630E /* WTReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6631EFA764900A6630E /* WTReportCell.xib */; };
 		0B31E6691EFB6A4200A6630E /* WTReportTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6671EFB6A4200A6630E /* WTReportTextCell.m */; };
 		0B31E66A1EFB6A4200A6630E /* WTReportTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6681EFB6A4200A6630E /* WTReportTextCell.xib */; };
+		0B31E66E1EFD0C3900A6630E /* WTDownLoadAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E66C1EFD0C3900A6630E /* WTDownLoadAlbumVC.m */; };
+		0B31E66F1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E66D1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib */; };
+		0B31E6731EFD0EC400A6630E /* WTDownLoadAudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6711EFD0EC400A6630E /* WTDownLoadAudioVC.m */; };
+		0B31E6741EFD0EC400A6630E /* WTDownLoadAudioVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6721EFD0EC400A6630E /* WTDownLoadAudioVC.xib */; };
+		0B31E6781EFD0F5000A6630E /* WTDownLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6761EFD0F5000A6630E /* WTDownLoadingVC.m */; };
+		0B31E6791EFD0F5000A6630E /* WTDownLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E6771EFD0F5000A6630E /* WTDownLoadingVC.xib */; };
 		0B33A29A1EE9256C005BA3EA /* WTContentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33A2981EE9256C005BA3EA /* WTContentsVC.m */; };
 		0B33A29B1EE9256C005BA3EA /* WTContentsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B33A2991EE9256C005BA3EA /* WTContentsVC.xib */; };
 		0B33A2AA1EE9289F005BA3EA /* WTFoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B33A2A81EE9289F005BA3EA /* WTFoundVC.m */; };
@@ -183,6 +189,15 @@
 		0B31E6661EFB6A4200A6630E /* WTReportTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportTextCell.h; sourceTree = "<group>"; };
 		0B31E6671EFB6A4200A6630E /* WTReportTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportTextCell.m; sourceTree = "<group>"; };
 		0B31E6681EFB6A4200A6630E /* WTReportTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTReportTextCell.xib; sourceTree = "<group>"; };
+		0B31E66B1EFD0C3900A6630E /* WTDownLoadAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDownLoadAlbumVC.h; sourceTree = "<group>"; };
+		0B31E66C1EFD0C3900A6630E /* WTDownLoadAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDownLoadAlbumVC.m; sourceTree = "<group>"; };
+		0B31E66D1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDownLoadAlbumVC.xib; sourceTree = "<group>"; };
+		0B31E6701EFD0EC400A6630E /* WTDownLoadAudioVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDownLoadAudioVC.h; sourceTree = "<group>"; };
+		0B31E6711EFD0EC400A6630E /* WTDownLoadAudioVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDownLoadAudioVC.m; sourceTree = "<group>"; };
+		0B31E6721EFD0EC400A6630E /* WTDownLoadAudioVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDownLoadAudioVC.xib; sourceTree = "<group>"; };
+		0B31E6751EFD0F5000A6630E /* WTDownLoadingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDownLoadingVC.h; sourceTree = "<group>"; };
+		0B31E6761EFD0F5000A6630E /* WTDownLoadingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDownLoadingVC.m; sourceTree = "<group>"; };
+		0B31E6771EFD0F5000A6630E /* WTDownLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTDownLoadingVC.xib; sourceTree = "<group>"; };
 		0B33A2971EE9256C005BA3EA /* WTContentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTContentsVC.h; path = ../WTContentsVC.h; sourceTree = "<group>"; };
 		0B33A2981EE9256C005BA3EA /* WTContentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTContentsVC.m; path = ../WTContentsVC.m; sourceTree = "<group>"; };
 		0B33A2991EE9256C005BA3EA /* WTContentsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTContentsVC.xib; path = ../WTContentsVC.xib; sourceTree = "<group>"; };
@@ -517,6 +532,15 @@
 				0B31E6511EFA70EE00A6630E /* WTDownLoadVC.h */,
 				0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */,
 				0B31E6531EFA70EE00A6630E /* WTDownLoadVC.xib */,
+				0B31E66B1EFD0C3900A6630E /* WTDownLoadAlbumVC.h */,
+				0B31E66C1EFD0C3900A6630E /* WTDownLoadAlbumVC.m */,
+				0B31E66D1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib */,
+				0B31E6701EFD0EC400A6630E /* WTDownLoadAudioVC.h */,
+				0B31E6711EFD0EC400A6630E /* WTDownLoadAudioVC.m */,
+				0B31E6721EFD0EC400A6630E /* WTDownLoadAudioVC.xib */,
+				0B31E6751EFD0F5000A6630E /* WTDownLoadingVC.h */,
+				0B31E6761EFD0F5000A6630E /* WTDownLoadingVC.m */,
+				0B31E6771EFD0F5000A6630E /* WTDownLoadingVC.xib */,
 			);
 			path = DownLoad;
 			sourceTree = "<group>";
@@ -823,6 +847,7 @@
 				0B1C2BE81EF76DD3000DC74C /* pageControlDot@2x.png in Resources */,
 				0CFA04581EF0E4450046A773 /* imageNameAndURLDD.plist in Resources */,
 				0B15409B1EE6519100C6E52F /* WTForgotPsd.xib in Resources */,
+				0B31E6791EFD0F5000A6630E /* WTDownLoadingVC.xib in Resources */,
 				0B33A2B01EE928BC005BA3EA /* WTSortVC.xib in Resources */,
 				0B33A2BA1EE928F0005BA3EA /* WTLiveVC.xib in Resources */,
 				0B33A2D21EEA76B7005BA3EA /* WTFoundContentCell.xib in Resources */,
@@ -832,6 +857,7 @@
 				0B33A2B51EE928D7005BA3EA /* WTRadioVC.xib in Resources */,
 				0CFA045D1EF104E20046A773 /* fenleiCollectionCell.xib in Resources */,
 				0C3C696C1EE54D810033DB1F /* Assets.xcassets in Resources */,
+				0B31E66F1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib in Resources */,
 				0B14CA761EF253B900C345FC /* WTContentsDetailVC.xib in Resources */,
 				0B31E6551EFA70EE00A6630E /* WTDownLoadVC.xib in Resources */,
 				0B1540881EE5434400C6E52F /* WTLoginVC.xib in Resources */,
@@ -839,6 +865,7 @@
 				0B1C2BE61EF76DD3000DC74C /* pageControlCurrentDot@2x.png in Resources */,
 				0B33A2AB1EE9289F005BA3EA /* WTFoundVC.xib in Resources */,
 				0B1C2BE71EF76DD3000DC74C /* pageControlCurrentDot@3x.png in Resources */,
+				0B31E6741EFD0EC400A6630E /* WTDownLoadAudioVC.xib in Resources */,
 				0B33A2CD1EEA7069005BA3EA /* WTFoundDetailVC.xib in Resources */,
 				0C091FCE1EE93CAE00878EF5 /* WTPlayerVC.xib in Resources */,
 				0B33A29B1EE9256C005BA3EA /* WTContentsVC.xib in Resources */,
@@ -930,6 +957,7 @@
 				0BEC4DA51EF14BEB00D2BB01 /* SnailSheetCell.m in Sources */,
 				0B4ED7501EEFFF7300EAA123 /* JQMusicTool.m in Sources */,
 				0B14CA7C1EF38B4E00C345FC /* WTRadioHeaCell.m in Sources */,
+				0B31E6731EFD0EC400A6630E /* WTDownLoadAudioVC.m in Sources */,
 				0B1C2BEB1EF76DD3000DC74C /* SDCycleScrollView.m in Sources */,
 				0B1C2BE41EF76DD3000DC74C /* TADotView.m in Sources */,
 				0B1C2BEA1EF76DD3000DC74C /* SDCollectionViewCell.m in Sources */,
@@ -944,8 +972,10 @@
 				0B14CA711EF22AB800C345FC /* UIView+Layout.m in Sources */,
 				0CFA045C1EF104E20046A773 /* fenleiCollectionCell.m in Sources */,
 				0B15409A1EE6519100C6E52F /* WTForgotPsd.m in Sources */,
+				0B31E66E1EFD0C3900A6630E /* WTDownLoadAlbumVC.m in Sources */,
 				0B33A2B41EE928D7005BA3EA /* WTRadioVC.m in Sources */,
 				0BEC4DA71EF14BEB00D2BB01 /* SnailSheetViewConfig.m in Sources */,
+				0B31E6781EFD0F5000A6630E /* WTDownLoadingVC.m in Sources */,
 				0B1540871EE5434400C6E52F /* WTLoginVC.m in Sources */,
 				0B1F35C31ED2931C007D26D9 /* main.m in Sources */,
 				0B33A2D11EEA76B7005BA3EA /* WTFoundContentCell.m in Sources */,

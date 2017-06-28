@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum{
+    
+    leftType,           //点击左边
+    centerType,         //点击中间
+    rightType           //点击右边
+    
+}ImgandLabType;
+
+@protocol WTFoundContetDelegate <NSObject>
+
+- (void)ImgandLabClick:(ImgandLabType)ImgType;
+
+@end
+
 @interface WTFoundContentCell : UITableViewCell
+
+@property(nonatomic,weak)id<WTFoundContetDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIImageView *leftImgV;
 @property (weak, nonatomic) IBOutlet UIImageView *CenterImgV;

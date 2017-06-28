@@ -56,8 +56,6 @@
 
 @interface AppDelegate ()
 
-
-
 @end
 
 @implementation AppDelegate
@@ -65,9 +63,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
     [[BDCloudMediaPlayerAuth sharedInstance] setAccessKey:@"724c9abc6cd9403daece9d4d17c3e31b"];
-  //  [BaiduAPM startWithApplicationToken:@"de0b9578cf3741b99df94a81d1ee4780"];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //引导页与芬兰的切换
@@ -119,8 +115,6 @@
             self.window.rootViewController = [self createLoginView];
         }
         
-        //        NSLog(@"进入应用成功");
-        //===================
     }];
     return guidance;
 }
@@ -145,6 +139,8 @@
     return [[UINavigationController alloc]initWithRootViewController:[[WTPlayerVC alloc]init]];
     
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

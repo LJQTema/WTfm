@@ -12,7 +12,7 @@
 #import "Singleton.h"
 
 
-@class WTBoFangModel;
+@class WTModel;
 @interface JQMusicTool : NSObject
 singleton_interface(JQMusicTool)
 
@@ -22,7 +22,12 @@ singleton_interface(JQMusicTool)
 /*
  *音乐播放前的准备工作
  */
--(void)prepareToPlayWithMusic:(WTBoFangModel *)music;
+-(void)prepareToPlayWithMusic:(WTModel *)music;
+
+/*
+ *切歌
+ */
+- (void)ToChangeMusic:(WTModel *)model;
 
 /*
  *播放

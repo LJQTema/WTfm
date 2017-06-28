@@ -108,6 +108,7 @@
         
         WTContentsDetailVC *wtDVC = [[WTContentsDetailVC alloc] init];
         wtDVC.LabText = @"本地台";
+        wtDVC.ContetType = 1;
         [self.delegate.navigationController pushViewController:wtDVC animated:YES];
         
     }else if (btn.tag == 101){  //国家

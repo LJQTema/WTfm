@@ -445,7 +445,7 @@ NSString * const ID = @"cycleCell";
     
     int index = 0;
     if (_flowLayout.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
-        NSLog(@"%f  %f ",_mainView.contentOffset.x,_flowLayout.itemSize.width);
+//        NSLog(@"%f  %f ",_mainView.contentOffset.x,_flowLayout.itemSize.width);
         index = (_mainView.contentOffset.x + _flowLayout.itemSize.width * 0.5+self.cellSpace/2-[self space]) / (_flowLayout.itemSize.width+self.cellSpace);
     } else {
         index = (_mainView.contentOffset.y + _flowLayout.itemSize.height * 0.5) / _flowLayout.itemSize.height;

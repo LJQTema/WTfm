@@ -18,6 +18,7 @@
 #import "WTContentsDetailVC.h"  //各种详情页
 
 #import "WTReportVC.h"          //举报页
+#import "WTDownLoadVC.h"        //下载页
 
 @interface WTPlayerVC ()<RollViewDelegate,  SnailSheetViewConfigDelegate, SnailSheetViewDelegate>{
     
@@ -35,7 +36,7 @@
 
 //@property (nonatomic, strong) UIImageView   *BackgroundImgV;    //背景图
 @property (nonatomic, strong) UIImageView   *HeaderImgV;        //转图
-@property (nonatomic, strong) UIButton      *BoFangBtn;        //播放,暂停
+
 
 @property(assign, nonatomic)NSInteger musicIndex;//当前播放音乐索引
 @property(strong,nonatomic) NSMutableArray *musicsArr;//音乐数据
@@ -72,6 +73,9 @@
     self.navigationController.navigationBar.hidden = YES;
     
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(JQNext:) name:BDCloudMediaPlayerPlaybackDidFinishNotification object:nil];
+    
+    
 //    [self creatPicRollView];
     [self loadData];            //网络请求
     [self creatContentView];    //搭建部分UI
@@ -79,8 +83,6 @@
 
 - (void)creatContentView{
     
-    [self.wtSlider addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
-    [self.wtSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
 //    [self.wtSlider setThumbImage:[UIImage imageNamed:@"Oval.png"] forState:UIControlStateNormal];
 //    [self.wtSlider setThumbImage:[UIImage imageNamed:@"Oval.png"] forState:UIControlStateHighlighted];
     
@@ -198,9 +200,9 @@
     
     [self.scrViewH addSubview:self.rollView];
     
-    NSArray *arr = @[@{@"imageH":@"timg-10",@"labelUP":@"第一个",@"labelDown":@"超超哥哥"},
-                     @{@"imageH":@"timg-9",@"labelUP":@"第二个",@"labelDown":@"还是超超哥哥"},
-                     @{@"imageH":@"timg-8",@"labelUP":@"第三个",@"labelDown":@"居然还是超超哥哥"}
+    NSArray *arr = @[@{@"imageH":@"timg-10",@"labelUP":@"第一个",@"labelDown":@"我站在桥上看风景"},
+                     @{@"imageH":@"timg-9",@"labelUP":@"第二个",@"labelDown":@"我站在桥上看风景"},
+                     @{@"imageH":@"timg-8",@"labelUP":@"第三个",@"labelDown":@"我站在桥上看风景"}
                      
                      ];
 
@@ -238,10 +240,7 @@
 
 #pragma mark - 滚动视图协议
 -(void)didSelectPicWithIndexPath:(NSInteger)index{
-    
-    
-    
-    
+
     
     if (index != -1) {
         
@@ -259,9 +258,15 @@
 #pragma mark - set方法填充更新页面播放器逻辑
 -(void)setPlayingMusic:(WTModel *)playingMusic{
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(JQNext) name:BDCloudMediaPlayerPlaybackStateDidChangeNotification object:nil];
+ 
+    self.NowLab.text = @"00:00";
+    self.TotalLab.text = @"00:00";
+    self.wtSlider.value = 0;
+    [self.wtSlider addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
+    [self.wtSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     
 }
+
 
 #pragma mark - 创建一个播放器
 -(void)playMusic{
@@ -275,14 +280,31 @@
         //更改 “播放器工具条” 的数据
         self.playingMusic = self.musicsArr[self.musicIndex];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(JQNext) name:BDCloudMediaPlayerPlaybackDidFinishNotification object:nil];
+
     }
     
     
 }
-- (void)JQNext{
+#pragma mark - 播放完毕-自动播放下一首
+- (void)JQNext:(NSNotification*)notification{
     
-    [self Next:nil];
+    NSNumber* reasonNumber = notification.userInfo[BDCloudMediaPlayerPlaybackDidFinishReasonUserInfoKey];
+    BDCloudMediaPlayerFinishReason reason = (BDCloudMediaPlayerFinishReason)reasonNumber.integerValue;
+    switch (reason) {
+        case BDCloudMediaPlayerFinishReasonEnd:
+            NSLog(@"player finish with reason: play to end time");
+            
+            [self Next:nil];
+            break;
+        case BDCloudMediaPlayerFinishReasonError:
+            NSLog(@"player finished with reason: error");
+            break;
+        case BDCloudMediaPlayerFinishReasonUser:
+            NSLog(@"player finished with reason: stopped by user");
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - 播放/暂停按钮
@@ -293,10 +315,12 @@
     if (btn.selected) {//播放
         
         [[JQMusicTool sharedJQMusicTool] pause];
+        [self stopTimer];
         btn.selected = NO;
     }else{//暂停
         
         [[JQMusicTool sharedJQMusicTool] play];
+        [self startTimer];
         btn.selected = YES;
     }
 }
@@ -304,32 +328,44 @@
 #pragma mark - 下一首
 - (IBAction)Next:(id)sender {
     
+    [self stopTimer];
     if (self.musicIndex == self.musicsArr.count - 1) {//最后条
         self.musicIndex = 0;
     }else{
         self.musicIndex ++;
     }
     
-    [self playMusic];
-    [[JQMusicTool sharedJQMusicTool] play];
+    _PlayBtn.selected = YES;
+
+    [[JQMusicTool sharedJQMusicTool] ToChangeMusic:self.musicsArr[self.musicIndex]];
+    
+    [self startTimer];
+
 }
 
 #pragma mark - 上一首
 - (IBAction)Before:(id)sender {
     
+    [self stopTimer];
     if (self.musicIndex == 0) {//第一首
         self.musicIndex = self.musicsArr.count - 1;
     }else{
         self.musicIndex --;
     }
     
-    [self playMusic];
-    [[JQMusicTool sharedJQMusicTool] play];
+    _PlayBtn.selected = YES;
+    
+    [[JQMusicTool sharedJQMusicTool] ToChangeMusic:self.musicsArr[self.musicIndex]];
+    
+    [self startTimer];
+
 }
 
 #pragma mark -- progress事件
 //当手指弹起的时候触发
 -(void)touchUp:(UISlider *)slider{
+    
+    [self startTimer];
 
     [[JQMusicTool sharedJQMusicTool] play];
     _PlayBtn.selected = YES;
@@ -337,37 +373,45 @@
 }
 //当值发生变化一直触发
 -(void)valueChange:(UISlider *)slider{
+    
+    [self stopTimer];
     [[JQMusicTool sharedJQMusicTool] pause];
     
-    
-    //    self.player.currentItem.currentTime.value
-    NSTimeInterval currentTime = slider.value;
+    self.NowLab.text = [self formatTimeInterval:[JQMusicTool sharedJQMusicTool].BDplayer.currentPlaybackTime];
     
     //seekToTime 跳到指定的播放时间
-    [[JQMusicTool sharedJQMusicTool].BDplayer seek:currentTime];
+    [[JQMusicTool sharedJQMusicTool].BDplayer seek:[JQMusicTool sharedJQMusicTool].BDplayer.duration *slider.value];
 
-    _PlayBtn.selected = YES;
+    _PlayBtn.selected = NO;
 
 }
 
 #pragma mark - 开启定时器
 - (void)startTimer{
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(turnPicture) userInfo:nil repeats:YES];
+    if (!self.timer) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                      target:self
+                                                    selector:@selector(turnPicture)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    }
 }
 #pragma mark - 停止定时器
 - (void)stopTimer{
     
-    [_timer invalidate];
-    
-    _timer = nil;
+    if (self.timer.isValid) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
-#pragma mark - 图片旋转
+#pragma mark - 内容变化
 - (void)turnPicture{
     
-    _HeaderImgV.transform = CGAffineTransformRotate(_HeaderImgV.transform,M_PI_4 * .01);
-    
+    self.wtSlider.value = [JQMusicTool sharedJQMusicTool].BDplayer.currentPlaybackTime/[JQMusicTool sharedJQMusicTool].BDplayer.duration;
+    self.NowLab.text = [self formatTimeInterval:[JQMusicTool sharedJQMusicTool].BDplayer.currentPlaybackTime];
+    self.TotalLab.text = [self formatTimeInterval:[JQMusicTool sharedJQMusicTool].BDplayer.duration];
 }
 
 
@@ -416,6 +460,11 @@
             WTContentsDetailVC  *wtConDVC = [[WTContentsDetailVC alloc] init];
             wtConDVC.LabText = model.text;
             [self.navigationController pushViewController:wtConDVC animated:YES];
+            [self.sl_popupController dismiss];
+        }else if (index == 3){
+            
+            WTDownLoadVC *wtdown = [[WTDownLoadVC alloc] init];
+            [self.navigationController pushViewController:wtdown animated:YES];
             [self.sl_popupController dismiss];
         }
     }else if (section == 0){
@@ -505,6 +554,30 @@
     }
     
     return [NSMutableArray arrayWithObjects:array1, array2, nil];
+}
+
+#pragma mark - 播放时长变化
+- (NSString*)formatTimeInterval:(NSTimeInterval)interval {
+    NSUInteger totalMinutes = (NSUInteger)interval / 60;
+    NSUInteger leftSeconds = (NSUInteger)interval % 60;
+    
+    NSUInteger totalHours = totalMinutes / 60;
+    NSUInteger leftMinutes = totalMinutes % 60;
+    
+    NSMutableString* string = [NSMutableString string];
+    if (totalHours != 0) {
+        [string appendFormat:@"%lu:", (unsigned long)totalHours];
+    }
+    
+    if (totalMinutes != 0) {
+        [string appendFormat:@"%02lu:", (unsigned long)leftMinutes];
+    } else {
+        [string appendString:@"00:"];
+    }
+    
+    [string appendFormat:@"%02lu", (unsigned long)leftSeconds];
+    
+    return string;
 }
 
 /*

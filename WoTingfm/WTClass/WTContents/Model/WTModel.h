@@ -13,7 +13,7 @@
 @property (nonatomic, copy)NSString *ContentImg;      //内容图片
 @property (nonatomic, copy)NSString *ContentName;     //内容名
 @property (nonatomic, copy)NSString *ContentPlay;     //内容url
-@property (nonatomic, assign)uint64_t ContentTimes;    //内容时长
+@property (nonatomic, copy)NSString *ContentTimes;    //内容时长
 @property (nonatomic, copy)NSString *ContentId;       //内容ID
 @property (nonatomic, copy)NSString *ContentFavorite;  //是否喜欢
 @property (nonatomic, copy)NSString *MediaType;       //电台类型
