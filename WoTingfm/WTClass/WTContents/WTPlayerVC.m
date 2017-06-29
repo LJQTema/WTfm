@@ -17,6 +17,7 @@
 #import "WTContentsVC.h"
 #import "WTContentsDetailVC.h"  //各种详情页
 
+#import "WTAlbumVC.h"           //专辑页
 #import "WTReportVC.h"          //举报页
 #import "WTDownLoadVC.h"        //下载页
 
@@ -474,6 +475,12 @@
             WTReportVC  *wtReportVC = [[WTReportVC alloc] init];
             
             [self.navigationController pushViewController:wtReportVC animated:YES];
+            [self.sl_popupController dismiss];
+        }else if (index == 1) { //专辑
+            
+            WTAlbumVC *wtalbumVC = [[WTAlbumVC alloc] init];
+            
+            [self.navigationController pushViewController:wtalbumVC animated:YES];
             [self.sl_popupController dismiss];
         }
         

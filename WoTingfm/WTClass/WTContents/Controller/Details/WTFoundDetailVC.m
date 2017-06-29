@@ -10,13 +10,24 @@
 
 @interface WTFoundDetailVC ()
 
+@property (weak, nonatomic) IBOutlet UITableView *FoundDetailTabV;
+
+@property (weak, nonatomic) IBOutlet UILabel *ContentLab;
+
 @end
 
 @implementation WTFoundDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    if (_DetailType == 0) {
+        
+        _ContentLab.text = @"每日听单";
+    }else if (_DetailType == 1) {
+        
+        _ContentLab.text = @"编辑精选";
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)backBtnClick:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
 
 @end

@@ -51,7 +51,7 @@
         buttonMune.tag = 1221 + i;
         [buttonMune setTitle:_munuNameArray[i] forState:UIControlStateNormal];
         [buttonMune setTitleColor:[UIColor blackColor] forState:0];
-        buttonMune.titleLabel.font = [UIFont systemFontOfSize:16];
+        buttonMune.titleLabel.font = [UIFont boldSystemFontOfSize:16];
         [_titleView addSubview:buttonMune];
         
         
@@ -69,7 +69,7 @@
 
 - (void)initScrollerView{
     
-    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64, K_Screen_Width, K_Screen_Height - 49 - 64)];
+    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64, K_Screen_Width, K_Screen_Height - 64)];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:contentScrollView];
     

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTFoundDetailVC">
             <connections>
+                <outlet property="ContentLab" destination="rjr-NE-FgW" id="nFw-Vk-8Fi"/>
+                <outlet property="FoundDetailTabV" destination="mJG-RJ-so0" id="6kA-7X-QVD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,27 +24,56 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-c0-dUe">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="详情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjr-NE-FgW">
-                            <rect key="frame" x="120" y="39" width="136" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjr-NE-FgW">
+                            <rect key="frame" x="120" y="34" width="136" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="4dg-aq-4p0"/>
+                                <constraint firstAttribute="width" constant="136" id="Kk4-ap-uLa"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-fW-rSG">
+                            <rect key="frame" x="2" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="3Q9-RY-LVB"/>
+                                <constraint firstAttribute="width" constant="44" id="Bpb-gt-IDM"/>
+                            </constraints>
+                            <state key="normal" image="Nav_icon_back_black"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="6G2-Dd-rOA"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="rjr-NE-FgW" firstAttribute="centerX" secondItem="HbB-c0-dUe" secondAttribute="centerX" id="HaI-PT-x1t"/>
+                        <constraint firstItem="rjr-NE-FgW" firstAttribute="top" secondItem="HbB-c0-dUe" secondAttribute="top" constant="34" id="J1K-yi-gCo"/>
+                        <constraint firstItem="pQu-fW-rSG" firstAttribute="leading" secondItem="HbB-c0-dUe" secondAttribute="leading" constant="2" id="KJF-wI-aJ5"/>
+                        <constraint firstItem="pQu-fW-rSG" firstAttribute="top" secondItem="HbB-c0-dUe" secondAttribute="top" constant="20" id="X7h-Sq-kEJ"/>
                         <constraint firstAttribute="height" constant="64" id="oW5-aK-MmX"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-RJ-so0">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HbB-c0-dUe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7CV-4K-60U"/>
                 <constraint firstItem="HbB-c0-dUe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ArN-hC-3U3"/>
+                <constraint firstAttribute="bottom" secondItem="mJG-RJ-so0" secondAttribute="bottom" id="ENG-eF-wT0"/>
+                <constraint firstItem="mJG-RJ-so0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HIX-iQ-gcf"/>
+                <constraint firstAttribute="trailing" secondItem="mJG-RJ-so0" secondAttribute="trailing" id="OmL-tx-jOd"/>
+                <constraint firstItem="mJG-RJ-so0" firstAttribute="top" secondItem="HbB-c0-dUe" secondAttribute="bottom" id="P4u-d4-6PH"/>
                 <constraint firstAttribute="trailing" secondItem="HbB-c0-dUe" secondAttribute="trailing" id="lSF-XA-Mbl"/>
             </constraints>
             <point key="canvasLocation" x="39.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Nav_icon_back_black" width="132" height="132"/>
+    </resources>
 </document>

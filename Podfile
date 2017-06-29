@@ -12,6 +12,7 @@ pod 'BaiduBCEPlayerLSS', '~> 2.0.1'
 pod 'YYModel'
 pod 'SnailPopupController', '~> 2.0.5'
 pod 'AMapLocation'
+pod 'FMDB'
 
 end
 

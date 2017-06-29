@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B14AAFD1F0394AC00A19770 /* WTAlbumDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14AAFB1F0394AC00A19770 /* WTAlbumDetailVC.m */; };
+		0B14AAFE1F0394AC00A19770 /* WTAlbumDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B14AAFC1F0394AC00A19770 /* WTAlbumDetailVC.xib */; };
+		0B14AB021F0394E900A19770 /* WTAlbumItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14AB001F0394E900A19770 /* WTAlbumItem.m */; };
+		0B14AB031F0394E900A19770 /* WTAlbumItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B14AB011F0394E900A19770 /* WTAlbumItem.xib */; };
+		0B14AB071F03958500A19770 /* WTAlbumSimilar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14AB051F03958500A19770 /* WTAlbumSimilar.m */; };
+		0B14AB081F03958500A19770 /* WTAlbumSimilar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B14AB061F03958500A19770 /* WTAlbumSimilar.xib */; };
+		0B14AB0D1F039E5E00A19770 /* WTAlbumContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14AB0B1F039E5E00A19770 /* WTAlbumContentCell.m */; };
+		0B14AB0E1F039E5E00A19770 /* WTAlbumContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B14AB0C1F039E5E00A19770 /* WTAlbumContentCell.xib */; };
+		0B14AB121F03B38F00A19770 /* WTAlbumIntroduceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14AB101F03B38F00A19770 /* WTAlbumIntroduceCell.m */; };
+		0B14AB131F03B38F00A19770 /* WTAlbumIntroduceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B14AB111F03B38F00A19770 /* WTAlbumIntroduceCell.xib */; };
 		0B14CA701EF22AB800C345FC /* CALayer+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14CA6D1EF22AB800C345FC /* CALayer+Layout.m */; };
 		0B14CA711EF22AB800C345FC /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14CA6F1EF22AB800C345FC /* UIView+Layout.m */; };
 		0B14CA751EF253B900C345FC /* WTContentsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B14CA731EF253B900C345FC /* WTContentsDetailVC.m */; };
@@ -84,6 +94,7 @@
 		0BEC4DA51EF14BEB00D2BB01 /* SnailSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA01EF14BEB00D2BB01 /* SnailSheetCell.m */; };
 		0BEC4DA61EF14BEB00D2BB01 /* SnailSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA21EF14BEB00D2BB01 /* SnailSheetView.m */; };
 		0BEC4DA71EF14BEB00D2BB01 /* SnailSheetViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA41EF14BEB00D2BB01 /* SnailSheetViewConfig.m */; };
+		0BFD022B1F04B0A700A54496 /* FMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD022A1F04B0A700A54496 /* FMDBTool.m */; };
 		0C091FC91EE93ADA00878EF5 /* WTPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C091FC71EE93ADA00878EF5 /* WTPlayerVC.m */; };
 		0C091FCE1EE93CAE00878EF5 /* WTPlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C091FCD1EE93CAE00878EF5 /* WTPlayerVC.xib */; };
 		0C3C696C1EE54D810033DB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C696B1EE54D810033DB1F /* Assets.xcassets */; };
@@ -116,6 +127,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B14AAFA1F0394AC00A19770 /* WTAlbumDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumDetailVC.h; sourceTree = "<group>"; };
+		0B14AAFB1F0394AC00A19770 /* WTAlbumDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumDetailVC.m; sourceTree = "<group>"; };
+		0B14AAFC1F0394AC00A19770 /* WTAlbumDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumDetailVC.xib; sourceTree = "<group>"; };
+		0B14AAFF1F0394E900A19770 /* WTAlbumItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumItem.h; sourceTree = "<group>"; };
+		0B14AB001F0394E900A19770 /* WTAlbumItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumItem.m; sourceTree = "<group>"; };
+		0B14AB011F0394E900A19770 /* WTAlbumItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumItem.xib; sourceTree = "<group>"; };
+		0B14AB041F03958500A19770 /* WTAlbumSimilar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumSimilar.h; sourceTree = "<group>"; };
+		0B14AB051F03958500A19770 /* WTAlbumSimilar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumSimilar.m; sourceTree = "<group>"; };
+		0B14AB061F03958500A19770 /* WTAlbumSimilar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumSimilar.xib; sourceTree = "<group>"; };
+		0B14AB0A1F039E5E00A19770 /* WTAlbumContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumContentCell.h; sourceTree = "<group>"; };
+		0B14AB0B1F039E5E00A19770 /* WTAlbumContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumContentCell.m; sourceTree = "<group>"; };
+		0B14AB0C1F039E5E00A19770 /* WTAlbumContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumContentCell.xib; sourceTree = "<group>"; };
+		0B14AB0F1F03B38F00A19770 /* WTAlbumIntroduceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAlbumIntroduceCell.h; sourceTree = "<group>"; };
+		0B14AB101F03B38F00A19770 /* WTAlbumIntroduceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAlbumIntroduceCell.m; sourceTree = "<group>"; };
+		0B14AB111F03B38F00A19770 /* WTAlbumIntroduceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAlbumIntroduceCell.xib; sourceTree = "<group>"; };
 		0B14CA6C1EF22AB800C345FC /* CALayer+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Layout.h"; sourceTree = "<group>"; };
 		0B14CA6D1EF22AB800C345FC /* CALayer+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Layout.m"; sourceTree = "<group>"; };
 		0B14CA6E1EF22AB800C345FC /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -152,12 +178,12 @@
 		0B1C2BDF1EF76DD3000DC74C /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		0B1C2BE01EF76DD3000DC74C /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		0B1C2BE11EF76DD3000DC74C /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVCell.h; path = ../Controller/Live/WTLiveCollVCell.h; sourceTree = "<group>"; };
-		0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVCell.m; path = ../Controller/Live/WTLiveCollVCell.m; sourceTree = "<group>"; };
-		0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVCell.xib; path = ../Controller/Live/WTLiveCollVCell.xib; sourceTree = "<group>"; };
-		0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVRightCell.h; path = Live/WTLiveCollVRightCell.h; sourceTree = "<group>"; };
-		0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVRightCell.m; path = Live/WTLiveCollVRightCell.m; sourceTree = "<group>"; };
-		0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVRightCell.xib; path = Live/WTLiveCollVRightCell.xib; sourceTree = "<group>"; };
+		0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTLiveCollVCell.h; path = ../../Controller/Live/WTLiveCollVCell.h; sourceTree = "<group>"; };
+		0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTLiveCollVCell.m; path = ../../Controller/Live/WTLiveCollVCell.m; sourceTree = "<group>"; };
+		0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTLiveCollVCell.xib; path = ../../Controller/Live/WTLiveCollVCell.xib; sourceTree = "<group>"; };
+		0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLiveCollVRightCell.h; sourceTree = "<group>"; };
+		0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLiveCollVRightCell.m; sourceTree = "<group>"; };
+		0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTLiveCollVRightCell.xib; sourceTree = "<group>"; };
 		0B1F35BE1ED2931C007D26D9 /* WoTingfm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WoTingfm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F35C21ED2931C007D26D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1F35C41ED2931C007D26D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,27 +239,27 @@
 		0B33A2B61EE928F0005BA3EA /* WTLiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLiveVC.h; sourceTree = "<group>"; };
 		0B33A2B71EE928F0005BA3EA /* WTLiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLiveVC.m; sourceTree = "<group>"; };
 		0B33A2B81EE928F0005BA3EA /* WTLiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTLiveVC.xib; sourceTree = "<group>"; };
-		0B33A2BC1EE92B62005BA3EA /* SKMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMainScrollView.h; sourceTree = "<group>"; };
-		0B33A2BD1EE92B62005BA3EA /* SKMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMainScrollView.m; sourceTree = "<group>"; };
-		0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundListCell.h; path = Found/WTFoundListCell.h; sourceTree = "<group>"; };
-		0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundListCell.m; path = Found/WTFoundListCell.m; sourceTree = "<group>"; };
-		0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTFoundListCell.xib; path = Found/WTFoundListCell.xib; sourceTree = "<group>"; };
-		0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundCellView.h; path = Found/WTFoundCellView.h; sourceTree = "<group>"; };
-		0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundCellView.m; path = Found/WTFoundCellView.m; sourceTree = "<group>"; };
+		0B33A2BC1EE92B62005BA3EA /* SKMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKMainScrollView.h; path = ../SKMainScrollView.h; sourceTree = "<group>"; };
+		0B33A2BD1EE92B62005BA3EA /* SKMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKMainScrollView.m; path = ../SKMainScrollView.m; sourceTree = "<group>"; };
+		0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundListCell.h; sourceTree = "<group>"; };
+		0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundListCell.m; sourceTree = "<group>"; };
+		0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundListCell.xib; sourceTree = "<group>"; };
+		0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundCellView.h; sourceTree = "<group>"; };
+		0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundCellView.m; sourceTree = "<group>"; };
 		0B33A2C91EEA7069005BA3EA /* WTFoundDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundDetailVC.h; sourceTree = "<group>"; };
 		0B33A2CA1EEA7069005BA3EA /* WTFoundDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundDetailVC.m; sourceTree = "<group>"; };
 		0B33A2CB1EEA7069005BA3EA /* WTFoundDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundDetailVC.xib; sourceTree = "<group>"; };
-		0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTFoundContentCell.h; path = Found/WTFoundContentCell.h; sourceTree = "<group>"; };
-		0B33A2CF1EEA76B7005BA3EA /* WTFoundContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTFoundContentCell.m; path = Found/WTFoundContentCell.m; sourceTree = "<group>"; };
-		0B33A2D01EEA76B7005BA3EA /* WTFoundContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTFoundContentCell.xib; path = Found/WTFoundContentCell.xib; sourceTree = "<group>"; };
-		0B33A2D31EEAA665005BA3EA /* WTSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSearchView.h; sourceTree = "<group>"; };
-		0B33A2D41EEAA665005BA3EA /* WTSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSearchView.m; sourceTree = "<group>"; };
+		0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFoundContentCell.h; sourceTree = "<group>"; };
+		0B33A2CF1EEA76B7005BA3EA /* WTFoundContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFoundContentCell.m; sourceTree = "<group>"; };
+		0B33A2D01EEA76B7005BA3EA /* WTFoundContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTFoundContentCell.xib; sourceTree = "<group>"; };
+		0B33A2D31EEAA665005BA3EA /* WTSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTSearchView.h; path = ../WTSearchView.h; sourceTree = "<group>"; };
+		0B33A2D41EEAA665005BA3EA /* WTSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTSearchView.m; path = ../WTSearchView.m; sourceTree = "<group>"; };
 		0B4ED7431EEFB4C100EAA123 /* RuntimeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
 		0B4ED7441EEFB4C100EAA123 /* RuntimeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
 		0B4ED7451EEFB4C100EAA123 /* UIButton+Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Timer.h"; sourceTree = "<group>"; };
 		0B4ED7461EEFB4C100EAA123 /* UIButton+Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Timer.m"; sourceTree = "<group>"; };
-		0B4ED7491EEFBFC000EAA123 /* WTMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMoreView.h; sourceTree = "<group>"; };
-		0B4ED74A1EEFBFC000EAA123 /* WTMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMoreView.m; sourceTree = "<group>"; };
+		0B4ED7491EEFBFC000EAA123 /* WTMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMoreView.h; path = ../WTMoreView.h; sourceTree = "<group>"; };
+		0B4ED74A1EEFBFC000EAA123 /* WTMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMoreView.m; path = ../WTMoreView.m; sourceTree = "<group>"; };
 		0B4ED74E1EEFFF7300EAA123 /* JQMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQMusicTool.h; sourceTree = "<group>"; };
 		0B4ED74F1EEFFF7300EAA123 /* JQMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQMusicTool.m; sourceTree = "<group>"; };
 		0B4ED7521EEFFFC500EAA123 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -247,6 +273,8 @@
 		0BEC4DA21EF14BEB00D2BB01 /* SnailSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetView.m; sourceTree = "<group>"; };
 		0BEC4DA31EF14BEB00D2BB01 /* SnailSheetViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailSheetViewConfig.h; sourceTree = "<group>"; };
 		0BEC4DA41EF14BEB00D2BB01 /* SnailSheetViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetViewConfig.m; sourceTree = "<group>"; };
+		0BFD02291F04B0A700A54496 /* FMDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTool.h; sourceTree = "<group>"; };
+		0BFD022A1F04B0A700A54496 /* FMDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTool.m; sourceTree = "<group>"; };
 		0C091FC61EE93ADA00878EF5 /* WTPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTPlayerVC.h; path = WoTingfm/WTClass/WTContents/WTPlayerVC.h; sourceTree = SOURCE_ROOT; };
 		0C091FC71EE93ADA00878EF5 /* WTPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTPlayerVC.m; path = WoTingfm/WTClass/WTContents/WTPlayerVC.m; sourceTree = SOURCE_ROOT; };
 		0C091FCD1EE93CAE00878EF5 /* WTPlayerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTPlayerVC.xib; path = WoTingfm/WTClass/WTContents/WTPlayerVC.xib; sourceTree = SOURCE_ROOT; };
@@ -262,9 +290,9 @@
 		0CB27B541EE59448006DF52B /* WTReadyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTReadyVC.xib; sourceTree = "<group>"; };
 		0CB27B571EE598DF006DF52B /* httpHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = httpHeader.h; sourceTree = "<group>"; };
 		0CFA04571EF0E4450046A773 /* imageNameAndURLDD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageNameAndURLDD.plist; sourceTree = "<group>"; };
-		0CFA04591EF104E20046A773 /* fenleiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fenleiCollectionCell.h; sourceTree = "<group>"; };
-		0CFA045A1EF104E20046A773 /* fenleiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fenleiCollectionCell.m; sourceTree = "<group>"; };
-		0CFA045B1EF104E20046A773 /* fenleiCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = fenleiCollectionCell.xib; sourceTree = "<group>"; };
+		0CFA04591EF104E20046A773 /* fenleiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fenleiCollectionCell.h; path = ../fenleiCollectionCell.h; sourceTree = "<group>"; };
+		0CFA045A1EF104E20046A773 /* fenleiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fenleiCollectionCell.m; path = ../fenleiCollectionCell.m; sourceTree = "<group>"; };
+		0CFA045B1EF104E20046A773 /* fenleiCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = fenleiCollectionCell.xib; path = ../fenleiCollectionCell.xib; sourceTree = "<group>"; };
 		3EA6A4DA9671E03519995A7F /* Pods-WoTingfm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoTingfm.release.xcconfig"; path = "Pods/Target Support Files/Pods-WoTingfm/Pods-WoTingfm.release.xcconfig"; sourceTree = "<group>"; };
 		4CEF372695DB6B91A41B4AED /* libPods-WoTingfm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WoTingfm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B242F13E323200A4EA8CF563 /* Pods-WoTingfm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoTingfm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WoTingfm/Pods-WoTingfm.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +341,19 @@
 				0B1540761EE50E1D00C6E52F /* ViewController */,
 			);
 			path = WTWelcome;
+			sourceTree = "<group>";
+		};
+		0B14AB091F039CDB00A19770 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				0B14AB0A1F039E5E00A19770 /* WTAlbumContentCell.h */,
+				0B14AB0B1F039E5E00A19770 /* WTAlbumContentCell.m */,
+				0B14AB0C1F039E5E00A19770 /* WTAlbumContentCell.xib */,
+				0B14AB0F1F03B38F00A19770 /* WTAlbumIntroduceCell.h */,
+				0B14AB101F03B38F00A19770 /* WTAlbumIntroduceCell.m */,
+				0B14AB111F03B38F00A19770 /* WTAlbumIntroduceCell.xib */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 		0B14CA781EF38B1C00C345FC /* Radio */ = {
@@ -404,6 +445,12 @@
 		0B1C2BED1EF7827D000DC74C /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */,
+				0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */,
+				0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */,
+				0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */,
+				0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */,
+				0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -492,6 +539,8 @@
 				0B4ED7521EEFFFC500EAA123 /* Singleton.h */,
 				0B4ED74E1EEFFF7300EAA123 /* JQMusicTool.h */,
 				0B4ED74F1EEFFF7300EAA123 /* JQMusicTool.m */,
+				0BFD02291F04B0A700A54496 /* FMDBTool.h */,
+				0BFD022A1F04B0A700A54496 /* FMDBTool.m */,
 			);
 			path = WTUtil;
 			sourceTree = "<group>";
@@ -502,6 +551,15 @@
 				0B31E65B1EFA711800A6630E /* WTAlbumVC.h */,
 				0B31E65C1EFA711800A6630E /* WTAlbumVC.m */,
 				0B31E65D1EFA711800A6630E /* WTAlbumVC.xib */,
+				0B14AAFA1F0394AC00A19770 /* WTAlbumDetailVC.h */,
+				0B14AAFB1F0394AC00A19770 /* WTAlbumDetailVC.m */,
+				0B14AAFC1F0394AC00A19770 /* WTAlbumDetailVC.xib */,
+				0B14AAFF1F0394E900A19770 /* WTAlbumItem.h */,
+				0B14AB001F0394E900A19770 /* WTAlbumItem.m */,
+				0B14AB011F0394E900A19770 /* WTAlbumItem.xib */,
+				0B14AB041F03958500A19770 /* WTAlbumSimilar.h */,
+				0B14AB051F03958500A19770 /* WTAlbumSimilar.m */,
+				0B14AB061F03958500A19770 /* WTAlbumSimilar.xib */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -548,6 +606,15 @@
 		0B31E6601EFA761600A6630E /* MoreView */ = {
 			isa = PBXGroup;
 			children = (
+				0B4ED7491EEFBFC000EAA123 /* WTMoreView.h */,
+				0B4ED74A1EEFBFC000EAA123 /* WTMoreView.m */,
+				0B33A2D31EEAA665005BA3EA /* WTSearchView.h */,
+				0B33A2D41EEAA665005BA3EA /* WTSearchView.m */,
+				0B33A2BC1EE92B62005BA3EA /* SKMainScrollView.h */,
+				0B33A2BD1EE92B62005BA3EA /* SKMainScrollView.m */,
+				0CFA04591EF104E20046A773 /* fenleiCollectionCell.h */,
+				0CFA045A1EF104E20046A773 /* fenleiCollectionCell.m */,
+				0CFA045B1EF104E20046A773 /* fenleiCollectionCell.xib */,
 				0B31E6611EFA764900A6630E /* WTReportCell.h */,
 				0B31E6621EFA764900A6630E /* WTReportCell.m */,
 				0B31E6631EFA764900A6630E /* WTReportCell.xib */,
@@ -632,17 +699,19 @@
 		0B33A2BB1EE92B3E005BA3EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0B4ED7491EEFBFC000EAA123 /* WTMoreView.h */,
-				0B4ED74A1EEFBFC000EAA123 /* WTMoreView.m */,
-				0B33A2D31EEAA665005BA3EA /* WTSearchView.h */,
-				0B33A2D41EEAA665005BA3EA /* WTSearchView.m */,
-				0B33A2BC1EE92B62005BA3EA /* SKMainScrollView.h */,
-				0B33A2BD1EE92B62005BA3EA /* SKMainScrollView.m */,
-				0CFA04591EF104E20046A773 /* fenleiCollectionCell.h */,
-				0CFA045A1EF104E20046A773 /* fenleiCollectionCell.m */,
-				0CFA045B1EF104E20046A773 /* fenleiCollectionCell.xib */,
 				0BEC4D9E1EF14BE000D2BB01 /* Player */,
 				0B33A2BF1EEA4315005BA3EA /* Found */,
+				0B14CA781EF38B1C00C345FC /* Radio */,
+				0B1C2BED1EF7827D000DC74C /* Live */,
+				0B31E6601EFA761600A6630E /* MoreView */,
+				0B14AB091F039CDB00A19770 /* Album */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B33A2BF1EEA4315005BA3EA /* Found */ = {
+			isa = PBXGroup;
+			children = (
 				0B33A2C51EEA4FAA005BA3EA /* WTFoundCellView.h */,
 				0B33A2C61EEA4FAA005BA3EA /* WTFoundCellView.m */,
 				0B33A2CE1EEA76B7005BA3EA /* WTFoundContentCell.h */,
@@ -651,22 +720,6 @@
 				0B33A2C01EEA4353005BA3EA /* WTFoundListCell.h */,
 				0B33A2C11EEA4353005BA3EA /* WTFoundListCell.m */,
 				0B33A2C21EEA4353005BA3EA /* WTFoundListCell.xib */,
-				0B14CA781EF38B1C00C345FC /* Radio */,
-				0B1C2BED1EF7827D000DC74C /* Live */,
-				0B1C2BF31EF7E1CA000DC74C /* WTLiveCollVCell.h */,
-				0B1C2BF41EF7E1CA000DC74C /* WTLiveCollVCell.m */,
-				0B1C2BF51EF7E1CA000DC74C /* WTLiveCollVCell.xib */,
-				0B1C2BF81EFA1475000DC74C /* WTLiveCollVRightCell.h */,
-				0B1C2BF91EFA1475000DC74C /* WTLiveCollVRightCell.m */,
-				0B1C2BFA1EFA1475000DC74C /* WTLiveCollVRightCell.xib */,
-				0B31E6601EFA761600A6630E /* MoreView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0B33A2BF1EEA4315005BA3EA /* Found */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Found;
 			sourceTree = "<group>";
@@ -844,9 +897,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B14AAFE1F0394AC00A19770 /* WTAlbumDetailVC.xib in Resources */,
 				0B1C2BE81EF76DD3000DC74C /* pageControlDot@2x.png in Resources */,
 				0CFA04581EF0E4450046A773 /* imageNameAndURLDD.plist in Resources */,
 				0B15409B1EE6519100C6E52F /* WTForgotPsd.xib in Resources */,
+				0B14AB081F03958500A19770 /* WTAlbumSimilar.xib in Resources */,
 				0B31E6791EFD0F5000A6630E /* WTDownLoadingVC.xib in Resources */,
 				0B33A2B01EE928BC005BA3EA /* WTSortVC.xib in Resources */,
 				0B33A2BA1EE928F0005BA3EA /* WTLiveVC.xib in Resources */,
@@ -856,6 +911,7 @@
 				0CB27B561EE59448006DF52B /* WTReadyVC.xib in Resources */,
 				0B33A2B51EE928D7005BA3EA /* WTRadioVC.xib in Resources */,
 				0CFA045D1EF104E20046A773 /* fenleiCollectionCell.xib in Resources */,
+				0B14AB131F03B38F00A19770 /* WTAlbumIntroduceCell.xib in Resources */,
 				0C3C696C1EE54D810033DB1F /* Assets.xcassets in Resources */,
 				0B31E66F1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib in Resources */,
 				0B14CA761EF253B900C345FC /* WTContentsDetailVC.xib in Resources */,
@@ -865,6 +921,8 @@
 				0B1C2BE61EF76DD3000DC74C /* pageControlCurrentDot@2x.png in Resources */,
 				0B33A2AB1EE9289F005BA3EA /* WTFoundVC.xib in Resources */,
 				0B1C2BE71EF76DD3000DC74C /* pageControlCurrentDot@3x.png in Resources */,
+				0B14AB031F0394E900A19770 /* WTAlbumItem.xib in Resources */,
+				0B14AB0E1F039E5E00A19770 /* WTAlbumContentCell.xib in Resources */,
 				0B31E6741EFD0EC400A6630E /* WTDownLoadAudioVC.xib in Resources */,
 				0B33A2CD1EEA7069005BA3EA /* WTFoundDetailVC.xib in Resources */,
 				0C091FCE1EE93CAE00878EF5 /* WTPlayerVC.xib in Resources */,
@@ -958,10 +1016,13 @@
 				0B4ED7501EEFFF7300EAA123 /* JQMusicTool.m in Sources */,
 				0B14CA7C1EF38B4E00C345FC /* WTRadioHeaCell.m in Sources */,
 				0B31E6731EFD0EC400A6630E /* WTDownLoadAudioVC.m in Sources */,
+				0B14AB021F0394E900A19770 /* WTAlbumItem.m in Sources */,
 				0B1C2BEB1EF76DD3000DC74C /* SDCycleScrollView.m in Sources */,
 				0B1C2BE41EF76DD3000DC74C /* TADotView.m in Sources */,
 				0B1C2BEA1EF76DD3000DC74C /* SDCollectionViewCell.m in Sources */,
+				0BFD022B1F04B0A700A54496 /* FMDBTool.m in Sources */,
 				0B1C2BE21EF76DD3000DC74C /* TAAbstractDotView.m in Sources */,
+				0B14AB121F03B38F00A19770 /* WTAlbumIntroduceCell.m in Sources */,
 				0B1C2BE31EF76DD3000DC74C /* TAAnimatedDotView.m in Sources */,
 				0B1F35C61ED2931C007D26D9 /* AppDelegate.m in Sources */,
 				0B1C2BEC1EF76DD3000DC74C /* UIView+SDExtension.m in Sources */,
@@ -981,6 +1042,7 @@
 				0B33A2D11EEA76B7005BA3EA /* WTFoundContentCell.m in Sources */,
 				0B33A29A1EE9256C005BA3EA /* WTContentsVC.m in Sources */,
 				0B31E6591EFA710400A6630E /* WTAnchorVC.m in Sources */,
+				0B14AB0D1F039E5E00A19770 /* WTAlbumContentCell.m in Sources */,
 				0B31E65E1EFA711800A6630E /* WTAlbumVC.m in Sources */,
 				0B33A2C71EEA4FAA005BA3EA /* WTFoundCellView.m in Sources */,
 				0B33A2D51EEAA665005BA3EA /* WTSearchView.m in Sources */,
@@ -988,7 +1050,9 @@
 				0B4ED7471EEFB4C100EAA123 /* RuntimeKit.m in Sources */,
 				0B33A2BE1EE92B62005BA3EA /* SKMainScrollView.m in Sources */,
 				0B14CA701EF22AB800C345FC /* CALayer+Layout.m in Sources */,
+				0B14AB071F03958500A19770 /* WTAlbumSimilar.m in Sources */,
 				0B4ED74B1EEFBFC000EAA123 /* WTMoreView.m in Sources */,
+				0B14AAFD1F0394AC00A19770 /* WTAlbumDetailVC.m in Sources */,
 				0CB27B551EE59448006DF52B /* WTReadyVC.m in Sources */,
 				0BEC4DA61EF14BEB00D2BB01 /* SnailSheetView.m in Sources */,
 				0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */,

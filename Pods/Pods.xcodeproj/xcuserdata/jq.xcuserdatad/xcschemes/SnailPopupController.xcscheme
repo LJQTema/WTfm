@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '464E1E293F44D7DC8303E4E65EED3E4D'
+               BlueprintIdentifier = 'EA2A595FBA0A887CB28CCC628F4AF778'
                BlueprintName = 'SnailPopupController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSnailPopupController.a'>

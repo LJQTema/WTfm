@@ -67,7 +67,7 @@
         buttonMune.tag = 1221 + i;
         [buttonMune setTitle:_munuNameArray[i] forState:UIControlStateNormal];
         [buttonMune setTitleColor:[UIColor blackColor] forState:0];
-        buttonMune.titleLabel.font = [UIFont systemFontOfSize:16];
+        buttonMune.titleLabel.font = [UIFont boldSystemFontOfSize:16];
         [_ContentView addSubview:buttonMune];
         
         

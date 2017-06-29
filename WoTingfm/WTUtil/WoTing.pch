@@ -67,7 +67,7 @@
 //#import "E_HUDView.h"
 //#import "AutomatePlist.h"
 ////#import "MediaManager.h"
-//#import "FMDBTool.h"
+#import "FMDBTool.h"
 //#import "HMSegmentedControl.h"  //可滑动的切换条
 //#import "YZDisplayViewController.h"
 //#import "MCDownloadManager.h"   //新下载器

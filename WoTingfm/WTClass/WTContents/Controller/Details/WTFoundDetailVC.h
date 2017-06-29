@@ -13,6 +13,6 @@
 /**
  详情页样式   0:每日听单      1:编辑精选
  */
-@property (nonatomic, assign) NSInteger *DetailType;
+@property (nonatomic, assign) NSInteger DetailType;
 
 @end
