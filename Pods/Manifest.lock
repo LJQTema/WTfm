@@ -30,6 +30,24 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SnailPopupController (2.0.6)
+  - UMengUShare/Core (6.4.4):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.4)
+  - UMengUShare/Social/QQ (6.4.4):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedQQ (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.4.4):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/WeChat (6.4.4):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -42,6 +60,9 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - SDWebImage (~> 4.0.0)
   - SnailPopupController (~> 2.0.5)
+  - UMengUShare/Social/QQ
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
   - YYModel
 
 SPEC CHECKSUMS:
@@ -56,8 +77,9 @@ SPEC CHECKSUMS:
   openssl-ios-bitcode: c833701a4488bd43de0051db41cfa75f6fef8109
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnailPopupController: 9076caaca21d997c46b61d49f438bfc7ac39d917
+  UMengUShare: cd54ae52958426b79aa9193a7b02058d6a6d9aa0
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d16f54449b4a5e25baa0621a7b8f6747ddee2efc
+PODFILE CHECKSUM: ecd53a62d565f35d56ed175e282ac8d433cdd77f
 
 COCOAPODS: 1.2.0

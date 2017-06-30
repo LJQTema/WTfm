@@ -259,9 +259,17 @@
 #pragma mark - set方法填充更新页面播放器逻辑
 -(void)setPlayingMusic:(WTModel *)playingMusic{
     
+    //时间
+    NSString *ContentTimes = playingMusic.ContentTimes;
+    NSTimeInterval time=[ContentTimes doubleValue];
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time/1000.0];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"mm:ss"];
+    NSString *currentStr = [dateFormatter stringFromDate: detaildate];
+    
  
     self.NowLab.text = @"00:00";
-    self.TotalLab.text = @"00:00";
+    self.TotalLab.text = currentStr;
     self.wtSlider.value = 0;
     [self.wtSlider addTarget:self action:@selector(touchUp:) forControlEvents:UIControlEventTouchUpInside];
     [self.wtSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
@@ -292,15 +300,15 @@
     NSNumber* reasonNumber = notification.userInfo[BDCloudMediaPlayerPlaybackDidFinishReasonUserInfoKey];
     BDCloudMediaPlayerFinishReason reason = (BDCloudMediaPlayerFinishReason)reasonNumber.integerValue;
     switch (reason) {
-        case BDCloudMediaPlayerFinishReasonEnd:
+        case BDCloudMediaPlayerFinishReasonEnd:         //正常结束
             NSLog(@"player finish with reason: play to end time");
             
             [self Next:nil];
             break;
-        case BDCloudMediaPlayerFinishReasonError:
+        case BDCloudMediaPlayerFinishReasonError:       //出现错误
             NSLog(@"player finished with reason: error");
             break;
-        case BDCloudMediaPlayerFinishReasonUser:
+        case BDCloudMediaPlayerFinishReasonUser:        //关于用户, 暂时用不到
             NSLog(@"player finished with reason: stopped by user");
             break;
         default:

@@ -13,6 +13,9 @@ pod 'YYModel'
 pod 'SnailPopupController', '~> 2.0.5'
 pod 'AMapLocation'
 pod 'FMDB'
+pod 'UMengUShare/Social/WeChat'
+pod 'UMengUShare/Social/QQ'
+pod 'UMengUShare/Social/Sina'
 
 end
 
