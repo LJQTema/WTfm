@@ -211,9 +211,35 @@
     
     
 }
+
+//登录请求
 - (IBAction)loginBtnClick:(id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"tabbar" object:nil];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:_phoneTextFileName.text,@"phone", _passwordTextFileName.text,@"password",  nil];
+    
+    NSString *login_Str = WoTing_Login;
+    
+    [ZCBNetworking postWithUrl:login_Str refreshCache:YES params:parameters success:^(id response) {
+        
+        NSDictionary *resultDict = (NSDictionary *)response;
+        
+        NSInteger  ReturnType = [[resultDict objectForKey:@"ret"] integerValue];
+        if (ReturnType == 0) {
+            
+            //登录成功后, 切换控制器
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"tabbar" object:nil];
+        }else{
+            
+            [WKProgressHUD popMessage:@"账号或密码错误" inView:nil duration:0.5 animated:YES];
+        }
+        
+    } fail:^(NSError *error) {
+        
+        NSLog(@"%@", error);
+        
+    }];
+    
+
     
 }
 

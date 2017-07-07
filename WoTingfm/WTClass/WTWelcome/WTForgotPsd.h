@@ -23,7 +23,7 @@
 - (IBAction)SureBtnClick:(id)sender;
 - (IBAction)getYanZhengMa:(id)sender;
 
-- (IBAction)PsdNumChangeClick:(id)sender;
+//- (IBAction)PsdNumChangeClick:(id)sender;
 - (IBAction)backBtnClick:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *ContentLab;

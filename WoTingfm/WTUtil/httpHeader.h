@@ -15,18 +15,12 @@
 
 /** 外网接口地址 */
 //#define SKInterFaceServer @"http://123.56.254.75:808/wt/"
-#define SKInterFaceServer @"http://182.92.175.134:808/wt/"
+#define SKInterFaceServer @"http://woting.suitingwei.com/"
 
 #pragma mark 各类接口
 
-/** 判断登录状态(每次启动app必须调用的接口) */
-#define WoTing_EntryApp         (SKInterFaceServer@"common/entryApp.do")
-
-/** 保存头像图片 */
-#define WoTing_Upload4App         (SKInterFaceServer@"common/upload4App.do")
-
 /** 登录 */
-#define WoTing_Login      (SKInterFaceServer@"passport/user/mlogin.do")
+#define WoTing_Login      (SKInterFaceServer@"api/accounts/login")
 
 /** 三方登录 */
 #define WoTing_SanLogin     (SKInterFaceServer@"passport/user/afterThirdAuth.do")
@@ -35,22 +29,13 @@
 #define WoTing_mlogout      (SKInterFaceServer@"passport/user/mlogout.do")
 
 /** 注册 */
-#define WoTing_register      (SKInterFaceServer@"passport/user/register.do")
+#define WoTing_register      (SKInterFaceServer@"api/accounts/register")
 
-/** 获取第一次验证码 */
-#define WoTing_phone        (SKInterFaceServer@"passport/user/registerByPhoneNum.do")
+/** 获取验证码 */
+#define WoTing_yanZM        (SKInterFaceServer@"api/accounts/verify-codes")
 
-/** 再次获取验证码 */
-#define WoTing_yanZM        (SKInterFaceServer@"passport/user/reSendPhoneCheckCode.do")
-
-/** 验证验证码  绑定手机号 */
-#define WoTing_YanZhengbangDing     (SKInterFaceServer@"passport/user/checkPhoneCheckCode.do")
-
-/** 通过手机号找回密码 */
-#define WoTing_RetrieveByPhone       (SKInterFaceServer@"passport/user/retrieveByPhoneNum.do")
-
-/** 修改密码 */
-#define WoTing_ChangePwd    (SKInterFaceServer@"passport/user/updatePwd.do")
+/** 忘记密码重置*/
+#define WoTing_ChangePwd    (SKInterFaceServer@"api/accounts/reset-passwords")
 
 /** 修改用户信息 */
 #define WoTing_UserInfo     (SKInterFaceServer@"passport/user/updateUserInfo.do")

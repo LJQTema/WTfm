@@ -8,6 +8,8 @@
 
 #import "WTForgotPsd.h"     //注册or忘记密码
 
+#import "WTForRegistNextVC.h"   //下一步
+
 #import "RuntimeKit.h"
 #import "UIButton+Timer.h"
 
@@ -22,25 +24,21 @@
     
     [self creatContentView];    //搭建UI样式
     [self setAnyTextFiled];     //设置各种输入框
-    _YanZMBtn.time = @"5";     //60秒计时
+    _YanZMBtn.time = @"60";     //60秒计时
     _YanZMBtn.layer.masksToBounds = YES;
     _YanZMBtn.layer.cornerRadius = 15;
     
-//    YanZMBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    button.frame = CGRectMake(40, 100, KScreenWidth - 80, 45);
-//    button.layer.masksToBounds = YES;
-//    button.layer.cornerRadius = 8;
-//    
+   
     if (_Type == 0) {   //注册
         
-        _ContentLab.text = @"注册";
-        [_SureBtn setTitle:@"注册" forState:UIControlStateNormal];
-        _PsdNumTF.placeholder = @"请输入密码(6-20位)";
+        _ContentLab.text = @"手机号注册";
+        [_SureBtn setTitle:@"下一步" forState:UIControlStateNormal];
+
     }else{  //忘记密码
         
         _ContentLab.text = @"找回密码";
-        [_SureBtn setTitle:@"确定" forState:UIControlStateNormal];
-        _PsdNumTF.placeholder = @"请输入新密码(6-20位)";
+        [_SureBtn setTitle:@"下一步" forState:UIControlStateNormal];
+
     }
 }
 
@@ -53,10 +51,10 @@
     
     self.phoneNumTF.delegate = self;
     self.YanZhengMaTF.delegate = self;
-    self.PsdNumTF.delegate = self;
-    
-    self.PsdNumTF.returnKeyType = UIReturnKeyGo;
-    self.PsdNumTF.secureTextEntry = YES;    //加密
+//    self.PsdNumTF.delegate = self;
+//    
+//    self.PsdNumTF.returnKeyType = UIReturnKeyGo;
+//    self.PsdNumTF.secureTextEntry = YES;    //加密
     
 }
 
@@ -72,10 +70,10 @@
     self.yanZhengMaIamgeView.layer.borderWidth = 1;
     self.yanZhengMaIamgeView.layer.borderColor = HYC__COLOR_HEX(0xEFEFEF).CGColor;
     
-    self.PsdNumImageView.layer.cornerRadius = self.PsdNumImageView.frame.size.height/2.000;
-    self.PsdNumImageView.layer.masksToBounds = YES;
-    self.PsdNumImageView.layer.borderWidth = 1;
-    self.PsdNumImageView.layer.borderColor = HYC__COLOR_HEX(0xEFEFEF).CGColor;
+//    self.PsdNumImageView.layer.cornerRadius = self.PsdNumImageView.frame.size.height/2.000;
+//    self.PsdNumImageView.layer.masksToBounds = YES;
+//    self.PsdNumImageView.layer.borderWidth = 1;
+//    self.PsdNumImageView.layer.borderColor = HYC__COLOR_HEX(0xEFEFEF).CGColor;
     
     self.SureBtn.layer.cornerRadius = self.SureBtn.frame.size.height/2.000;
     self.SureBtn.layer.masksToBounds = YES;
@@ -89,8 +87,6 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChange:)           name:UITextFieldTextDidChangeNotification object:_phoneNumTF];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChange:)           name:UITextFieldTextDidChangeNotification object:_YanZhengMaTF];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textFieldDidChange:)           name:UITextFieldTextDidChangeNotification object:_PsdNumTF];
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     
@@ -98,17 +94,13 @@
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UITextFieldTextDidChangeNotification object:_YanZhengMaTF];
     
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:UITextFieldTextDidChangeNotification object:_PsdNumTF];
-    
 }
 - (void)textFieldDidChange:(NSNotification *)note
 {
     
     if (_PsdNumTF.text.length >= 6
         &&
-        _phoneNumTF.text.length != 0
-        &&
-        _YanZhengMaTF.text.length == 6
+        _YanZhengMaTF.text.length == 4
         ) {
         
         _SureBtn.backgroundColor = HYC__COLOR_HEX(0xFD8548);
@@ -141,33 +133,81 @@
 #pragma mark - 确定按钮点击事件
 - (IBAction)SureBtnClick:(id)sender {
     
+    if (_Type == 0) {   //注册
+        
+        WTForRegistNextVC *wtNextVC = [[WTForRegistNextVC alloc] init];
+        wtNextVC.Type = 0;
+        wtNextVC.code = _YanZhengMaTF.text;
+        wtNextVC.phoneText = _phoneNumTF.text;
+        [self.navigationController pushViewController:wtNextVC animated:YES];
+        
+    }else{  //忘记密码
+        
+        WTForRegistNextVC *wtNextVC = [[WTForRegistNextVC alloc] init];
+        wtNextVC.Type = 1;
+        wtNextVC.code = _YanZhengMaTF.text;
+        wtNextVC.phoneText = _phoneNumTF.text;
+        [self.navigationController pushViewController:wtNextVC animated:YES];
+        
+    }
+    
+    
 }
 
 #pragma mark - 获取验证码
 - (IBAction)getYanZhengMa:(id)sender {
     
-    [_YanZMBtn startTime];
-    
-}
-
-#pragma mark - 密码的显示与隐藏
-- (IBAction)PsdNumChangeClick:(id)sender {
-    
-    UIButton *btn = (UIButton *)sender;
-    
-    btn.selected ^= YES;
-    
-    if (btn.selected) {
+    if (_phoneNumTF.text.length == 11) {
         
-        _PsdNumTF.secureTextEntry = NO;
+        [_YanZMBtn startTime];//倒计时
         
+        NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:_phoneNumTF.text,@"phone" , nil];
+        
+        NSString *login_Str = WoTing_yanZM;
+        
+        [ZCBNetworking postWithUrl:login_Str refreshCache:YES params:parameters success:^(id response) {
+            
+            NSDictionary *resultDict = (NSDictionary *)response;
+            
+            NSString  *ReturnType = [resultDict objectForKey:@"msg"];
+            if ([ReturnType isEqualToString:@"success"]) {
+                
+                [WKProgressHUD popMessage:@"验证码已发送" inView:nil duration:0.5 animated:YES];
+ 
+            }
+            
+        } fail:^(NSError *error) {
+            
+            NSLog(@"%@", error);
+            
+        }];
     }else{
         
-        _PsdNumTF.secureTextEntry = YES;
-        
+        [WKProgressHUD popMessage:@"请输入正确手机号" inView:nil duration:0.5 animated:YES];
     }
-
+    
+    
+    
 }
+
+//#pragma mark - 密码的显示与隐藏
+//- (IBAction)PsdNumChangeClick:(id)sender {
+//    
+//    UIButton *btn = (UIButton *)sender;
+//    
+//    btn.selected ^= YES;
+//    
+//    if (btn.selected) {
+//        
+//        _PsdNumTF.secureTextEntry = NO;
+//        
+//    }else{
+//        
+//        _PsdNumTF.secureTextEntry = YES;
+//        
+//    }
+//
+//}
 
 - (IBAction)backBtnClick:(id)sender {
     

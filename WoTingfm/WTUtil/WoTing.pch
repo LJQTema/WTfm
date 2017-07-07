@@ -62,8 +62,8 @@
 #import "UIView+Layout.h"
 //#import "UIView+SKFrame.h"
 //#import "UIColor+SKHexColor.h"      //16进制颜色转换
-//#import "NSString+NullOfString.h"
-//#import "WKProgressHUD.h"
+#import "NSString+NullOfString.h"
+#import "WKProgressHUD.h"
 //#import "E_HUDView.h"
 //#import "AutomatePlist.h"
 ////#import "MediaManager.h"
@@ -84,6 +84,7 @@
 //#import "BoFangTabbarView.h"
 #import "ZCBNetworking.h"
 #import "SDCycleScrollView.h"
+#import "CALayer+Layout.h"
 //#import "WTPopTool.h"
 
 

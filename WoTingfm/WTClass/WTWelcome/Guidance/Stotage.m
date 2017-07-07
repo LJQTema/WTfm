@@ -33,4 +33,15 @@
     [userDef setBool:value forKey:LOGIN_KEY];
     return [userDef synchronize];
 }
+
+//+ (void)setToken:(NSString *)value{
+//    
+//    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+//    [userDef setValue:value forKey:LOGIN_KEY];
+//    [userDef synchronize];
+//}
+
+
+
+
 @end
