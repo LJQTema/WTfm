@@ -42,6 +42,13 @@
     }
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [_PsdNumTF endEditing:YES];
+    [_phoneNumTF endEditing:YES];
+    [_YanZhengMaTF endEditing:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -98,7 +105,7 @@
 - (void)textFieldDidChange:(NSNotification *)note
 {
     
-    if (_PsdNumTF.text.length >= 6
+    if (_phoneNumTF.text.length >= 6
         &&
         _YanZhengMaTF.text.length == 4
         ) {
@@ -178,8 +185,12 @@
             
         } fail:^(NSError *error) {
             
-            NSLog(@"%@", error);
-            
+            NSLog(@"%@", error.userInfo);
+            [_YanZMBtn stopTime];
+            [WKProgressHUD popMessage:
+             error.userInfo[@"NSLocalizedDescription"] 
+                               
+                               inView:nil duration:1 animated:YES];
         }];
     }else{
         

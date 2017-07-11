@@ -16,7 +16,7 @@
 
 #import "SKMainScrollView.h"
 #import "WTSearchView.h"    //语音View
-
+#import "MainViewController.h"
 
 #define barLineImageViewWigth 50
 @interface WTContentsVC ()<UIScrollViewDelegate>{
@@ -208,6 +208,7 @@
                      
                      );
                     
+
 //                    [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
                     
                 }];
@@ -215,6 +216,12 @@
                 contentScrollView.contentOffset = CGPointMake(self.view.bounds.size.width * (i - 1221), 0);
                 
                 
+
+                     
+
+                
+                [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
+
             }
         }
 
@@ -276,7 +283,38 @@
 #pragma mark - 返回首页
 - (IBAction)BackBtnClick:(id)sender {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    MainViewController * tabbar = [MainViewController sharedManager];
+    
+    UIButton *btn = (UIButton *)sender;
+    btn.selected^= YES;
+    if (btn.selected) {
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            tabbar.tabBar.frame = CGRectMake(0, HHHHH, WWWWW, 49);  
+            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
+            //        transitionView.height = 460-40;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }else{
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            tabbar.tabBar.frame = CGRectMake(0, HHHHH - 49, WWWWW, 49);  
+            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
+            //        transitionView.height = 460-40;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    
+    
+    
 }
 
 #pragma mark - 点击语音搜索
