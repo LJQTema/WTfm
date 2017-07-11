@@ -54,6 +54,10 @@
 		0B1F35D11ED2931C007D26D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1F35CF1ED2931C007D26D9 /* LaunchScreen.storyboard */; };
 		0B1F35DC1ED2931C007D26D9 /* WoTingfmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35DB1ED2931C007D26D9 /* WoTingfmTests.m */; };
 		0B1F35E71ED2931C007D26D9 /* WoTingfmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F35E61ED2931C007D26D9 /* WoTingfmUITests.m */; };
+		0B2757D11F1481340051B627 /* WTMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757CF1F1481340051B627 /* WTMainVC.m */; };
+		0B2757D21F1481340051B627 /* WTMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757D01F1481340051B627 /* WTMainVC.xib */; };
+		0B2757D61F1483150051B627 /* WTMainHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757D41F1483150051B627 /* WTMainHeaderCell.m */; };
+		0B2757D71F1483150051B627 /* WTMainHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */; };
 		0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E64D1EFA70BE00A6630E /* WTReportVC.m */; };
 		0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */; };
 		0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */; };
@@ -213,6 +217,12 @@
 		0B1F35E21ED2931C007D26D9 /* WoTingfmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoTingfmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F35E61ED2931C007D26D9 /* WoTingfmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoTingfmUITests.m; sourceTree = "<group>"; };
 		0B1F35E81ED2931C007D26D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2757CE1F1481340051B627 /* WTMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainVC.h; sourceTree = "<group>"; };
+		0B2757CF1F1481340051B627 /* WTMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainVC.m; sourceTree = "<group>"; };
+		0B2757D01F1481340051B627 /* WTMainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainVC.xib; sourceTree = "<group>"; };
+		0B2757D31F1483150051B627 /* WTMainHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainHeaderCell.h; sourceTree = "<group>"; };
+		0B2757D41F1483150051B627 /* WTMainHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainHeaderCell.m; sourceTree = "<group>"; };
+		0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainHeaderCell.xib; sourceTree = "<group>"; };
 		0B28CFF41EE19794001E16C7 /* WoTing.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoTing.pch; sourceTree = "<group>"; };
 		0B31E64C1EFA70BE00A6630E /* WTReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportVC.h; sourceTree = "<group>"; };
 		0B31E64D1EFA70BE00A6630E /* WTReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportVC.m; sourceTree = "<group>"; };
@@ -359,6 +369,7 @@
 			children = (
 				0B0BC18E1EE2BF6C00C26D08 /* WTWelcome */,
 				0B1540691EE4F98300C6E52F /* WTContents */,
+				0B2757CA1F1480AE0051B627 /* WTUsers */,
 			);
 			path = WTClass;
 			sourceTree = "<group>";
@@ -579,6 +590,43 @@
 				0BFD022A1F04B0A700A54496 /* FMDBTool.m */,
 			);
 			path = WTUtil;
+			sourceTree = "<group>";
+		};
+		0B2757CA1F1480AE0051B627 /* WTUsers */ = {
+			isa = PBXGroup;
+			children = (
+				0B2757CD1F1481110051B627 /* Model */,
+				0B2757CC1F1481040051B627 /* View */,
+				0B2757CB1F1480F90051B627 /* Controller */,
+			);
+			path = WTUsers;
+			sourceTree = "<group>";
+		};
+		0B2757CB1F1480F90051B627 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B2757CE1F1481340051B627 /* WTMainVC.h */,
+				0B2757CF1F1481340051B627 /* WTMainVC.m */,
+				0B2757D01F1481340051B627 /* WTMainVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0B2757CC1F1481040051B627 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B2757D31F1483150051B627 /* WTMainHeaderCell.h */,
+				0B2757D41F1483150051B627 /* WTMainHeaderCell.m */,
+				0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B2757CD1F1481110051B627 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0B31E6481EFA700000A6630E /* Album */ = {
@@ -968,9 +1016,11 @@
 				0B33A2C41EEA4353005BA3EA /* WTFoundListCell.xib in Resources */,
 				0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */,
 				0B1C2BFC1EFA1475000DC74C /* WTLiveCollVRightCell.xib in Resources */,
+				0B2757D71F1483150051B627 /* WTMainHeaderCell.xib in Resources */,
 				0B14CA7D1EF38B4E00C345FC /* WTRadioHeaCell.xib in Resources */,
 				0B1C2BF71EF7E1CA000DC74C /* WTLiveCollVCell.xib in Resources */,
 				0B067BE31F0B6BB200AE05C1 /* WTForRegistNextVC.xib in Resources */,
+				0B2757D21F1481340051B627 /* WTMainVC.xib in Resources */,
 				0B31E66A1EFB6A4200A6630E /* WTReportTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,6 +1104,7 @@
 				0B31E6731EFD0EC400A6630E /* WTDownLoadAudioVC.m in Sources */,
 				0B14AB021F0394E900A19770 /* WTAlbumItem.m in Sources */,
 				0B1C2BEB1EF76DD3000DC74C /* SDCycleScrollView.m in Sources */,
+				0B2757D61F1483150051B627 /* WTMainHeaderCell.m in Sources */,
 				0B1C2BE41EF76DD3000DC74C /* TADotView.m in Sources */,
 				0B1C2BEA1EF76DD3000DC74C /* SDCollectionViewCell.m in Sources */,
 				0B067BE61F0B7B6700AE05C1 /* WTSanLoginView.m in Sources */,
@@ -1105,6 +1156,7 @@
 				0B33A2B91EE928F0005BA3EA /* WTLiveVC.m in Sources */,
 				0B33A2AA1EE9289F005BA3EA /* WTFoundVC.m in Sources */,
 				0BEC4D9D1EF12ADD00D2BB01 /* WTModel.m in Sources */,
+				0B2757D11F1481340051B627 /* WTMainVC.m in Sources */,
 				0CAA0D1F1EE7EBFA00B7491F /* RollView.m in Sources */,
 				0B33A2CC1EEA7069005BA3EA /* WTFoundDetailVC.m in Sources */,
 				0B33A2C31EEA4353005BA3EA /* WTFoundListCell.m in Sources */,
