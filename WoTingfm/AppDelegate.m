@@ -50,11 +50,17 @@
 #import "WTReadyVC.h"           //登录页
 #import "WTContentsVC.h"        //首页
 #import "WTPlayerVC.h"
-
+#import "MainViewController.h"
 //#import <BaiduMobileAPM/BaiduMobileAPM.h>
 #import <BDCloudMediaPlayer/BDCloudMediaPlayer.h>
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    
+    MainViewController *_mainVC;
+    WTContentsVC *_firstVC;
+    UINavigationController *_firstNavC;
+    
+}
 
 @end
 
@@ -150,7 +156,20 @@
 #pragma mark --创建根视图控制器
 
 -(UIViewController *)createRootController
-{
+{  
+   
+    _firstVC=[[WTContentsVC alloc]init];
+    _firstNavC=[[UINavigationController alloc]initWithRootViewController:_firstVC];
+
+    _mainVC=[MainViewController sharedManager];
+
+    _mainVC.viewControllers=@[_firstNavC];
+
+    return
+    
+    _mainVC
+    ;
+    
     
     return [[UINavigationController alloc]initWithRootViewController:[[WTContentsVC alloc]init]];
     

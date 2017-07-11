@@ -61,11 +61,16 @@ static NSInteger _second;
     
 }
 
-/*
+
 - (void)stopTime {
+    
+    //[self timerMethod];
     [_timer setFireDate:[NSDate distantFuture]];
+    [self setTitle:@"重新获取验证码" forState:UIControlStateNormal];
+    [self setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:UIControlStateNormal];
     self.enabled = YES;
+    self.backgroundColor = self.color;
 }
- */
+ 
 
 @end

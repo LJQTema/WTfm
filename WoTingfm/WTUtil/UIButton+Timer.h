@@ -14,6 +14,6 @@
 @property (nonatomic, retain) UIColor *color;
 
 - (void)startTime;
-//- (void)stopTime;
+- (void)stopTime;
 
 @end
