@@ -1,20 +1,18 @@
 //
-//  WTMainHeaderCell.m
+//  WTMainCell.m
 //  WoTingfm
 //
 //  Created by jq on 2017/7/11.
 //  Copyright © 2017年 jq. All rights reserved.
 //
 
-#import "WTMainHeaderCell.h"
+#import "WTMainCell.h"
 
-@implementation WTMainHeaderCell
+@implementation WTMainCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    _headerImgV.layer.masksToBounds = YES;
-    _headerImgV.layer.cornerRadius = 30;
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

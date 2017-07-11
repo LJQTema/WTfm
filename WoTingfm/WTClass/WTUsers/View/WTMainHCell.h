@@ -1,5 +1,5 @@
 //
-//  WTMainHeaderCell.h
+//  WTMainHCell.h
 //  WoTingfm
 //
 //  Created by jq on 2017/7/11.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WTMainHeaderCell : UITableViewCell
+@interface WTMainHCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *headerImgV;
+@property (weak, nonatomic) IBOutlet UIImageView *ContentImgV;
 
 @property (weak, nonatomic) IBOutlet UILabel *ContentLab;
-@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+
 
 @end

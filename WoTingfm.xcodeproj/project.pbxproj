@@ -58,6 +58,12 @@
 		0B2757D21F1481340051B627 /* WTMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757D01F1481340051B627 /* WTMainVC.xib */; };
 		0B2757D61F1483150051B627 /* WTMainHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757D41F1483150051B627 /* WTMainHeaderCell.m */; };
 		0B2757D71F1483150051B627 /* WTMainHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */; };
+		0B2757DB1F14ADAE0051B627 /* WTMainSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757D91F14ADAE0051B627 /* WTMainSecondCell.m */; };
+		0B2757DC1F14ADAE0051B627 /* WTMainSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757DA1F14ADAE0051B627 /* WTMainSecondCell.xib */; };
+		0B2757E01F14B92D0051B627 /* WTMainHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757DE1F14B92D0051B627 /* WTMainHCell.m */; };
+		0B2757E11F14B92D0051B627 /* WTMainHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757DF1F14B92D0051B627 /* WTMainHCell.xib */; };
+		0B2757E51F14B93A0051B627 /* WTMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757E31F14B93A0051B627 /* WTMainCell.m */; };
+		0B2757E61F14B93A0051B627 /* WTMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757E41F14B93A0051B627 /* WTMainCell.xib */; };
 		0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E64D1EFA70BE00A6630E /* WTReportVC.m */; };
 		0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */; };
 		0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */; };
@@ -223,6 +229,15 @@
 		0B2757D31F1483150051B627 /* WTMainHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainHeaderCell.h; sourceTree = "<group>"; };
 		0B2757D41F1483150051B627 /* WTMainHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainHeaderCell.m; sourceTree = "<group>"; };
 		0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainHeaderCell.xib; sourceTree = "<group>"; };
+		0B2757D81F14ADAE0051B627 /* WTMainSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainSecondCell.h; sourceTree = "<group>"; };
+		0B2757D91F14ADAE0051B627 /* WTMainSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainSecondCell.m; sourceTree = "<group>"; };
+		0B2757DA1F14ADAE0051B627 /* WTMainSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainSecondCell.xib; sourceTree = "<group>"; };
+		0B2757DD1F14B92D0051B627 /* WTMainHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainHCell.h; sourceTree = "<group>"; };
+		0B2757DE1F14B92D0051B627 /* WTMainHCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainHCell.m; sourceTree = "<group>"; };
+		0B2757DF1F14B92D0051B627 /* WTMainHCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainHCell.xib; sourceTree = "<group>"; };
+		0B2757E21F14B93A0051B627 /* WTMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainCell.h; sourceTree = "<group>"; };
+		0B2757E31F14B93A0051B627 /* WTMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainCell.m; sourceTree = "<group>"; };
+		0B2757E41F14B93A0051B627 /* WTMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainCell.xib; sourceTree = "<group>"; };
 		0B28CFF41EE19794001E16C7 /* WoTing.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoTing.pch; sourceTree = "<group>"; };
 		0B31E64C1EFA70BE00A6630E /* WTReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportVC.h; sourceTree = "<group>"; };
 		0B31E64D1EFA70BE00A6630E /* WTReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportVC.m; sourceTree = "<group>"; };
@@ -618,6 +633,15 @@
 				0B2757D31F1483150051B627 /* WTMainHeaderCell.h */,
 				0B2757D41F1483150051B627 /* WTMainHeaderCell.m */,
 				0B2757D51F1483150051B627 /* WTMainHeaderCell.xib */,
+				0B2757D81F14ADAE0051B627 /* WTMainSecondCell.h */,
+				0B2757D91F14ADAE0051B627 /* WTMainSecondCell.m */,
+				0B2757DA1F14ADAE0051B627 /* WTMainSecondCell.xib */,
+				0B2757DD1F14B92D0051B627 /* WTMainHCell.h */,
+				0B2757DE1F14B92D0051B627 /* WTMainHCell.m */,
+				0B2757DF1F14B92D0051B627 /* WTMainHCell.xib */,
+				0B2757E21F14B93A0051B627 /* WTMainCell.h */,
+				0B2757E31F14B93A0051B627 /* WTMainCell.m */,
+				0B2757E41F14B93A0051B627 /* WTMainCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1000,8 +1024,10 @@
 				0B31E66F1EFD0C3900A6630E /* WTDownLoadAlbumVC.xib in Resources */,
 				0B14CA761EF253B900C345FC /* WTContentsDetailVC.xib in Resources */,
 				0B31E6551EFA70EE00A6630E /* WTDownLoadVC.xib in Resources */,
+				0B2757E61F14B93A0051B627 /* WTMainCell.xib in Resources */,
 				0B1540881EE5434400C6E52F /* WTLoginVC.xib in Resources */,
 				0B31E65F1EFA711800A6630E /* WTAlbumVC.xib in Resources */,
+				0B2757E11F14B92D0051B627 /* WTMainHCell.xib in Resources */,
 				0B1C2BE61EF76DD3000DC74C /* pageControlCurrentDot@2x.png in Resources */,
 				0B33A2AB1EE9289F005BA3EA /* WTFoundVC.xib in Resources */,
 				0B1C2BE71EF76DD3000DC74C /* pageControlCurrentDot@3x.png in Resources */,
@@ -1020,6 +1046,7 @@
 				0B14CA7D1EF38B4E00C345FC /* WTRadioHeaCell.xib in Resources */,
 				0B1C2BF71EF7E1CA000DC74C /* WTLiveCollVCell.xib in Resources */,
 				0B067BE31F0B6BB200AE05C1 /* WTForRegistNextVC.xib in Resources */,
+				0B2757DC1F14ADAE0051B627 /* WTMainSecondCell.xib in Resources */,
 				0B2757D21F1481340051B627 /* WTMainVC.xib in Resources */,
 				0B31E66A1EFB6A4200A6630E /* WTReportTextCell.xib in Resources */,
 			);
@@ -1094,7 +1121,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2757E01F14B92D0051B627 /* WTMainHCell.m in Sources */,
 				0B4ED7481EEFB4C100EAA123 /* UIButton+Timer.m in Sources */,
+				0B2757E51F14B93A0051B627 /* WTMainCell.m in Sources */,
 				0B14CA751EF253B900C345FC /* WTContentsDetailVC.m in Sources */,
 				0C091FC91EE93ADA00878EF5 /* WTPlayerVC.m in Sources */,
 				0B31E6641EFA764900A6630E /* WTReportCell.m in Sources */,
@@ -1138,6 +1167,7 @@
 				0B33A2C71EEA4FAA005BA3EA /* WTFoundCellView.m in Sources */,
 				0B33A2D51EEAA665005BA3EA /* WTSearchView.m in Sources */,
 				0B067BDE1F0B4D1000AE05C1 /* NSString+NullOfString.m in Sources */,
+				0B2757DB1F14ADAE0051B627 /* WTMainSecondCell.m in Sources */,
 				0BEC4D971EF1200500D2BB01 /* ZCBNetworking.m in Sources */,
 				0B4ED7471EEFB4C100EAA123 /* RuntimeKit.m in Sources */,
 				0B33A2BE1EE92B62005BA3EA /* SKMainScrollView.m in Sources */,
