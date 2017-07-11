@@ -46,9 +46,9 @@
 
 #import "AppDelegate.h"
 #import "Stotage.h"
-#import "WTReadyVC.h"
 #import "GuidanceViewController.h"
-#import "WTReadyVC.h"
+#import "WTReadyVC.h"           //登录页
+#import "WTContentsVC.h"        //首页
 #import "WTPlayerVC.h"
 
 //#import <BaiduMobileAPM/BaiduMobileAPM.h>
@@ -152,7 +152,7 @@
 -(UIViewController *)createRootController
 {
     
-    return [[UINavigationController alloc]initWithRootViewController:[[WTPlayerVC alloc]init]];
+    return [[UINavigationController alloc]initWithRootViewController:[[WTContentsVC alloc]init]];
     
 }
 
