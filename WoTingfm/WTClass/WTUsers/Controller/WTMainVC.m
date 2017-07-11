@@ -29,7 +29,7 @@
     _MainTabView.dataSource = self;
     _MainTabView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _MainTabView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    _MainTabView.backgroundColor = HYC__COLOR_HEX(0xEFEFEF);
     
     [self reageterMainCell]; //注册
 }
@@ -50,6 +50,23 @@
     
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        
+        return 90;
+    }else if (indexPath.row == 1){
+        
+        return 70;
+    }else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 9 ){
+        
+        return 56;
+    }else{
+        
+        return 50;
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     

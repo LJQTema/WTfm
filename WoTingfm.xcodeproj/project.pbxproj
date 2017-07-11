@@ -64,6 +64,8 @@
 		0B2757E11F14B92D0051B627 /* WTMainHCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757DF1F14B92D0051B627 /* WTMainHCell.xib */; };
 		0B2757E51F14B93A0051B627 /* WTMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757E31F14B93A0051B627 /* WTMainCell.m */; };
 		0B2757E61F14B93A0051B627 /* WTMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757E41F14B93A0051B627 /* WTMainCell.xib */; };
+		0B2757EB1F14D6C80051B627 /* WTPersonInforVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2757E91F14D6C80051B627 /* WTPersonInforVC.m */; };
+		0B2757EC1F14D6C80051B627 /* WTPersonInforVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2757EA1F14D6C80051B627 /* WTPersonInforVC.xib */; };
 		0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E64D1EFA70BE00A6630E /* WTReportVC.m */; };
 		0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31E64E1EFA70BE00A6630E /* WTReportVC.xib */; };
 		0B31E6541EFA70EE00A6630E /* WTDownLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31E6521EFA70EE00A6630E /* WTDownLoadVC.m */; };
@@ -239,6 +241,9 @@
 		0B2757E21F14B93A0051B627 /* WTMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMainCell.h; sourceTree = "<group>"; };
 		0B2757E31F14B93A0051B627 /* WTMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMainCell.m; sourceTree = "<group>"; };
 		0B2757E41F14B93A0051B627 /* WTMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTMainCell.xib; sourceTree = "<group>"; };
+		0B2757E81F14D6C80051B627 /* WTPersonInforVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTPersonInforVC.h; sourceTree = "<group>"; };
+		0B2757E91F14D6C80051B627 /* WTPersonInforVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTPersonInforVC.m; sourceTree = "<group>"; };
+		0B2757EA1F14D6C80051B627 /* WTPersonInforVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTPersonInforVC.xib; sourceTree = "<group>"; };
 		0B28CFF41EE19794001E16C7 /* WoTing.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoTing.pch; sourceTree = "<group>"; };
 		0B31E64C1EFA70BE00A6630E /* WTReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTReportVC.h; sourceTree = "<group>"; };
 		0B31E64D1EFA70BE00A6630E /* WTReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTReportVC.m; sourceTree = "<group>"; };
@@ -628,6 +633,7 @@
 				0B2757CE1F1481340051B627 /* WTMainVC.h */,
 				0B2757CF1F1481340051B627 /* WTMainVC.m */,
 				0B2757D01F1481340051B627 /* WTMainVC.xib */,
+				0B2757E71F14D6AC0051B627 /* PersonInfor */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +662,16 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0B2757E71F14D6AC0051B627 /* PersonInfor */ = {
+			isa = PBXGroup;
+			children = (
+				0B2757E81F14D6C80051B627 /* WTPersonInforVC.h */,
+				0B2757E91F14D6C80051B627 /* WTPersonInforVC.m */,
+				0B2757EA1F14D6C80051B627 /* WTPersonInforVC.xib */,
+			);
+			path = PersonInfor;
 			sourceTree = "<group>";
 		};
 		0B31E6481EFA700000A6630E /* Album */ = {
@@ -1044,6 +1060,7 @@
 				0B33A29B1EE9256C005BA3EA /* WTContentsVC.xib in Resources */,
 				0B31E6651EFA764900A6630E /* WTReportCell.xib in Resources */,
 				0B31E65A1EFA710400A6630E /* WTAnchorVC.xib in Resources */,
+				0B2757EC1F14D6C80051B627 /* WTPersonInforVC.xib in Resources */,
 				0B33A2C41EEA4353005BA3EA /* WTFoundListCell.xib in Resources */,
 				0B31E6501EFA70BE00A6630E /* WTReportVC.xib in Resources */,
 				0B1C2BFC1EFA1475000DC74C /* WTLiveCollVRightCell.xib in Resources */,
@@ -1152,6 +1169,7 @@
 				0B31E6691EFB6A4200A6630E /* WTReportTextCell.m in Sources */,
 				0B31E64F1EFA70BE00A6630E /* WTReportVC.m in Sources */,
 				0B33A2AF1EE928BC005BA3EA /* WTSortVC.m in Sources */,
+				0B2757EB1F14D6C80051B627 /* WTPersonInforVC.m in Sources */,
 				0C68CBB21EE698CB002355DC /* GuidanceViewController.m in Sources */,
 				0B14CA711EF22AB800C345FC /* UIView+Layout.m in Sources */,
 				0CFA045C1EF104E20046A773 /* fenleiCollectionCell.m in Sources */,

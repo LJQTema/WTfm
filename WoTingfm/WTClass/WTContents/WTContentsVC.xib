@@ -29,7 +29,7 @@
                                 <constraint firstAttribute="height" constant="44" id="lRK-iW-93n"/>
                                 <constraint firstAttribute="width" constant="44" id="zMJ-Xh-uSz"/>
                             </constraints>
-                            <state key="normal" image="Nav_icon_close"/>
+                            <state key="normal" image="icon_center_black"/>
                             <connections>
                                 <action selector="BackBtnClick:" destination="-1" eventType="touchUpInside" id="fyV-sY-odM"/>
                             </connections>
@@ -47,7 +47,7 @@
                                 <constraint firstAttribute="height" constant="44" id="Dy8-eb-B2e"/>
                                 <constraint firstAttribute="width" constant="44" id="TiS-6P-uuK"/>
                             </constraints>
-                            <state key="normal" image="nav_icon_voice_black"/>
+                            <state key="normal" image="icon_search_LJQ"/>
                             <connections>
                                 <action selector="YuYinBtnClick:" destination="-1" eventType="touchUpInside" id="ugI-Y8-INc"/>
                             </connections>
@@ -86,7 +86,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Nav_icon_close" width="132" height="132"/>
-        <image name="nav_icon_voice_black" width="66" height="66"/>
+        <image name="icon_center_black" width="44" height="44"/>
+        <image name="icon_search_LJQ" width="44" height="44"/>
     </resources>
 </document>

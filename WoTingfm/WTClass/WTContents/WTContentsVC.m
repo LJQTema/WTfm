@@ -18,6 +18,8 @@
 #import "WTSearchView.h"    //语音View
 #import "MainViewController.h"
 
+#import "WTMainVC.h"
+
 #define barLineImageViewWigth 50
 @interface WTContentsVC ()<UIScrollViewDelegate>{
     
@@ -283,36 +285,39 @@
 #pragma mark - 返回首页
 - (IBAction)BackBtnClick:(id)sender {
     
-    MainViewController * tabbar = [MainViewController sharedManager];
+//    MainViewController * tabbar = [MainViewController sharedManager];
+//    
+//    UIButton *btn = (UIButton *)sender;
+//    btn.selected^= YES;
+//    if (btn.selected) {
+//        
+//        [UIView animateWithDuration:0.5 animations:^{
+//            
+//            tabbar.tabBar.frame = CGRectMake(0, HHHHH, WWWWW, 49);  
+//            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
+//            //        transitionView.height = 460-40;
+//            
+//        } completion:^(BOOL finished) {
+//            
+//        }];
+//        
+//    }else{
+//        
+//        [UIView animateWithDuration:0.5 animations:^{
+//            
+//            tabbar.tabBar.frame = CGRectMake(0, HHHHH - 49, WWWWW, 49);  
+//            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
+//            //        transitionView.height = 460-40;
+//            
+//        } completion:^(BOOL finished) {
+//            
+//        }];
+//        
+//    }
     
-    UIButton *btn = (UIButton *)sender;
-    btn.selected^= YES;
-    if (btn.selected) {
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            tabbar.tabBar.frame = CGRectMake(0, HHHHH, WWWWW, 49);  
-            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
-            //        transitionView.height = 460-40;
-            
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-    }else{
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            tabbar.tabBar.frame = CGRectMake(0, HHHHH - 49, WWWWW, 49);  
-            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
-            //        transitionView.height = 460-40;
-            
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-    }
+    WTMainVC *mainVC = [[WTMainVC alloc] init];
     
+    [self.navigationController pushViewController:mainVC animated:YES];
     
     
 }
