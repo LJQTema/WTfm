@@ -212,6 +212,32 @@
     
 }
 
+- (void)yincangTabbarHight{
+    
+        
+        
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                
+                self.tabBar.frame = CGRectMake(0, HHHHH, WWWWW, 49);  
+                
+            } completion:^(BOOL finished) {
+                
+            }];
+}
+
+- (void)xianshiTabbarHight{
+    
+    [UIView animateWithDuration:0.5 animations:^{
+                        
+                        self.tabBar.frame = CGRectMake(0, HHHHH - 49, WWWWW, 49);  
+                        
+                    } completion:^(BOOL finished) {
+                        
+                    }];
+    
+}
+
 
 
 

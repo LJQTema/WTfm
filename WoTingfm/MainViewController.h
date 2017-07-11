@@ -11,5 +11,6 @@
 @interface MainViewController : UITabBarController
 
 + (MainViewController *)sharedManager;
-
+- (void)yincangTabbarHight;
+- (void)xianshiTabbarHight;
 @end
