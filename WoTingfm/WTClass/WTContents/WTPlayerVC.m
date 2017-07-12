@@ -67,6 +67,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     _musicIndex = 0;
     dataBFArray = [NSMutableArray arrayWithCapacity:0];
     _musicsArr = [NSMutableArray arrayWithCapacity:0];
@@ -77,7 +79,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(JQNext:) name:BDCloudMediaPlayerPlaybackDidFinishNotification object:nil];
     
     
-//    [self creatPicRollView];
+    [self creatPicRollView];
     [self loadData];            //网络请求
     [self creatContentView];    //搭建部分UI
 }
