@@ -7,17 +7,12 @@
 //
 
 #import "MainViewController.h"
-
+#import "WTPlayerVC.h"
 
 
 @interface MainViewController ()
 {
-    //用临时变量记录高亮状态的按钮
-    UILabel *_tmpLb;
-    UINavigationController *_tmpNavigationController;
-    UIImageView *_tmpImgV;
     
-    NSString *_UPURL;
     
 }
 
@@ -85,81 +80,13 @@
     
     [self.tabBar addSubview:labelName];
     
-//    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
-//    
-//    NSString *a =[userDef objectForKey:@"ZJJYHYCTABBAREVERY"];
-//    
-//    NSArray *array=self.viewControllers;
-//    for (int i=0; i<array.count ; i++) {
-//        
-//        UINavigationController *nav=[array objectAtIndex:i];
-//        //创建图片
-//        UIImageView *itemImgV=[[UIImageView alloc]initWithFrame:CGRectMake(i*WWWWW/4, 0, WWWWW/4, 49)];
-//        itemImgV.image=nav.tabBarItem.image;
-//        //将图片添加到标签栏
-//        [self.tabBar addSubview:itemImgV];
-//        
-//        //创建按钮上的文字
-//        UILabel *lb=[[UILabel alloc]initWithFrame:CGRectMake(0, 38, WWWWW/4, 10)];
-//        lb.text=nav.tabBarItem.title;
-//        lb.textAlignment=NSTextAlignmentCenter;
-//        lb.font=[UIFont systemFontOfSize:15];
-//        [itemImgV addSubview:lb];
-//        
-//        if (a == nil) {
-//            
-//            a = @"0";
-//            
-//        }
-//        
-//        
-//        //设置默认第一个按钮为高亮
-//        if([a isEqualToString:[NSString stringWithFormat:@"%d",i]])
-//        {
-//            
-//            
-//            itemImgV.image=nav.tabBarItem.selectedImage;
-//            [lb setTextColor:[UIColor orangeColor]];
-//            //将当前高亮的按钮保存临时变量
-//            _tmpLb=lb;
-//            _tmpImgV=itemImgV;
-//            _tmpNavigationController=nav;
-//            
-//        }
-//        
-//        if (i == 1) {
-//            
-//            UILabel *labelNumber = [[UILabel alloc]initWithFrame:CGRectMake(60, 5, 10, 10)];
-//            
-////            labelNumber.text = a;
-//            
-//            labelNumber.font = [UIFont systemFontOfSize:10];
-//            
-//            labelNumber.textAlignment = UITextAlignmentCenter;
-//            
-//            labelNumber.backgroundColor = [UIColor redColor];
-//            
-//            labelNumber.textColor = [UIColor whiteColor];
-//            
-//            labelNumber.layer.masksToBounds = YES;
-//            labelNumber.layer.cornerRadius = labelNumber.frame.size.width/2.000000;
-//            
-//            labelNumber.tag = 150;
-//            
-//            [itemImgV addSubview:labelNumber];
-//            
-//        }
-//        
-//        
-//        //创建点击手势
-//        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
-//        itemImgV.userInteractionEnabled=YES;
-//        //为每张图片添加tag
-//        itemImgV.tag=i+100;
-//        [itemImgV addGestureRecognizer:tap];
-//        
-//        
-//    }
+    imageV.userInteractionEnabled = YES;
+    
+    [imageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)]];
+    
+    labelName.userInteractionEnabled = YES;
+    
+    [labelName addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)]];
     
 }
 
@@ -167,49 +94,12 @@
 -(void)tapClick:(UITapGestureRecognizer *)tap
 {
     
-    if (tap.view.tag == 101) {
+    WTPlayerVC *playerVC = [[WTPlayerVC alloc]init];
+    
+    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:playerVC animated:YES completion:nil];
         
-        UILabel *labelName = (UILabel *)[self.view viewWithTag:150];
-        
-        [labelName removeFromSuperview];
-        
-    }
-    
-    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
-    [userDef setObject:[NSString stringWithFormat:@"%ld",tap.view.tag-100] forKey:@"ZJJYHYCTABBAREVERY"];
-    [userDef synchronize];
-    
-    NSString *a =[userDef objectForKey:@"ZJJYHYCTABBAREVERY"];
-    
-    
-    //将临时变量改为低亮
-    [_tmpLb setTextColor:[UIColor blackColor]];
-    _tmpImgV.image=_tmpNavigationController.tabBarItem.image;
-    
-    //将点击的按钮变为高亮
-    NSArray *navigationControllerArray=self.viewControllers;
-    
-    UINavigationController *nav=[navigationControllerArray objectAtIndex:tap.view.tag-100];
-    
-    UIImageView *imgV=(UIImageView *)tap.view;
-    imgV.image=nav.tabBarItem.selectedImage;
-    //获得图片上的label
-    UILabel *lb=(UILabel *)[imgV.subviews lastObject];
-    [lb setTextColor:[UIColor orangeColor]];
-    
-    
-    //临时变量保存高亮按钮
-    _tmpNavigationController=nav;
-    _tmpLb=lb;
-    _tmpImgV=imgV;
-    
-    
-    
-    //实现子视图控制器页面的切换
-    self.selectedIndex=tap.view.tag-100;
-    
-    
-    
 }
 
 - (void)yincangTabbarHight{
