@@ -13,6 +13,8 @@
 #import "WTMainHCell.h"
 #import "WTMainCell.h"
 
+#import "WTPersonInforVC.h"
+
 @interface WTMainVC ()<UITableViewDelegate, UITableViewDataSource>
 
 
@@ -187,7 +189,9 @@
     
     if (indexPath.row == 0) {
         
+        WTPersonInforVC *personInforVC = [[WTPersonInforVC alloc] init];
         
+        [self.navigationController pushViewController:personInforVC animated:YES];
     }
     
 }
