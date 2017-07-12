@@ -512,8 +512,10 @@
     
 }
 
-#pragma mark - 个人中心点击
+#pragma mark - 退出播放器点击
 - (IBAction)MainBtnClick:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
