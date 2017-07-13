@@ -23,6 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //获得标签栏上的所有子视图
+    NSArray *subViewsArray=self.tabBar.subviews;
+    //遍历数组
+    for (UIView *view in subViewsArray) {
+        view.hidden=YES;
+    }
+    
 
     // Do any additional setup after loading the view.
 }
@@ -45,12 +52,9 @@
 
     
     
-    //获得标签栏上的所有子视图
-    NSArray *subViewsArray=self.tabBar.subviews;
-    //遍历数组
-    for (UIView *view in subViewsArray) {
-        view.hidden=YES;
-    }
+    
+    
+    
 }
 
 //创建导航条按钮,添加到tabbar
