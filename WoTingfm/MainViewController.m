@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    self.tabBar.backgroundColor = [UIColor blackColor];
     // Do any additional setup after loading the view.
 }
 
@@ -96,7 +96,7 @@
     
     WTPlayerVC *playerVC = [[WTPlayerVC alloc]init];
     
-    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  //  playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     [self presentViewController:playerVC animated:YES completion:nil];
         

@@ -79,6 +79,53 @@
         
         
         return cell;
+    }else if (indexPath.row == 6){
+        
+        static NSString *cellID = @"PersonID";
+        
+        WTPersonCell *cell = (WTPersonCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        if (!cell) {
+            cell = [[WTPersonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+        
+        
+        
+        return cell;
+    }else{
+        
+        static NSString *cellID = @"PersonSignID";
+        
+        WTPersonSignCell *cell = (WTPersonSignCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        if (!cell) {
+            cell = [[WTPersonSignCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+        
+        if (indexPath.row == 1) {
+            
+            cell.contentLab.text = @"昵称";
+            
+        }else if (indexPath.row == 2){
+            
+            cell.contentLab.text = @"听号";
+            
+        }else if (indexPath.row == 3){
+            
+            cell.contentLab.text = @"性别";
+            
+        }else if (indexPath.row == 4){
+            
+            cell.contentLab.text = @"年龄";
+            
+        }else{
+            
+            cell.contentLab.text = @"地区";
+            
+        }
+        
+        
+        return cell;
     }
     
     return 0;
