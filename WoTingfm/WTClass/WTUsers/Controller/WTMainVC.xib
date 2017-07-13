@@ -68,7 +68,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DlU-oN-rAy">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -78,7 +78,7 @@
                 <constraint firstItem="kiU-9n-iDj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mkn-qh-yaB"/>
                 <constraint firstItem="DlU-oN-rAy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nV8-N4-IHe"/>
                 <constraint firstItem="DlU-oN-rAy" firstAttribute="top" secondItem="kiU-9n-iDj" secondAttribute="bottom" id="sGH-5K-4lP"/>
-                <constraint firstAttribute="bottom" secondItem="DlU-oN-rAy" secondAttribute="bottom" id="tvZ-qX-Gyk"/>
+                <constraint firstAttribute="bottom" secondItem="DlU-oN-rAy" secondAttribute="bottom" constant="49" id="tvZ-qX-Gyk"/>
                 <constraint firstAttribute="trailing" secondItem="kiU-9n-iDj" secondAttribute="trailing" id="uvC-km-bSa"/>
                 <constraint firstAttribute="trailing" secondItem="DlU-oN-rAy" secondAttribute="trailing" id="yWe-VH-mTI"/>
             </constraints>

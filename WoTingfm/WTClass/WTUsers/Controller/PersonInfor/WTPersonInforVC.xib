@@ -55,7 +55,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-pB-hXC">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -66,7 +66,7 @@
                 <constraint firstItem="x2e-pB-hXC" firstAttribute="top" secondItem="FK2-PW-fyz" secondAttribute="bottom" id="NRv-wA-dl6"/>
                 <constraint firstItem="x2e-pB-hXC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Py3-Nu-P9k"/>
                 <constraint firstItem="FK2-PW-fyz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SjT-Lx-Ywc"/>
-                <constraint firstAttribute="bottom" secondItem="x2e-pB-hXC" secondAttribute="bottom" id="ZU1-nV-08f"/>
+                <constraint firstAttribute="bottom" secondItem="x2e-pB-hXC" secondAttribute="bottom" constant="49" id="ZU1-nV-08f"/>
                 <constraint firstItem="FK2-PW-fyz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vPs-IY-y0i"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>

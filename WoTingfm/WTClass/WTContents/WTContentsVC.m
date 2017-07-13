@@ -25,8 +25,7 @@
     
     SKMainScrollView    *contentScrollView;
     UIImageView         *barLineImageView;//标识条
-    UIView              *blackView;     //语音搜索黑背景
-    WTSearchView        *YuyinView; //语音view
+
     
     NSArray *_munuNameArray;
     
@@ -95,7 +94,7 @@
 - (void)initScrollerView{
     
     //  __weak WTXiangJiangViewController *weakSelf = self;
-    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64, K_Screen_Width, K_Screen_Height - 64)];
+    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64, K_Screen_Width, K_Screen_Height - 64 - 49)];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:contentScrollView];
     
@@ -282,38 +281,9 @@
 }
 */
 
-#pragma mark - 返回首页
+#pragma mark - 进入个人中心
 - (IBAction)BackBtnClick:(id)sender {
     
-//    MainViewController * tabbar = [MainViewController sharedManager];
-//    
-//    UIButton *btn = (UIButton *)sender;
-//    btn.selected^= YES;
-//    if (btn.selected) {
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            
-//            tabbar.tabBar.frame = CGRectMake(0, HHHHH, WWWWW, 49);  
-//            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
-//            //        transitionView.height = 460-40;
-//            
-//        } completion:^(BOOL finished) {
-//            
-//        }];
-//        
-//    }else{
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            
-//            tabbar.tabBar.frame = CGRectMake(0, HHHHH - 49, WWWWW, 49);  
-//            //        UIView * transitionView = [[tabbar.view subviews] objectAtIndex:0];  
-//            //        transitionView.height = 460-40;
-//            
-//        } completion:^(BOOL finished) {
-//            
-//        }];
-//        
-//    }
     
     WTMainVC *mainVC = [[WTMainVC alloc] init];
     
@@ -322,73 +292,11 @@
     
 }
 
-#pragma mark - 点击语音搜索
+#pragma mark - 点击搜索
 - (IBAction)YuYinBtnClick:(id)sender {
     
-    [self CreatYuYinView];  //创建语音搜索View
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        blackView.frame = CGRectMake(0, 0, K_Screen_Width, K_Screen_Height);
-    }];
+
 }
-
-
-#pragma mark - 创建语音搜索View
-- (void)CreatYuYinView{
-    
-    blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, K_Screen_Height)];
-    blackView.backgroundColor = [UIColor clearColor];
-    blackView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapBlack = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(DeleteYuYinView)];
-    [blackView addGestureRecognizer:tapBlack];
-    [self.view addSubview:blackView];
-    
-    
-    
-    
-    YuyinView = [[WTSearchView alloc] initWithFrame:CGRectMake(0, K_Screen_Height, K_Screen_Width, 240)];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(Viewtap)];
-    [YuyinView addGestureRecognizer:tap];
-    [blackView addSubview:YuyinView];
-    
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        
-        
-        blackView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-        YuyinView.frame = CGRectMake(0, K_Screen_Height - 240, K_Screen_Width, 240);
-        
-    }];
-}
-- (void)Viewtap{
-}
-
-#pragma mark - 销毁语音搜索View
-- (void)DeleteYuYinView{
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        
-        YuyinView.frame = CGRectMake(0, K_Screen_Height, K_Screen_Width, 240);
-        
-        blackView.backgroundColor = [UIColor clearColor];
-        
-        
-    }];
-    
-    [self performSelector:@selector(removeView) withObject:nil afterDelay:0.3];
-}
-
-- (void)removeView{
-    
-    [blackView removeFromSuperview];
-}
-
-
-
-
-
-
 
 
 

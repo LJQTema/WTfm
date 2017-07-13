@@ -66,7 +66,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-0Q-fYG">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -76,7 +76,7 @@
                 <constraint firstItem="4DZ-0Q-fYG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Km9-a2-E6r"/>
                 <constraint firstAttribute="trailing" secondItem="4DZ-0Q-fYG" secondAttribute="trailing" id="gjT-Pl-gco"/>
                 <constraint firstItem="Wwr-9y-7ay" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kTz-40-ebq"/>
-                <constraint firstAttribute="bottom" secondItem="4DZ-0Q-fYG" secondAttribute="bottom" id="l5Z-0B-ydu"/>
+                <constraint firstAttribute="bottom" secondItem="4DZ-0Q-fYG" secondAttribute="bottom" constant="49" id="l5Z-0B-ydu"/>
                 <constraint firstItem="4DZ-0Q-fYG" firstAttribute="top" secondItem="Wwr-9y-7ay" secondAttribute="bottom" id="sde-rL-VIp"/>
                 <constraint firstAttribute="trailing" secondItem="Wwr-9y-7ay" secondAttribute="trailing" id="yCh-us-Uu9"/>
             </constraints>

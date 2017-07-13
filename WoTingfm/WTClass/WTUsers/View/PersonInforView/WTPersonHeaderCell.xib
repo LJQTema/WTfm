@@ -15,14 +15,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="95.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh7-ug-J1l">
                         <rect key="frame" x="0.0" y="6" width="320" height="84"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9z-nS-oMa">
-                                <rect key="frame" x="6" y="32" width="60" height="21"/>
+                                <rect key="frame" x="10" y="32" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="74u-Bi-kav"/>
                                     <constraint firstAttribute="height" constant="21" id="tZm-gJ-dnr"/>
@@ -43,7 +43,7 @@
                         <constraints>
                             <constraint firstItem="KVO-zE-TY0" firstAttribute="top" secondItem="nh7-ug-J1l" secondAttribute="top" constant="12" id="EUg-BR-Sau"/>
                             <constraint firstAttribute="trailing" secondItem="KVO-zE-TY0" secondAttribute="trailing" constant="13" id="Rn1-Y0-nvo"/>
-                            <constraint firstItem="v9z-nS-oMa" firstAttribute="leading" secondItem="nh7-ug-J1l" secondAttribute="leading" constant="6" id="fOi-AN-Hxg"/>
+                            <constraint firstItem="v9z-nS-oMa" firstAttribute="leading" secondItem="nh7-ug-J1l" secondAttribute="leading" constant="10" id="fOi-AN-Hxg"/>
                             <constraint firstItem="v9z-nS-oMa" firstAttribute="top" secondItem="nh7-ug-J1l" secondAttribute="top" constant="32" id="rKQ-Um-IFI"/>
                             <constraint firstAttribute="height" constant="84" id="uXh-60-9Mw"/>
                         </constraints>

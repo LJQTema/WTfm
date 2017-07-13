@@ -97,7 +97,7 @@
 
 - (void)initScrollerView{
     
-    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 260, K_Screen_Width, K_Screen_Height - 260)];
+    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 260, K_Screen_Width, K_Screen_Height - 260 - 49)];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:contentScrollView];
     
