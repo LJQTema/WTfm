@@ -514,9 +514,6 @@
 
 #pragma mark - 个人中心点击
 - (IBAction)MainBtnClick:(id)sender {
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
-    
 }
 
 
