@@ -325,4 +325,45 @@ static NSMutableArray *HUDs;
 }
 
 
+
+
+#pragma -定制上提弹窗
+
++ (void)HYC__shangtiAlertWithController:(UIViewController *)controllerName WithtitleArray:(NSArray <NSString *>*)strArray WithBlock:(SuccessBlock)sBlock
+{
+    WKProgressHUD *ProgressHUD = [[WKProgressHUD alloc]init];
+    ProgressHUD.sblock = sBlock;
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+   // if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    for (NSString *strName in strArray) {
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:strName style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            
+            
+            ProgressHUD.sblock(action);
+//            //相机
+//            UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
+//            imagePickerC.delegate = controllerName;
+//            imagePickerC.allowsEditing = YES;
+//            imagePickerC.sourceType = UIImagePickerControllerSourceTypeCamera;
+//            [controllerName presentViewController:imagePickerC animated:YES completion:^{
+//                
+//            }];
+        }];
+        
+        [alertController addAction:defaultAction];
+    }
+    
+    UIAlertAction *cancelA = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertController addAction:cancelA];
+    
+    
+    [controllerName presentViewController:alertController animated:YES completion:nil];
+}
+
+
 @end

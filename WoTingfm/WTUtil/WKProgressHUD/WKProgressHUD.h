@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^MyBlock)(void);
-
+typedef void(^SuccessBlock)(UIAlertAction *AlertAction);
 @interface WKProgressHUD : UIView
 @property (nonatomic, weak) UIView *selfView;
 
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
 @property (nonatomic, strong) UILabel *textLabel;
-
+@property(copy,nonatomic)SuccessBlock sblock;
 @property (nonatomic, copy) NSString *text;
 
 // 等待中
@@ -38,6 +38,9 @@ typedef void(^MyBlock)(void);
 
 //时间戳
 + (NSString *)timeForBeiJingTimeStamp:(NSString *)timeStamp andsetDateFormat:(NSString *)dateFormat;
+
+//上提提示框的封装
++ (void)HYC__shangtiAlertWithController:(UIViewController *)controllerName WithtitleArray:(NSArray <NSString *>*)strArray WithBlock:(SuccessBlock)sBlock;
 
 //汉子转拼音首字母
 + (NSString *)firstCharactor:(NSString *)aString;

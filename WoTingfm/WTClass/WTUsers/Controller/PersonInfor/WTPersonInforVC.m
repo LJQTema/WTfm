@@ -212,45 +212,12 @@
     
     if (IOS8) {
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-        
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                //相机
-                UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
-                imagePickerC.delegate = self;
-                imagePickerC.allowsEditing = YES;
-                imagePickerC.sourceType = UIImagePickerControllerSourceTypeCamera;
-                [self presentViewController:imagePickerC animated:YES completion:^{
-                    
-                }];
-            }];
-            
-            [alertController addAction:defaultAction];
-        }
-        
-        UIAlertAction *defaultAction1 = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-            //相册
-            UIImagePickerController *iamgePickerC = [[UIImagePickerController alloc] init];
-            iamgePickerC.delegate = self;
-            iamgePickerC.allowsEditing = YES;
-            iamgePickerC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-            [self presentViewController:iamgePickerC animated:YES completion:^{
-                
-            }];
+        [WKProgressHUD HYC__shangtiAlertWithController:self WithtitleArray:@[@"11",@"22"] WithBlock:^(UIAlertAction *AlertAction) {
+           
+            HYC__SHOW_AlertAtView(AlertAction.title);
             
         }];
         
-        UIAlertAction *cancelA = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        
-        [alertController addAction:cancelA];
-        [alertController addAction:defaultAction1];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
     }
     
 }
