@@ -514,8 +514,9 @@
 
 #pragma mark - 退出播放器点击
 - (IBAction)MainBtnClick:(id)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [self dismissViewControllerAnimated:NO completion:nil];
+
 }
 
 
