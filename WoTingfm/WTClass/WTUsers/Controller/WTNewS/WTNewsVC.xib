@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTNewsVC">
+            <connections>
+                <outlet property="NewsTableV" destination="hLx-ya-To9" id="vku-yf-g8t"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71f-8O-Tz7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52X-nV-7ne">
+                            <rect key="frame" x="2" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="6WY-Z9-DSZ"/>
+                                <constraint firstAttribute="height" constant="44" id="orA-h8-ZFK"/>
+                            </constraints>
+                            <state key="normal" image="Nav_icon_back_black"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="47u-cb-KNV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息中心" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-PD-kI3">
+                            <rect key="frame" x="111" y="32" width="153" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Uoq-k7-rB7"/>
+                                <constraint firstAttribute="width" constant="153" id="uLD-U2-7kf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="3sv-PD-kI3" firstAttribute="centerX" secondItem="71f-8O-Tz7" secondAttribute="centerX" id="6as-5W-kGu"/>
+                        <constraint firstItem="52X-nV-7ne" firstAttribute="leading" secondItem="71f-8O-Tz7" secondAttribute="leading" constant="2" id="RwG-Fm-Cjp"/>
+                        <constraint firstItem="52X-nV-7ne" firstAttribute="top" secondItem="71f-8O-Tz7" secondAttribute="top" constant="20" id="Wf5-wY-j96"/>
+                        <constraint firstAttribute="height" constant="64" id="uA9-Wd-k7b"/>
+                        <constraint firstItem="3sv-PD-kI3" firstAttribute="top" secondItem="71f-8O-Tz7" secondAttribute="top" constant="32" id="yFn-Op-vyR"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-ya-To9">
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="71f-8O-Tz7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Bn-as-tc2"/>
+                <constraint firstAttribute="trailing" secondItem="hLx-ya-To9" secondAttribute="trailing" id="AHd-rU-QUe"/>
+                <constraint firstItem="hLx-ya-To9" firstAttribute="top" secondItem="71f-8O-Tz7" secondAttribute="bottom" id="CEX-iS-MDy"/>
+                <constraint firstAttribute="bottom" secondItem="hLx-ya-To9" secondAttribute="bottom" constant="49" id="OCy-M1-Wwq"/>
+                <constraint firstItem="71f-8O-Tz7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a4z-kP-e3j"/>
+                <constraint firstItem="hLx-ya-To9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c7W-ho-EGK"/>
+                <constraint firstAttribute="trailing" secondItem="71f-8O-Tz7" secondAttribute="trailing" id="tGs-9O-bnv"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Nav_icon_back_black" width="132" height="132"/>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 //
-//  LJQ_BackgroundView.h
+//  WTNewsVC.h
 //  WoTingfm
 //
 //  Created by jq on 2017/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LJQ_BackgroundView : UIView
+@interface WTNewsVC : UIViewController
 
 @end

@@ -342,14 +342,7 @@ static NSMutableArray *HUDs;
             
             
             ProgressHUD.sblock(action);
-//            //相机
-//            UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
-//            imagePickerC.delegate = controllerName;
-//            imagePickerC.allowsEditing = YES;
-//            imagePickerC.sourceType = UIImagePickerControllerSourceTypeCamera;
-//            [controllerName presentViewController:imagePickerC animated:YES completion:^{
-//                
-//            }];
+
         }];
         
         [alertController addAction:defaultAction];

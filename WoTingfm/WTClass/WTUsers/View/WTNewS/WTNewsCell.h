@@ -1,16 +1,13 @@
 //
-//  LJQ_BackgroundView.m
+//  WTNewsCell.h
 //  WoTingfm
 //
 //  Created by jq on 2017/7/13.
 //  Copyright © 2017年 jq. All rights reserved.
 //
 
-#import "LJQ_BackgroundView.h"
+#import <UIKit/UIKit.h>
 
-@implementation LJQ_BackgroundView
-
-
-
+@interface WTNewsCell : UITableViewCell
 
 @end

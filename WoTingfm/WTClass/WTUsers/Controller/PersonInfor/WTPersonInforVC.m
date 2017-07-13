@@ -14,7 +14,7 @@
 
 #define IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ? YES : NO)
 
-@interface WTPersonInforVC ()<UITableViewDelegate, UITableViewDataSource>{
+@interface WTPersonInforVC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     
     UIView              *blackView;     //黑背景
 
@@ -212,16 +212,61 @@
     
     if (IOS8) {
         
-        [WKProgressHUD HYC__shangtiAlertWithController:self WithtitleArray:@[@"11",@"22"] WithBlock:^(UIAlertAction *AlertAction) {
+        [WKProgressHUD HYC__shangtiAlertWithController:self WithtitleArray:@[@"拍照",@"从相册选择"] WithBlock:^(UIAlertAction *AlertAction) {
            
-            HYC__SHOW_AlertAtView(AlertAction.title);
-            
+            if ([AlertAction.title isEqualToString:@"拍照"]) {
+                
+                //相机
+                UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
+                imagePickerC.delegate = self;
+                imagePickerC.allowsEditing = YES;
+                imagePickerC.sourceType = UIImagePickerControllerSourceTypeCamera;
+                [self presentViewController:imagePickerC animated:YES completion:^{
+                    
+                }];
+            }else if ([AlertAction.title isEqualToString:@"从相册选择"]){
+                
+                //相册
+                UIImagePickerController *iamgePickerC = [[UIImagePickerController alloc] init];
+                iamgePickerC.delegate = self;
+                iamgePickerC.allowsEditing = YES;
+                iamgePickerC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [self presentViewController:iamgePickerC animated:YES completion:^{
+                    
+                }];
+            }
+         
         }];
         
     }
     
 }
 
+//选择照片完成之后的代理方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    
+    //info是所选择照片的信息
+    
+    //    UIImagePickerControllerEditedImage//编辑过的图片
+    //    UIImagePickerControllerOriginalImage//原图
+    
+    
+    NSLog(@"%@",info);
+    //刚才已经看了info中的键值对，可以从info中取出一个UIImage对象，将取出的对象赋给按钮的image
+    //@"UIImagePickerControllerReferenceURL" : @"assets-library://asset/asset.JPG?id=106E99A1-4F6A-45A2-B320-B0AD4A8E8473&ext=JPG"
+    UIImage *resultImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    
+    
+    
+    // imageData = UIImageJPEGRepresentation(resultImage, 0.5);
+    
+    //上传头像
+
+    
+    //使用模态返回到软件界面
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
