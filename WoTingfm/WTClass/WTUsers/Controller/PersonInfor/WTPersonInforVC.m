@@ -12,6 +12,8 @@
 #import "WTPersonSignCell.h"
 #import "WTPersonCell.h"
 
+#define IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ? YES : NO)
+
 @interface WTPersonInforVC ()<UITableViewDelegate, UITableViewDataSource>{
     
     UIView              *blackView;     //黑背景
@@ -80,6 +82,10 @@
             cell = [[WTPersonHeaderCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
 
+        cell.contentImgV.image = [UIImage imageNamed:@"timg-8"];
+        cell.contentImgV.userInteractionEnabled = YES;
+        UITapGestureRecognizer *imgTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(PostHeaderImageView)];
+        [cell.contentImgV addGestureRecognizer:imgTap];
         
         
         return cell;
@@ -196,6 +202,57 @@
 - (void)removeView{
     
     [blackView removeFromSuperview];
+}
+
+
+
+- (void)PostHeaderImageView{
+    
+    [UIApplication sharedApplication].keyWindow.tintColor = [UIColor blackColor];
+    
+    if (IOS8) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //相机
+                UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
+                imagePickerC.delegate = self;
+                imagePickerC.allowsEditing = YES;
+                imagePickerC.sourceType = UIImagePickerControllerSourceTypeCamera;
+                [self presentViewController:imagePickerC animated:YES completion:^{
+                    
+                }];
+            }];
+            
+            [alertController addAction:defaultAction];
+        }
+        
+        UIAlertAction *defaultAction1 = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            //相册
+            UIImagePickerController *iamgePickerC = [[UIImagePickerController alloc] init];
+            iamgePickerC.delegate = self;
+            iamgePickerC.allowsEditing = YES;
+            iamgePickerC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:iamgePickerC animated:YES completion:^{
+                
+            }];
+            
+        }];
+        
+        UIAlertAction *cancelA = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        
+        [alertController addAction:cancelA];
+        [alertController addAction:defaultAction1];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
 }
 
 
