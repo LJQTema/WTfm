@@ -67,15 +67,15 @@
     XinLangBtn.tag = 101;
     XinLangBtn.layer.cornerRadius = 60/2;
     XinLangBtn.layer.masksToBounds = YES;
-    [XinLangBtn setImage:[UIImage imageNamed:@"timg-8"] forState:UIControlStateNormal];
+    [XinLangBtn setImage:[UIImage imageNamed:@"icon_vebo_n"] forState:UIControlStateNormal];
     [XinLangBtn addTarget:self action:@selector(SanLoginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:XinLangBtn];
     [XinLangBtn mas_makeConstraints:^(MASConstraintMaker *make) {
        
         make.top.mas_equalTo(40);
         make.centerX.equalTo(WeakSelf.mas_centerX);
-        make.width.mas_equalTo(60);
-        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(56);
     }];
     
     //微信
@@ -83,15 +83,15 @@
     WeiXinBtn.tag = 102;
     WeiXinBtn.layer.cornerRadius = 60/2;
     WeiXinBtn.layer.masksToBounds = YES;
-    [WeiXinBtn setImage:[UIImage imageNamed:@"timg-9"] forState:UIControlStateNormal];
+    [WeiXinBtn setImage:[UIImage imageNamed:@"icon_wechat_n"] forState:UIControlStateNormal];
     [WeiXinBtn addTarget:self action:@selector(SanLoginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:WeiXinBtn];
     [WeiXinBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.mas_equalTo(40);
         make.right.equalTo(XinLangBtn.mas_left).with.offset(-40);
-        make.width.mas_equalTo(60);
-        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(56);
     }];
     
     //QQ
@@ -99,15 +99,15 @@
     QQBtn.tag = 103;
     QQBtn.layer.cornerRadius = 60/2;
     QQBtn.layer.masksToBounds = YES;
-    [QQBtn setImage:[UIImage imageNamed:@"timg-10"] forState:UIControlStateNormal];
+    [QQBtn setImage:[UIImage imageNamed:@"icon_qq_n"] forState:UIControlStateNormal];
     [QQBtn addTarget:self action:@selector(SanLoginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:QQBtn];
     [QQBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.mas_equalTo(40);
         make.left.equalTo(XinLangBtn.mas_right).with.offset(40);
-        make.width.mas_equalTo(60);
-        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(56);
     }];
     
 }

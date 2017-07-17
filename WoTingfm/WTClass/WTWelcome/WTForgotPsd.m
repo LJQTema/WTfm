@@ -13,6 +13,8 @@
 #import "RuntimeKit.h"
 #import "UIButton+Timer.h"
 
+#import "WTSanLoginView.h"  //三方登录
+
 @interface WTForgotPsd ()<UITextFieldDelegate>
 
 @end
@@ -33,6 +35,9 @@
         
         _ContentLab.text = @"手机号注册";
         [_SureBtn setTitle:@"下一步" forState:UIControlStateNormal];
+        
+        WTSanLoginView *sanLoginView = [[WTSanLoginView alloc] initWithFrame:CGRectMake(0, K_Screen_Height - 140, K_Screen_Width, 140)];
+        [self.view addSubview:sanLoginView];
 
     }else{  //忘记密码
         

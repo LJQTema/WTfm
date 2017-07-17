@@ -16,7 +16,6 @@
 
 @interface WTPersonInforVC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     
-    UIView              *blackView;     //黑背景
 
 }
 
@@ -146,63 +145,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 3) {
-        
-        [self CreatYuYinView];  //创建语音搜索View
+
 
         
     }
     
 }
 
-#pragma mark - 创建语音搜索View
-- (void)CreatYuYinView{
-    
-    blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, K_Screen_Height)];
-    blackView.backgroundColor = [UIColor clearColor];
-    blackView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapBlack = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(DeleteYuYinView)];
-    [blackView addGestureRecognizer:tapBlack];
-    [self.view addSubview:blackView];
-    
-    
-//    
-//    
-//    YuyinView = [[WTSearchView alloc] initWithFrame:CGRectMake(0, K_Screen_Height, K_Screen_Width, 240)];
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(Viewtap)];
-//    [YuyinView addGestureRecognizer:tap];
-//    [blackView addSubview:YuyinView];
-    
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        
-        
-        blackView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-//        YuyinView.frame = CGRectMake(0, K_Screen_Height - 240, K_Screen_Width, 240);
-        
-    }];
-}
-- (void)Viewtap{
-}
-
-#pragma mark - 销毁语音搜索View
-- (void)DeleteYuYinView{
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        
-//        YuyinView.frame = CGRectMake(0, K_Screen_Height, K_Screen_Width, 240);
-        
-        blackView.backgroundColor = [UIColor clearColor];
-        
-        
-    }];
-    
-    [self performSelector:@selector(removeView) withObject:nil afterDelay:0.3];
-}
-
-- (void)removeView{
-    
-    [blackView removeFromSuperview];
-}
 
 
 

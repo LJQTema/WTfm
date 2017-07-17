@@ -10,4 +10,6 @@
 
 @interface WTPersonInforVC : UIViewController
 
+@property (nonatomic, strong) NSMutableDictionary     *MUserDict;     //用户信息
+
 @end

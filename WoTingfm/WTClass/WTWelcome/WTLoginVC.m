@@ -10,6 +10,8 @@
 
 #import "WTForgotPsd.h"     //忘记密码
 
+#import "WTSanLoginView.h"  //三方登录
+
 @interface WTLoginVC ()<UITextFieldDelegate>
 
 @end
@@ -37,7 +39,8 @@
     [self yuanhukuangzi];
     [self loding];
     
-    
+    WTSanLoginView *sanLoginView = [[WTSanLoginView alloc] initWithFrame:CGRectMake(0, K_Screen_Height - 140, K_Screen_Width, 140)];
+    [self.view addSubview:sanLoginView];
     
     
     
