@@ -22,6 +22,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *NowLab;
 @property (weak, nonatomic) IBOutlet UILabel *TotalLab;
 
+//约束
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *BtnConLightOne;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *BtnConLightTwo;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *BtnConLightThree;
+
 
 
 @end

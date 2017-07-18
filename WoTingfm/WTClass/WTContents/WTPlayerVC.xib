@@ -12,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTPlayerVC">
             <connections>
                 <outlet property="BackgroupImgV" destination="ENF-GQ-bbO" id="PSU-yP-NVZ"/>
+                <outlet property="BtnConLightOne" destination="iIz-pm-ywk" id="FZc-Qv-WU5"/>
+                <outlet property="BtnConLightThree" destination="F6o-bv-orY" id="cdh-fr-ip9"/>
+                <outlet property="BtnConLightTwo" destination="gYg-aD-uYc" id="VIl-Dr-sar"/>
                 <outlet property="NextBtn" destination="b7H-Si-sET" id="2gw-3X-jbQ"/>
                 <outlet property="NowLab" destination="iB1-dh-oVf" id="7ug-J9-IGY"/>
                 <outlet property="PlayBtn" destination="wnu-Hu-dQx" id="Jtx-OV-lW3"/>
@@ -73,8 +76,8 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xI-jv-RZs">
                             <rect key="frame" x="8" y="5" width="44" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="Gv0-14-35g"/>
-                                <constraint firstAttribute="width" constant="44" id="Y0R-Ek-kAU"/>
+                                <constraint firstAttribute="height" constant="44" id="2Xj-6u-Wul"/>
+                                <constraint firstAttribute="width" constant="44" id="Q9j-vy-LRb"/>
                             </constraints>
                             <state key="normal" image="icon_like_n"/>
                             <state key="selected" image="icon_like_s"/>
@@ -82,24 +85,24 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-Ca-T3h">
                             <rect key="frame" x="126" y="5" width="44" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="44" id="IkA-r6-3uJ"/>
-                                <constraint firstAttribute="height" constant="44" id="LY7-Xi-gvP"/>
+                                <constraint firstAttribute="height" constant="44" id="eN9-7v-S1L"/>
+                                <constraint firstAttribute="width" constant="44" id="t8r-A1-Nvt"/>
                             </constraints>
                             <state key="normal" image="icon_down_BoFang"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-eA-Yha">
                             <rect key="frame" x="244" y="5" width="44" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="44" id="mm5-rG-dH5"/>
-                                <constraint firstAttribute="height" constant="44" id="oIN-yM-HNJ"/>
+                                <constraint firstAttribute="width" constant="44" id="ObX-w3-fKe"/>
+                                <constraint firstAttribute="height" constant="44" id="Vbf-ah-W74"/>
                             </constraints>
                             <state key="normal" image="icon_DingShi_white"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-on-b85">
                             <rect key="frame" x="362" y="5" width="44" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="44" id="Rap-SH-UAq"/>
-                                <constraint firstAttribute="height" constant="44" id="cBg-kd-J5a"/>
+                                <constraint firstAttribute="width" constant="44" id="LRE-8L-wsR"/>
+                                <constraint firstAttribute="height" constant="44" id="epJ-DC-WUq"/>
                             </constraints>
                             <state key="normal" image="icon_list_BoFang"/>
                             <connections>
@@ -109,16 +112,16 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="3xI-jv-RZs" firstAttribute="leading" secondItem="21f-2h-6uY" secondAttribute="leading" constant="8" id="1fi-qn-ksn"/>
-                        <constraint firstItem="eYd-Ca-T3h" firstAttribute="leading" secondItem="3xI-jv-RZs" secondAttribute="trailing" constant="74" id="52m-tJ-P5q"/>
-                        <constraint firstItem="eYd-Ca-T3h" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="6U0-rH-gZj"/>
-                        <constraint firstItem="aKf-on-b85" firstAttribute="leading" secondItem="E6g-eA-Yha" secondAttribute="trailing" constant="74" id="Dzv-01-8qm"/>
                         <constraint firstAttribute="height" constant="49" id="F0X-95-vDd"/>
-                        <constraint firstItem="3xI-jv-RZs" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="HKj-t0-oaK"/>
-                        <constraint firstAttribute="trailing" secondItem="aKf-on-b85" secondAttribute="trailing" constant="8" id="Zkr-yE-WT6"/>
-                        <constraint firstItem="E6g-eA-Yha" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="dYr-QD-M9q"/>
-                        <constraint firstItem="aKf-on-b85" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="fdC-O7-drz"/>
-                        <constraint firstItem="E6g-eA-Yha" firstAttribute="leading" secondItem="eYd-Ca-T3h" secondAttribute="trailing" constant="74" id="l6d-BR-3Dq"/>
+                        <constraint firstItem="aKf-on-b85" firstAttribute="leading" secondItem="E6g-eA-Yha" secondAttribute="trailing" constant="74" id="F6o-bv-orY"/>
+                        <constraint firstItem="aKf-on-b85" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="eM4-Ds-tRx"/>
+                        <constraint firstItem="E6g-eA-Yha" firstAttribute="leading" secondItem="eYd-Ca-T3h" secondAttribute="trailing" constant="74" id="gYg-aD-uYc"/>
+                        <constraint firstItem="eYd-Ca-T3h" firstAttribute="leading" secondItem="3xI-jv-RZs" secondAttribute="trailing" constant="74" id="iIz-pm-ywk"/>
+                        <constraint firstItem="3xI-jv-RZs" firstAttribute="top" secondItem="21f-2h-6uY" secondAttribute="top" constant="5" id="iQ9-04-PF7"/>
+                        <constraint firstItem="3xI-jv-RZs" firstAttribute="leading" secondItem="21f-2h-6uY" secondAttribute="leading" constant="8" id="lQ7-pm-Jka"/>
+                        <constraint firstAttribute="trailing" secondItem="aKf-on-b85" secondAttribute="trailing" constant="8" id="mnO-CC-Bi7"/>
+                        <constraint firstAttribute="bottom" secondItem="E6g-eA-Yha" secondAttribute="bottom" id="s01-kc-sK6"/>
+                        <constraint firstAttribute="bottom" secondItem="eYd-Ca-T3h" secondAttribute="bottom" id="xbF-uA-JN2"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kve-s9-ozO">

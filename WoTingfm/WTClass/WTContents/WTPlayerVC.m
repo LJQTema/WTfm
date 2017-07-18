@@ -57,6 +57,9 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];//白色
     
+    self.BtnConLightOne.constant = (WWWWW - (8 * 2 + 44 * 4))/3.000;
+    self.BtnConLightTwo.constant = self.BtnConLightOne.constant;
+    self.BtnConLightThree.constant = self.BtnConLightOne.constant;
     
 }
 
