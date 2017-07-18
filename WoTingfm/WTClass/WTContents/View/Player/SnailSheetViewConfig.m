@@ -87,14 +87,14 @@
     if (_textLabelTextColor) {
         return _textLabelTextColor;
     }
-    return [UIColor darkGrayColor];
+    return HYC__COLOR_HEX(0xB9BABF);
 }
 
 - (UIFont *)textLabelFont {
     if (_textLabelFont) {
         return _textLabelFont;
     }
-    return [UIFont systemFontOfSize:14];
+    return [UIFont systemFontOfSize:12];
 }
 
 @end

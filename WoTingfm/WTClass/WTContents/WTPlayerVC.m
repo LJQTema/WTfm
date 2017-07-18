@@ -432,7 +432,7 @@
 #pragma mark - 更多列表点击
 - (IBAction)MoreBtnClick:(id)sender {
 
-    CGRect rect = CGRectMake(100, 100, K_Screen_Width - 20, 260);
+    CGRect rect = CGRectMake(100, 100, K_Screen_Width - 20, 343);
     SnailSheetView *sheet = [[SnailSheetView alloc] initWithFrame:rect configDelegate:self];
     sheet.layer.masksToBounds = YES;
     sheet.layer.cornerRadius = 10;
@@ -454,9 +454,9 @@
 - (SnailSheetViewLayout *)layoutOfItemInSheetView:(SnailSheetView *)sheetView {
     
     return [SnailSheetViewLayout layoutWithItemSize:CGSizeMake(54, 76)
-                                      itemEdgeInset:UIEdgeInsetsMake(15, 20, 20, 20)
-                                        itemSpacing:15
-                                     imageViewWidth:80
+                                      itemEdgeInset:UIEdgeInsetsMake(20, 20, 20, 35)
+                                        itemSpacing:24
+                                     imageViewWidth:54
                                          subSpacing:10];
 }
 
