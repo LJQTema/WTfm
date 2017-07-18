@@ -34,13 +34,6 @@
                                 <action selector="BackBtnClick:" destination="-1" eventType="touchUpInside" id="fyV-sY-odM"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vrg-w2-qkY">
-                            <rect key="frame" x="0.0" y="63" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="qcs-xh-7dB"/>
-                            </constraints>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxx-w5-jDU">
                             <rect key="frame" x="329" y="20" width="44" height="44"/>
                             <constraints>
@@ -63,14 +56,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="nrV-nY-6pR" firstAttribute="leading" secondItem="qjM-Gq-1cc" secondAttribute="trailing" constant="8" id="2jY-Vu-ykB"/>
-                        <constraint firstItem="Vrg-w2-qkY" firstAttribute="leading" secondItem="EIZ-QU-5Sr" secondAttribute="leading" id="5ij-Yn-9W0"/>
                         <constraint firstAttribute="height" constant="64" id="BHT-0u-7Tp"/>
                         <constraint firstAttribute="trailing" secondItem="uxx-w5-jDU" secondAttribute="trailing" constant="2" id="K9X-ta-ngi"/>
                         <constraint firstItem="uxx-w5-jDU" firstAttribute="top" secondItem="EIZ-QU-5Sr" secondAttribute="top" constant="20" id="LNy-qH-W6G"/>
                         <constraint firstItem="nrV-nY-6pR" firstAttribute="top" secondItem="EIZ-QU-5Sr" secondAttribute="top" constant="20" id="aFG-Ou-i1P"/>
                         <constraint firstItem="qjM-Gq-1cc" firstAttribute="leading" secondItem="EIZ-QU-5Sr" secondAttribute="leading" constant="2" id="bMM-G2-jgc"/>
-                        <constraint firstAttribute="bottom" secondItem="Vrg-w2-qkY" secondAttribute="bottom" id="dam-Lb-Hjb"/>
-                        <constraint firstAttribute="trailing" secondItem="Vrg-w2-qkY" secondAttribute="trailing" id="h4V-QC-hSZ"/>
                         <constraint firstItem="qjM-Gq-1cc" firstAttribute="top" secondItem="EIZ-QU-5Sr" secondAttribute="top" constant="20" id="hdo-cw-X0z"/>
                         <constraint firstItem="uxx-w5-jDU" firstAttribute="leading" secondItem="nrV-nY-6pR" secondAttribute="trailing" constant="8" id="tzk-YK-c3G"/>
                     </constraints>

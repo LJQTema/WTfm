@@ -25,17 +25,17 @@
 
 - (void)setupView{
     
-    //图标
-    _TuBiaoImgV = [[UIImageView alloc] init];
-    _TuBiaoImgV.image = [UIImage imageNamed:@"discount_icon_title.png"];
-    [self addSubview:_TuBiaoImgV];
-    [_TuBiaoImgV mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.left.mas_equalTo(0);
-        make.top.mas_equalTo(15);
-        make.width.mas_equalTo(15);
-        make.height.mas_equalTo(15);
-    }];
+//    //图标
+//    _TuBiaoImgV = [[UIImageView alloc] init];
+//    _TuBiaoImgV.image = [UIImage imageNamed:@"discount_icon_title.png"];
+//    [self addSubview:_TuBiaoImgV];
+//    [_TuBiaoImgV mas_makeConstraints:^(MASConstraintMaker *make) {
+//       
+//        make.left.mas_equalTo(0);
+//        make.top.mas_equalTo(15);
+//        make.width.mas_equalTo(15);
+//        make.height.mas_equalTo(15);
+//    }];
     
     //标题
     _ContentLab = [[UILabel alloc] init];
@@ -44,10 +44,10 @@
     [self addSubview:_ContentLab];
     [_ContentLab mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.left.mas_equalTo(17);
-        make.top.mas_equalTo(15);
+        make.left.mas_equalTo(12);
+        make.top.mas_equalTo(22);
         make.width.mas_equalTo(80);
-        make.height.mas_equalTo(15);
+        make.height.mas_equalTo(16);
     }];
     
     //更多按钮
@@ -57,8 +57,8 @@
     [self addSubview:MoreBtn];
     [MoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.right.mas_equalTo(-6);
-        make.top.mas_equalTo(10);
+        make.right.mas_equalTo(-8);
+        make.top.mas_equalTo(18);
         make.width.mas_equalTo(24);
         make.height.mas_equalTo(24);
     }];

@@ -46,11 +46,11 @@
 
 - (void)CreatFouLunBo{
     
-    HeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, 126)];
+    HeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, 160)];
     HeaderView.backgroundColor = [UIColor whiteColor];
     _FoundTableView.tableHeaderView = HeaderView;
 
-    _topPhotoBoworr = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 6, K_Screen_Width, 120) delegate:self placeholderImage:nil];
+    _topPhotoBoworr = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, K_Screen_Width, 160) delegate:self placeholderImage:nil];
     _topPhotoBoworr.boworrWidth = K_Screen_Width - 30;
     _topPhotoBoworr.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _topPhotoBoworr.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
@@ -78,7 +78,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    WTFoundCellView *FoundHeaderView = [[WTFoundCellView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, 45)];
+    WTFoundCellView *FoundHeaderView = [[WTFoundCellView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, 54)];
     FoundHeaderView.ContentLab.text = @"一路向北";
     FoundHeaderView.delegate = self;
     return FoundHeaderView;
@@ -87,7 +87,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
         
-    return 45;
+    return 54;
 
 }
 

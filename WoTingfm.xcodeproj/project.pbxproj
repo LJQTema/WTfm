@@ -122,6 +122,9 @@
 		0BEC4DA51EF14BEB00D2BB01 /* SnailSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA01EF14BEB00D2BB01 /* SnailSheetCell.m */; };
 		0BEC4DA61EF14BEB00D2BB01 /* SnailSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA21EF14BEB00D2BB01 /* SnailSheetView.m */; };
 		0BEC4DA71EF14BEB00D2BB01 /* SnailSheetViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC4DA41EF14BEB00D2BB01 /* SnailSheetViewConfig.m */; };
+		0BFBE4B31F1CA77500249362 /* BoFangListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBE4B21F1CA77500249362 /* BoFangListView.m */; };
+		0BFBE4B71F1CBD7700249362 /* BoFangListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBE4B51F1CBD7700249362 /* BoFangListCell.m */; };
+		0BFBE4B81F1CBD7700249362 /* BoFangListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFBE4B61F1CBD7700249362 /* BoFangListCell.xib */; };
 		0BFD022B1F04B0A700A54496 /* FMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD022A1F04B0A700A54496 /* FMDBTool.m */; };
 		0C02F7701F14B65000F5E723 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C02F76F1F14B65000F5E723 /* MainViewController.m */; };
 		0C091FC91EE93ADA00878EF5 /* WTPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C091FC71EE93ADA00878EF5 /* WTPlayerVC.m */; };
@@ -346,6 +349,11 @@
 		0BEC4DA21EF14BEB00D2BB01 /* SnailSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetView.m; sourceTree = "<group>"; };
 		0BEC4DA31EF14BEB00D2BB01 /* SnailSheetViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailSheetViewConfig.h; sourceTree = "<group>"; };
 		0BEC4DA41EF14BEB00D2BB01 /* SnailSheetViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetViewConfig.m; sourceTree = "<group>"; };
+		0BFBE4B11F1CA77500249362 /* BoFangListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoFangListView.h; sourceTree = "<group>"; };
+		0BFBE4B21F1CA77500249362 /* BoFangListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoFangListView.m; sourceTree = "<group>"; };
+		0BFBE4B41F1CBD7700249362 /* BoFangListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoFangListCell.h; sourceTree = "<group>"; };
+		0BFBE4B51F1CBD7700249362 /* BoFangListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoFangListCell.m; sourceTree = "<group>"; };
+		0BFBE4B61F1CBD7700249362 /* BoFangListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoFangListCell.xib; sourceTree = "<group>"; };
 		0BFD02291F04B0A700A54496 /* FMDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTool.h; sourceTree = "<group>"; };
 		0BFD022A1F04B0A700A54496 /* FMDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTool.m; sourceTree = "<group>"; };
 		0C02F76E1F14B65000F5E723 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -949,6 +957,11 @@
 				0BEC4DA21EF14BEB00D2BB01 /* SnailSheetView.m */,
 				0BEC4DA31EF14BEB00D2BB01 /* SnailSheetViewConfig.h */,
 				0BEC4DA41EF14BEB00D2BB01 /* SnailSheetViewConfig.m */,
+				0BFBE4B11F1CA77500249362 /* BoFangListView.h */,
+				0BFBE4B21F1CA77500249362 /* BoFangListView.m */,
+				0BFBE4B41F1CBD7700249362 /* BoFangListCell.h */,
+				0BFBE4B51F1CBD7700249362 /* BoFangListCell.m */,
+				0BFBE4B61F1CBD7700249362 /* BoFangListCell.xib */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -1092,6 +1105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B14AAFE1F0394AC00A19770 /* WTAlbumDetailVC.xib in Resources */,
+				0BFBE4B81F1CBD7700249362 /* BoFangListCell.xib in Resources */,
 				0B1C2BE81EF76DD3000DC74C /* pageControlDot@2x.png in Resources */,
 				0CFA04581EF0E4450046A773 /* imageNameAndURLDD.plist in Resources */,
 				0B15409B1EE6519100C6E52F /* WTForgotPsd.xib in Resources */,
@@ -1264,12 +1278,14 @@
 				0B33A2D51EEAA665005BA3EA /* WTSearchView.m in Sources */,
 				0B067BDE1F0B4D1000AE05C1 /* NSString+NullOfString.m in Sources */,
 				0B2757DB1F14ADAE0051B627 /* WTMainSecondCell.m in Sources */,
+				0BFBE4B31F1CA77500249362 /* BoFangListView.m in Sources */,
 				0BEC4D971EF1200500D2BB01 /* ZCBNetworking.m in Sources */,
 				0B4ED7471EEFB4C100EAA123 /* RuntimeKit.m in Sources */,
 				0B33A2BE1EE92B62005BA3EA /* SKMainScrollView.m in Sources */,
 				0B14CA701EF22AB800C345FC /* CALayer+Layout.m in Sources */,
 				0B14AB071F03958500A19770 /* WTAlbumSimilar.m in Sources */,
 				0B4ED74B1EEFBFC000EAA123 /* WTMoreView.m in Sources */,
+				0BFBE4B71F1CBD7700249362 /* BoFangListCell.m in Sources */,
 				0B14AAFD1F0394AC00A19770 /* WTAlbumDetailVC.m in Sources */,
 				0B067BD91F0B3A4700AE05C1 /* WKMessageProgressHUD.m in Sources */,
 				0CB27B551EE59448006DF52B /* WTReadyVC.m in Sources */,

@@ -32,10 +32,10 @@
                         <rect key="frame" x="216" y="0.0" width="92" height="92"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phg-K3-vfS">
-                        <rect key="frame" x="0.0" y="147" width="320" height="10"/>
+                        <rect key="frame" x="10" y="156" width="300" height="1"/>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="10" id="gjB-xf-ZJp"/>
+                            <constraint firstAttribute="height" constant="1" id="oDQ-3q-6ks"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="混沌剑神之最终审判" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THb-Pa-0qu">
@@ -69,13 +69,12 @@
                 <constraints>
                     <constraint firstItem="Lnu-KO-j7A" firstAttribute="height" secondItem="rfr-8b-YF9" secondAttribute="height" id="1CR-hJ-3BL"/>
                     <constraint firstItem="SnA-2D-ON9" firstAttribute="centerX" secondItem="rfr-8b-YF9" secondAttribute="centerX" id="212-Rz-tfd"/>
+                    <constraint firstAttribute="bottom" secondItem="phg-K3-vfS" secondAttribute="bottom" id="8yx-4O-wYK"/>
                     <constraint firstItem="rfr-8b-YF9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Amm-KF-u6F"/>
                     <constraint firstItem="cb0-df-gy7" firstAttribute="top" secondItem="Lnu-KO-j7A" secondAttribute="bottom" constant="12" id="FT5-bN-dcU"/>
+                    <constraint firstAttribute="trailing" secondItem="phg-K3-vfS" secondAttribute="trailing" constant="10" id="HnB-Mk-MtZ"/>
                     <constraint firstItem="THb-Pa-0qu" firstAttribute="centerX" secondItem="c01-EA-DJc" secondAttribute="centerX" id="IdR-7J-w4e"/>
                     <constraint firstItem="SnA-2D-ON9" firstAttribute="top" secondItem="rfr-8b-YF9" secondAttribute="bottom" constant="12" id="JYR-uz-8hR"/>
-                    <constraint firstItem="phg-K3-vfS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K16-fW-qCb"/>
-                    <constraint firstAttribute="bottom" secondItem="phg-K3-vfS" secondAttribute="bottom" id="KAv-i3-z8P"/>
-                    <constraint firstAttribute="trailing" secondItem="phg-K3-vfS" secondAttribute="trailing" id="N4b-Rp-Qoq"/>
                     <constraint firstItem="Lnu-KO-j7A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TZA-PE-wWg"/>
                     <constraint firstItem="rfr-8b-YF9" firstAttribute="leading" secondItem="c01-EA-DJc" secondAttribute="trailing" constant="10" id="ViW-0k-EBA"/>
                     <constraint firstItem="Lnu-KO-j7A" firstAttribute="leading" secondItem="rfr-8b-YF9" secondAttribute="trailing" constant="10" id="W7C-Qd-31N"/>
@@ -90,6 +89,7 @@
                     <constraint firstItem="SnA-2D-ON9" firstAttribute="width" secondItem="rfr-8b-YF9" secondAttribute="width" id="qsh-X0-4jS"/>
                     <constraint firstItem="rfr-8b-YF9" firstAttribute="height" secondItem="c01-EA-DJc" secondAttribute="height" id="rD8-9N-ZNp"/>
                     <constraint firstItem="THb-Pa-0qu" firstAttribute="width" secondItem="c01-EA-DJc" secondAttribute="width" id="rZD-Pm-Amh"/>
+                    <constraint firstItem="phg-K3-vfS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uki-XZ-N99"/>
                     <constraint firstItem="THb-Pa-0qu" firstAttribute="top" secondItem="c01-EA-DJc" secondAttribute="bottom" constant="12" id="xov-L4-XaB"/>
                     <constraint firstItem="Lnu-KO-j7A" firstAttribute="width" secondItem="rfr-8b-YF9" secondAttribute="width" id="zZh-Jc-0Hv"/>
                 </constraints>

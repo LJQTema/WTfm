@@ -10,7 +10,6 @@
 
 @interface WTPlayerVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *bofangliebiaoBtnName;
 
 @property (weak, nonatomic) IBOutlet UIView *scrViewH;
 

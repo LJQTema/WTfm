@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BoFangListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-v8-YcU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXW-39-rIL">
+                                <rect key="frame" x="12" y="12" width="245" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="jD8-1T-wMb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez6-ap-OGR">
+                                <rect key="frame" x="288" y="18" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="X5Z-De-HTv"/>
+                                    <constraint firstAttribute="height" constant="24" id="iZq-uu-XGI"/>
+                                </constraints>
+                                <state key="normal" image="Music-play_icon_delete"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music-play_icon_Album" translatesAutoresizingMaskIntoConstraints="NO" id="ykr-Jh-qRP">
+                                <rect key="frame" x="8" y="32" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="0Fs-N8-T9z"/>
+                                    <constraint firstAttribute="height" constant="24" id="et8-JU-aJu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Music-play_icon_ZhuBo" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-sA-tN4">
+                                <rect key="frame" x="130" y="32" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="MBh-l7-06E"/>
+                                    <constraint firstAttribute="width" constant="24" id="NWt-YA-hB2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suf-sU-E0d">
+                                <rect key="frame" x="36" y="37" width="87" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="rtb-sF-eoL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.51764705882352935" green="0.52156862745098043" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-Hz-Y9K">
+                                <rect key="frame" x="158" y="37" width="110" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="2IJ-qL-kMe"/>
+                                    <constraint firstAttribute="height" constant="14" id="sI9-Un-Jgf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.51764705879999995" green="0.52156862749999999" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ez6-ap-OGR" firstAttribute="leading" secondItem="oca-Hz-Y9K" secondAttribute="trailing" constant="20" id="0Yb-dx-X4r"/>
+                            <constraint firstItem="HXW-39-rIL" firstAttribute="leading" secondItem="KGg-v8-YcU" secondAttribute="leading" constant="12" id="4bu-WH-UzY"/>
+                            <constraint firstItem="ykr-Jh-qRP" firstAttribute="top" secondItem="HXW-39-rIL" secondAttribute="bottom" constant="4" id="Ggi-mm-gSS"/>
+                            <constraint firstItem="oca-Hz-Y9K" firstAttribute="top" secondItem="HXW-39-rIL" secondAttribute="bottom" constant="9" id="L2o-Fp-BKC"/>
+                            <constraint firstItem="ykr-Jh-qRP" firstAttribute="leading" secondItem="KGg-v8-YcU" secondAttribute="leading" constant="8" id="X5s-YW-25N"/>
+                            <constraint firstItem="suf-sU-E0d" firstAttribute="leading" secondItem="ykr-Jh-qRP" secondAttribute="trailing" constant="4" id="egZ-qi-tAU"/>
+                            <constraint firstAttribute="trailing" secondItem="ez6-ap-OGR" secondAttribute="trailing" constant="8" id="fQZ-Gg-eaR"/>
+                            <constraint firstItem="ez6-ap-OGR" firstAttribute="leading" secondItem="HXW-39-rIL" secondAttribute="trailing" constant="31" id="jSw-rf-O0H"/>
+                            <constraint firstItem="suf-sU-E0d" firstAttribute="top" secondItem="HXW-39-rIL" secondAttribute="bottom" constant="9" id="klZ-Rw-fu6"/>
+                            <constraint firstItem="Ek3-sA-tN4" firstAttribute="top" secondItem="HXW-39-rIL" secondAttribute="bottom" constant="4" id="qmH-Yb-hLG"/>
+                            <constraint firstItem="Ek3-sA-tN4" firstAttribute="leading" secondItem="suf-sU-E0d" secondAttribute="trailing" constant="7" id="uDO-et-Myy"/>
+                            <constraint firstItem="HXW-39-rIL" firstAttribute="top" secondItem="KGg-v8-YcU" secondAttribute="top" constant="12" id="yKT-Ak-nyN"/>
+                            <constraint firstItem="oca-Hz-Y9K" firstAttribute="leading" secondItem="Ek3-sA-tN4" secondAttribute="trailing" constant="4" id="ywC-7A-yIo"/>
+                            <constraint firstItem="ez6-ap-OGR" firstAttribute="top" secondItem="KGg-v8-YcU" secondAttribute="top" constant="18" id="zQb-t3-FOa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KGg-v8-YcU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="11u-Iq-baD"/>
+                    <constraint firstItem="KGg-v8-YcU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2de-jl-VLf"/>
+                    <constraint firstAttribute="trailing" secondItem="KGg-v8-YcU" secondAttribute="trailing" id="OpW-kM-jwu"/>
+                    <constraint firstAttribute="bottom" secondItem="KGg-v8-YcU" secondAttribute="bottom" id="gbh-eQ-yq9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="AlbumLab" destination="suf-sU-E0d" id="D4t-5S-rkf"/>
+                <outlet property="ContentLab" destination="HXW-39-rIL" id="dd2-PH-4Db"/>
+                <outlet property="DeleteBtn" destination="ez6-ap-OGR" id="yaj-ew-B64"/>
+                <outlet property="nameLab" destination="oca-Hz-Y9K" id="DyH-Y1-XxB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Music-play_icon_Album" width="24" height="24"/>
+        <image name="Music-play_icon_ZhuBo" width="24" height="24"/>
+        <image name="Music-play_icon_delete" width="24" height="24"/>
+    </resources>
+</document>

@@ -13,6 +13,7 @@
 #import "SnailSheetView.h"
 #import "WTMoreView.h"
 #import "WTModel.h"
+#import "BoFangListView.h"      //播放列表
 
 #import "WTContentsVC.h"
 #import "WTContentsDetailVC.h"  //各种详情页
@@ -21,12 +22,14 @@
 #import "WTReportVC.h"          //举报页
 #import "WTDownLoadVC.h"        //下载页
 
-@interface WTPlayerVC ()<RollViewDelegate,  SnailSheetViewConfigDelegate, SnailSheetViewDelegate>{
+@interface WTPlayerVC ()<RollViewDelegate,  SnailSheetViewConfigDelegate, SnailSheetViewDelegate, BoFangListViewDelegate>{
     
     NSMutableArray *dataBFArray;
     
     UIView  *blackView;
     WTMoreView  *MoreView;  //更多
+    
+    BoFangListView *boFangList; //播放列表
 }
 
 
@@ -72,7 +75,7 @@
     _musicIndex = 0;
     dataBFArray = [NSMutableArray arrayWithCapacity:0];
     _musicsArr = [NSMutableArray arrayWithCapacity:0];
-    _bofangliebiaoBtnName.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    
     self.navigationController.navigationBar.hidden = YES;
     
     
@@ -429,8 +432,10 @@
 #pragma mark - 更多列表点击
 - (IBAction)MoreBtnClick:(id)sender {
 
-    CGRect rect = CGRectMake(100, 100, K_Screen_Width, 260);
+    CGRect rect = CGRectMake(100, 100, K_Screen_Width - 20, 260);
     SnailSheetView *sheet = [[SnailSheetView alloc] initWithFrame:rect configDelegate:self];
+    sheet.layer.masksToBounds = YES;
+    sheet.layer.cornerRadius = 10;
     sheet.models = [self sheetModels];
     [sheet autoresizingFlexibleHeight];
     sheet.delegate = self;
@@ -448,7 +453,7 @@
 
 - (SnailSheetViewLayout *)layoutOfItemInSheetView:(SnailSheetView *)sheetView {
     
-    return [SnailSheetViewLayout layoutWithItemSize:CGSizeMake(80, 100)
+    return [SnailSheetViewLayout layoutWithItemSize:CGSizeMake(54, 76)
                                       itemEdgeInset:UIEdgeInsetsMake(15, 20, 20, 20)
                                         itemSpacing:15
                                      imageViewWidth:80
@@ -502,20 +507,20 @@
 - (IBAction)FoundBtnClick:(id)sender {
     
     
-    [self presentViewController:
-     
-     [[UINavigationController alloc]initWithRootViewController:
-      
-      [[WTContentsVC alloc] init]]
-                       
-                       animated:YES completion:nil];
+//    [self presentViewController:
+//     
+//     [[UINavigationController alloc]initWithRootViewController:
+//      
+//      [[WTContentsVC alloc] init]]
+//                       
+//                       animated:YES completion:nil];
     
 }
 
 #pragma mark - 退出播放器点击
 - (IBAction)MainBtnClick:(id)sender {
 
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 
@@ -524,38 +529,67 @@
 - (IBAction)BoFangListBtnClick:(id)sender {
     
     
-    [_rollView zhuanhuozhebuzhuan];
+//    [_rollView zhuanhuozhebuzhuan];
+    
+    blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, K_Screen_Height)];
+    blackView.userInteractionEnabled = YES;
+    UITapGestureRecognizer  *blackTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(WTBoFangListViewESCClick)];
+    [blackView addGestureRecognizer:blackTap];
+    blackView.backgroundColor = HYC__COLOR_HEX_A(0x000000, 0.55);
+    [self.view addSubview:blackView];
+    
+    boFangList = [[BoFangListView alloc] initWithFrame:CGRectMake(0, K_Screen_Height, K_Screen_Width, 500)];
+    boFangList.delegate = self;
+    [self.view addSubview:boFangList];
+    
+    [UIView animateWithDuration:0.3 animations:^{
         
+        boFangList.frame = CGRectMake(0, K_Screen_Height - 500, K_Screen_Width, 500);
+    }];
+   
+
 }
+#pragma mark - 播放列表取消
+- (void)WTBoFangListViewESCClick{
+    
+    [blackView removeFromSuperview];
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        boFangList.frame = CGRectMake(0, K_Screen_Height, K_Screen_Width, 500);
+        
+    } completion:^(BOOL finished) {
+        
+        [boFangList removeFromSuperview];
+    }];
+
+}
+
 
 #define titleKey @"title"
 #define imgNameKey @"imageName"
 
 - (NSArray *)sheetModels {
     
-    NSArray *arr1 = @[@{titleKey   : @"喜欢",
-                        imgNameKey : @"music_play_icon_like_n"},
-                      
-                      @{titleKey   : @"专辑",
-                        imgNameKey : @"music_play_icon_albums"},
+    NSArray *arr1 = @[@{titleKey   : @"专辑",
+                        imgNameKey : @"icon_view-album_n"},
                       
                       @{titleKey   : @"主播",
-                        imgNameKey : @"music_play_icon_anchor"},
+                        imgNameKey : @"icon_view-archer_n"},
                       
-                      @{titleKey   : @"举报",
-                        imgNameKey : @"music_play_icon_report"},];
+                      @{titleKey   : @"意见反馈",
+                        imgNameKey : @"icon_report_n"},];
     
-    NSArray *arr2 = @[@{titleKey   : @"下载",
-                        imgNameKey : @"music_play_icon_download"},
+    NSArray *arr2 = @[@{titleKey   : @"微信好友",
+                        imgNameKey : @"icon_wechat_n"},
                       
-                      @{titleKey   : @"播放历史",
-                        imgNameKey : @"music_play_icon_ago"},
+                      @{titleKey   : @"朋友圈",
+                        imgNameKey : @"icon_friends_n"},
                       
-                      @{titleKey   : @"我的订阅",
-                        imgNameKey : @"music_play_icon_subscription"},
+                      @{titleKey   : @"微博",
+                        imgNameKey : @"icon_vebo_n"},
                       
-                      @{titleKey   : @"本地音频",
-                        imgNameKey : @"music_play_icon_local"},];
+                      @{titleKey   : @"QQ",
+                        imgNameKey : @"icon_qq_n"},];
     
     NSMutableArray *array1 = [NSMutableArray array];
     for (NSDictionary *dict in arr1) {

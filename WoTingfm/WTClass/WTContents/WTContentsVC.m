@@ -24,7 +24,7 @@
 @interface WTContentsVC ()<UIScrollViewDelegate>{
     
     SKMainScrollView    *contentScrollView;
-    UIImageView         *barLineImageView;//标识条
+//    UIImageView         *barLineImageView;//标识条
 
     
     NSArray *_munuNameArray;
@@ -78,14 +78,13 @@
         if (!i) {
             
             [buttonMune setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
-            //buttonMune.backgroundColor = [UIColor redColor];
             
             
             
             
-            barLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake((buttonMune.frame.size.width - barLineImageViewWigth)/2.00, self.ContentView.frame.size.height - 1, barLineImageViewWigth, 1)];
-            barLineImageView.backgroundColor = HYC__COLOR_HEX(0xFD8548);
-            [_ContentView addSubview:barLineImageView];
+//            barLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake((buttonMune.frame.size.width - barLineImageViewWigth)/2.00, self.ContentView.frame.size.height - 1, barLineImageViewWigth, 1)];
+//            barLineImageView.backgroundColor = HYC__COLOR_HEX(0xFD8548);
+//            [_ContentView addSubview:barLineImageView];
         }
     }
 
@@ -196,18 +195,18 @@
                     
                     [aBtn setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
                     
-                    barLineImageView.frame = 
-                    
-                    CGRectMake
-                    
-                    (
-                     
-                     (aBtn.tag - 1221) * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00,
-                     self.ContentView.frame.size.height - 1, 
-                     barLineImageViewWigth,
-                     1
-                     
-                     );
+//                    barLineImageView.frame = 
+//                    
+//                    CGRectMake
+//                    
+//                    (
+//                     
+//                     (aBtn.tag - 1221) * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00,
+//                     self.ContentView.frame.size.height - 1, 
+//                     barLineImageViewWigth,
+//                     1
+//                     
+//                     );
                     
 
 //                    [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
@@ -248,18 +247,18 @@
         
         [rightBtn setTitleColor:HYC__COLOR_RGBL(253 * (numberFloat - number), 133 * (numberFloat - number), 72 * (numberFloat - number), 1) forState:0];
         
-        barLineImageView.frame = 
-        
-        CGRectMake
-        
-        (
-         
-         numberFloat * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00, 
-         self.ContentView.frame.size.height - 1,
-         barLineImageViewWigth, 
-         1
-         
-         );
+//        barLineImageView.frame = 
+//        
+//        CGRectMake
+//        
+//        (
+//         
+//         numberFloat * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00, 
+//         self.ContentView.frame.size.height - 1,
+//         barLineImageViewWigth, 
+//         1
+//         
+//         );
         
     }
 
