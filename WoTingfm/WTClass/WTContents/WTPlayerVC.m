@@ -469,40 +469,85 @@
     
     SnailSheetItemModel *model = [self sheetModels][section][index];
     
-    if (section == 0 && index == 0) {
+    if (section == 0) {//第一行
         
-        button.selected ^= 1;
-    }else if (section == 1 ){
-        
-        if (index == 1 || index == 2) {
-            
-            WTContentsDetailVC  *wtConDVC = [[WTContentsDetailVC alloc] init];
-            wtConDVC.LabText = model.text;
-            [self.navigationController pushViewController:wtConDVC animated:YES];
-            [self.sl_popupController dismiss];
-        }else if (index == 3){
-            
-            WTDownLoadVC *wtdown = [[WTDownLoadVC alloc] init];
-            [self.navigationController pushViewController:wtdown animated:YES];
-            [self.sl_popupController dismiss];
-        }
-    }else if (section == 0){
-        
-        if (index == 3) {   //举报
-            
-            WTReportVC  *wtReportVC = [[WTReportVC alloc] init];
-            
-            [self.navigationController pushViewController:wtReportVC animated:YES];
-            [self.sl_popupController dismiss];
-        }else if (index == 1) { //专辑
+        if (index == 0) {   //专辑
             
             WTAlbumVC *wtalbumVC = [[WTAlbumVC alloc] init];
             
             [self.navigationController pushViewController:wtalbumVC animated:YES];
             [self.sl_popupController dismiss];
+        }else if (index == 2) {   //举报
+            
+            WTReportVC  *wtReportVC = [[WTReportVC alloc] init];
+            
+            [self.navigationController pushViewController:wtReportVC animated:YES];
+            [self.sl_popupController dismiss];
+        }else{
+            
+            
+            
         }
+
+    }else if (section == 1 ){   //第二行
         
+        if (index == 0) {
+            
+            // 根据获取的platformType确定所选平台进行下一步操作
+            [self shareWebPageToPlatformType:UMSocialPlatformType_WechatSession];
+            
+            [self.sl_popupController dismiss];
+        }else if (index == 1){
+            
+            // 根据获取的platformType确定所选平台进行下一步操作
+            [self shareWebPageToPlatformType:UMSocialPlatformType_WechatTimeLine];
+            
+            [self.sl_popupController dismiss];
+        }else if (index == 2){
+            
+            // 根据获取的platformType确定所选平台进行下一步操作
+            [self shareWebPageToPlatformType:UMSocialPlatformType_Sina];
+            
+            [self.sl_popupController dismiss];
+        }else{
+            
+            // 根据获取的platformType确定所选平台进行下一步操作
+            [self shareWebPageToPlatformType:UMSocialPlatformType_QQ];
+            
+            [self.sl_popupController dismiss];
+        }
     }
+    
+}
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType
+{
+    
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    
+    //创建网页内容对象 、 为显示图片 在加载block里进行分享
+//    UIImageView *imageV = [[UIImageView alloc] init];
+//    [imageV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:_dataDict[@"ContentImg"]]] placeholderImage:[UIImage imageNamed:@"img_radio_default"]  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//        UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:_dataDict[@"ContentName"] descr:_dataDict[@"ContentDescn"] thumImage:image];
+//        
+//        //设置网页地址
+//        shareObject.webpageUrl =_dataDict[@"ContentShareURL"];
+//        
+//        //分享消息对象设置分享内容对象
+//        messageObject.shareObject = shareObject;
+//        
+//        //调用分享接口
+//        [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+//            if (error) {
+//                NSLog(@"************Share fail with error %@*********",error);
+//            }else{
+//                NSLog(@"response data is %@",data);
+//            }
+//        }];
+//        
+//    } ];
+    
     
 }
 
@@ -541,13 +586,13 @@
     blackView.backgroundColor = HYC__COLOR_HEX_A(0x000000, 0.55);
     [self.view addSubview:blackView];
     
-    boFangList = [[BoFangListView alloc] initWithFrame:CGRectMake(0, K_Screen_Height, K_Screen_Width, 500)];
+    boFangList = [[BoFangListView alloc] initWithFrame:CGRectMake(0, K_Screen_Height, K_Screen_Width, K_Screen_Width+0.35*K_Screen_Width)];
     boFangList.delegate = self;
     [self.view addSubview:boFangList];
     
     [UIView animateWithDuration:0.3 animations:^{
         
-        boFangList.frame = CGRectMake(0, K_Screen_Height - 500, K_Screen_Width, 500);
+        boFangList.frame = CGRectMake(0, K_Screen_Height - (K_Screen_Width+0.35*K_Screen_Width), K_Screen_Width, K_Screen_Width+0.35*K_Screen_Width);
     }];
    
 
@@ -558,7 +603,7 @@
     [blackView removeFromSuperview];
     [UIView animateWithDuration:0.3 animations:^{
         
-        boFangList.frame = CGRectMake(0, K_Screen_Height, K_Screen_Width, 500);
+        boFangList.frame = CGRectMake(0, K_Screen_Height, K_Screen_Width, K_Screen_Width+0.35*K_Screen_Width);
         
     } completion:^(BOOL finished) {
         

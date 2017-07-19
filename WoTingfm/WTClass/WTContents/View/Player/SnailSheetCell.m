@@ -149,14 +149,7 @@ static NSString *sl_CellIdentifier = @"sl_sheetCollectionCell";
 
     [_imageView setImage:model.image forState:UIControlStateNormal];
     
-    if (index == 0) {
-        
-        [_imageView setImage:[UIImage imageNamed:@"music_play_icon_like_s"] forState:UIControlStateSelected];
-    }
-//    else if (index == 5){
-//        
-//        [_imageView setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
-//    }
+
     _textLabel.text = model.text;
     
     // appearance

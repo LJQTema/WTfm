@@ -86,7 +86,7 @@
     
     //-----------------------------------------LJQ-------TableView---------------------------------------//
     
-    _BoFangListTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, K_Screen_Width, 400) style:UITableViewStylePlain];
+    _BoFangListTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, K_Screen_Width, (K_Screen_Width+0.35*K_Screen_Width ) - 100) style:UITableViewStylePlain];
     _BoFangListTab.delegate = self;
     _BoFangListTab.dataSource = self;
     [self addSubview:_BoFangListTab];
@@ -94,10 +94,10 @@
     [self regsterListCell];
     
     //----------------------------------------esc-------------------------------------------------------//
-    UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(0, 450, K_Screen_Width, 1)];
+    UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(0, (K_Screen_Width+0.35*K_Screen_Width ) - 50, K_Screen_Width, 1)];
     barView.backgroundColor = HYC__COLOR_HEX(0xEFEFEF);
     [self addSubview:barView];
-    UIButton   *escBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 450, K_Screen_Width, 49)];
+    UIButton   *escBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, (K_Screen_Width+0.35*K_Screen_Width ) - 50, K_Screen_Width, 49)];
     [escBtn setTitle:@"取消" forState:UIControlStateNormal];
     [escBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [escBtn addTarget:self action:@selector(ESCBtnClick:) forControlEvents:UIControlEventTouchUpInside];
