@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTContentsVC">
             <connections>
+                <outlet property="ContentView" destination="5Gp-Up-HLk" id="Tlj-FI-Ktw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,10 +48,20 @@
                         <constraint firstItem="uxx-w5-jDU" firstAttribute="top" secondItem="EIZ-QU-5Sr" secondAttribute="top" constant="20" id="LNy-qH-W6G"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gp-Up-HLk">
+                    <rect key="frame" x="0.0" y="64" width="375" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="8XW-cd-67t"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Gp-Up-HLk" secondAttribute="trailing" id="21J-SZ-ZVj"/>
+                <constraint firstItem="5Gp-Up-HLk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="D8j-9Y-2FE"/>
                 <constraint firstAttribute="trailing" secondItem="EIZ-QU-5Sr" secondAttribute="trailing" id="WYK-Nl-liL"/>
+                <constraint firstItem="5Gp-Up-HLk" firstAttribute="top" secondItem="EIZ-QU-5Sr" secondAttribute="bottom" id="bkg-Ul-3RP"/>
                 <constraint firstItem="EIZ-QU-5Sr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gOI-U5-N9b"/>
                 <constraint firstItem="EIZ-QU-5Sr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iJv-Hr-DUL"/>
             </constraints>

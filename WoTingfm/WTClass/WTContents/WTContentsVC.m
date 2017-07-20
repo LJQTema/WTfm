@@ -12,6 +12,7 @@
 #import "WTSortVC.h"    //分类
 #import "WTRadioVC.h"   //电台
 #import "WTLiveVC.h"    //直播
+#import "WTMainVC.h"    //我的
 
 
 #import "SKMainScrollView.h"
@@ -24,7 +25,7 @@
 @interface WTContentsVC ()<UIScrollViewDelegate>{
     
     SKMainScrollView    *contentScrollView;
-//    UIImageView         *barLineImageView;//标识条
+    UIImageView         *barLineImageView;//标识条
 
     
     NSArray *_munuNameArray;
@@ -40,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _munuNameArray = @[@"精选",@"分类",@"电台",@"直播"];
+    _munuNameArray = @[@"精选",@"分类",@"电台",@"直播",@"我的"];
     
     //---->--->-->->伦理分割线----<---<--<-<//
     self.navigationController.navigationBar.hidden = YES;
@@ -61,9 +62,9 @@
         UIButton *buttonMune = [[UIButton alloc]
                                 initWithFrame:
                                 CGRectMake(
-                                           (WWWWW - 90)/1.00/_munuNameArray.count * i,
+                                           (WWWWW )/1.00/_munuNameArray.count * i,
                                            0, 
-                                           (WWWWW - 90)/1.00/_munuNameArray.count, 
+                                           (WWWWW )/1.00/_munuNameArray.count,
                                            self.ContentView.frame.size.height - 2)];
         buttonMune.tag = 1221 + i;
         [buttonMune setTitle:_munuNameArray[i] forState:UIControlStateNormal];
@@ -82,9 +83,9 @@
             
             
             
-//            barLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake((buttonMune.frame.size.width - barLineImageViewWigth)/2.00, self.ContentView.frame.size.height - 1, barLineImageViewWigth, 1)];
-//            barLineImageView.backgroundColor = HYC__COLOR_HEX(0xFD8548);
-//            [_ContentView addSubview:barLineImageView];
+            barLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake((buttonMune.frame.size.width - barLineImageViewWigth)/2.00, self.ContentView.frame.size.height - 1, barLineImageViewWigth, 1)];
+            barLineImageView.backgroundColor = HYC__COLOR_HEX(0xFD8548);
+            [_ContentView addSubview:barLineImageView];
         }
     }
 
@@ -93,12 +94,12 @@
 - (void)initScrollerView{
     
     //  __weak WTXiangJiangViewController *weakSelf = self;
-    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64, K_Screen_Width, K_Screen_Height - 64 - 49)];
+    contentScrollView = [[SKMainScrollView alloc] initWithFrame:CGRectMake(0, 64 + 36, K_Screen_Width, K_Screen_Height - 64 - 36 - 49)];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:contentScrollView];
     
     // 防止scroll上下拖动
-    contentScrollView.contentSize = CGSizeMake(K_Screen_Width * 4, 0);
+    contentScrollView.contentSize = CGSizeMake(K_Screen_Width * 5, 0);
     contentScrollView.pagingEnabled = YES;
     contentScrollView.bounces = NO;
     contentScrollView.contentOffset = CGPointMake(0, 0);
@@ -106,7 +107,7 @@
 //    contentScrollView.showsHorizontalScrollIndicator=true;
 //    contentScrollView.showsVerticalScrollIndicator=false;
     
-    for (int i = 0; i < 4; i ++) {
+    for (int i = 0; i < 5; i ++) {
         
         if (i == 0) {
             
@@ -150,9 +151,23 @@
                 make.centerY.equalTo(contentScrollView);
             }];
             
-        }else{
+        }else if (i == 3) {
             
             WTLiveVC *wtFenLeiVC = [[WTLiveVC alloc] init];
+            
+            [self addChildViewController:wtFenLeiVC];
+            [contentScrollView addSubview:wtFenLeiVC.view];
+            [wtFenLeiVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+                
+                make.width.equalTo(contentScrollView);
+                make.height.equalTo(contentScrollView);
+                make.left.mas_equalTo(K_Screen_Width * i);
+                make.centerY.equalTo(contentScrollView);
+            }];
+            
+        }else{
+            
+            WTMainVC *wtFenLeiVC = [[WTMainVC alloc] init];
             
             [self addChildViewController:wtFenLeiVC];
             [contentScrollView addSubview:wtFenLeiVC.view];
@@ -195,21 +210,21 @@
                     
                     [aBtn setTitleColor:HYC__COLOR_HEX(0xFD8548) forState:0];
                     
-//                    barLineImageView.frame = 
-//                    
-//                    CGRectMake
-//                    
-//                    (
-//                     
-//                     (aBtn.tag - 1221) * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00,
-//                     self.ContentView.frame.size.height - 1, 
-//                     barLineImageViewWigth,
-//                     1
-//                     
-//                     );
+                    barLineImageView.frame = 
+                    
+                    CGRectMake
+                    
+                    (
+                     
+                     (aBtn.tag - 1221) * (WWWWW)/1.00/_munuNameArray.count + ((WWWWW)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00,
+                     self.ContentView.frame.size.height - 1, 
+                     barLineImageViewWigth,
+                     1
+                     
+                     );
                     
 
-//                    [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
+                    [contentScrollView setContentOffset:CGPointMake(self.view.bounds.size.width * (aBtn.tag - 1221), 0) animated:YES];
                     
                 }];
                 
@@ -247,18 +262,18 @@
         
         [rightBtn setTitleColor:HYC__COLOR_RGBL(253 * (numberFloat - number), 133 * (numberFloat - number), 72 * (numberFloat - number), 1) forState:0];
         
-//        barLineImageView.frame = 
-//        
-//        CGRectMake
-//        
-//        (
-//         
-//         numberFloat * (WWWWW - 90)/1.00/_munuNameArray.count + ((WWWWW - 90)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00, 
-//         self.ContentView.frame.size.height - 1,
-//         barLineImageViewWigth, 
-//         1
-//         
-//         );
+        barLineImageView.frame = 
+        
+        CGRectMake
+        
+        (
+         
+         numberFloat * (WWWWW)/1.00/_munuNameArray.count + ((WWWWW)/1.00/_munuNameArray.count - barLineImageViewWigth)/2.00, 
+         self.ContentView.frame.size.height - 1,
+         barLineImageViewWigth, 
+         1
+         
+         );
         
     }
 
