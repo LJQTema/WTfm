@@ -86,7 +86,7 @@
     
     
     [self creatPicRollView];
-    [self loadData];            //网络请求
+//    [self loadData];            //网络请求
     [self creatContentView];    //搭建部分UI
 }
 
@@ -101,7 +101,7 @@
     
     NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"CCEEA4E534B44FA78FC48034961908E9",@"IMEI", @"414.000000*736.000000",@"ScreenSize",@"1",@"PCDType", @"Simulator", @"MobileClass",@"0",@"GPS-longitude", @"0",@"GPS-latitude",@"0",@"PageType",@"10",@"PageSize",  nil];
     
-    NSString *login_Str = WoTing_MainPage;
+    NSString *login_Str ;
     
     [ZCBNetworking postWithUrl:login_Str refreshCache:YES params:parameters success:^(id response) {
         

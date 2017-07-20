@@ -106,11 +106,13 @@
 -(void)tapClick:(UITapGestureRecognizer *)tap
 {
     
-    WTPlayerVC *playerVC = [[WTPlayerVC alloc]init];
+//    WTPlayerVC *playerVC = [[WTPlayerVC alloc]init];
+//    
+//  //  playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    
+//    [self presentViewController:playerVC animated:YES completion:nil];
     
-  //  playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    
-    [self presentViewController:playerVC animated:YES completion:nil];
+    [self presentViewController:[[UINavigationController alloc]initWithRootViewController:[[WTPlayerVC alloc]init]] animated:YES completion:nil];
         
 }
 

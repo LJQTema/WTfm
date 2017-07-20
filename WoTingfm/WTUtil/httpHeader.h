@@ -15,18 +15,14 @@
 
 /** 外网接口地址 */
 //#define SKInterFaceServer @"http://123.56.254.75:808/wt/"
-#define SKInterFaceServer @"http://woting.suitingwei.com/"
+#define SKInterFaceServer @"http://api.wotingfm.com/"
 
 #pragma mark 各类接口
 
+/*------------------------------登录部分接口------------------------------------*/
+
 /** 登录 */
 #define WoTing_Login      (SKInterFaceServer@"api/accounts/login")
-
-/** 三方登录 */
-#define WoTing_SanLogin     (SKInterFaceServer@"passport/user/afterThirdAuth.do")
-
-/** 注销 */
-#define WoTing_mlogout      (SKInterFaceServer@"passport/user/mlogout.do")
 
 /** 注册 */
 #define WoTing_register      (SKInterFaceServer@"api/accounts/register")
@@ -37,90 +33,14 @@
 /** 忘记密码重置*/
 #define WoTing_ChangePwd    (SKInterFaceServer@"api/accounts/reset-passwords")
 
-/** 修改用户信息 */
-#define WoTing_UserInfo     (SKInterFaceServer@"passport/user/updateUserInfo.do")
 
-/** 搜索陌生人 */
-#define WoTing_SearchStranger         (SKInterFaceServer@"passport/friend/searchStranger.do")
+/*------------------------------听部分接口------------------------------------*/
 
-/** 添加陌生人为好友 */
-#define WoTing_FriendInvite       (SKInterFaceServer@"passport/friend/invite.do")
+/** 首页(精选) */
+#define WoTing_ListeningSelection     (SKInterFaceServer@"api/listenings/selections")
 
-/** 删除好友 */
-#define WoTing_DelFriend      (SKInterFaceServer@"passport/friend/delFriend.do")
-
-/** 修改好友信息 */
-#define WoTing_UpdateFriendInfo         (SKInterFaceServer@"passport/friend/updateFriendInfo.do")
-
-/** 得到邀请我为好友的列表 */
-#define WoTing_FriendInvitedList      (SKInterFaceServer@"passport/friend/getInvitedMeList.do")
-
-/** 同意或拒绝添加好友邀请 */
-#define WoTing_FriendInviteDeal      (SKInterFaceServer@"passport/friend/inviteDeal.do")
-
-/** 享听 - 播放*/
-#define WoTing_MainPage     (SKInterFaceServer@"mainPage.do")
-
-/** 跳转后播放界面数据刷新 */
-#define WoTing_searchBy           (SKInterFaceServer@"searchByText.do")
-
-/** 享听 - 推荐 - 电台*/
-#define WoTing_GetContents      (SKInterFaceServer@"content/getContents.do")
-
-/** 享听 - 电台 - 城市列表 */
-#define WoTing_getCatalogInfo    (SKInterFaceServer@"getCatalogInfo.do")
-
-/** 享听 - 分类 */
-#define WoTing_CatalogInfo      (SKInterFaceServer@"getPreferenceCatalog.do")
-
-/** 享听 - 专辑 */
-#define WoTing_GetContentInfo       (SKInterFaceServer@"content/getContentInfo.do")
-
-/** 点击喜欢 */
-#define WoTing_like         (SKInterFaceServer@"content/clickFavorite.do")
-
-/** 喜欢列表 */
-#define WoTing_likeList         (SKInterFaceServer@"content/getFavoriteList.do")
-
-/** 节目单数据 */
-#define WoTing_JMD          (SKInterFaceServer@"content/getBCProgramme.do")
-
-/** 获取评论列表 */
-#define WoTing_PLgetList        (SKInterFaceServer@"discuss/article/getList.do")
-
-/** 添加评论 */
-#define WoTing_PLget        (SKInterFaceServer@"discuss/add.do")
-
-/** 得到热门搜索 */
-#define WoTing_HotKeys      (SKInterFaceServer@"getHotKeys.do")
-
-/** 搜索内容 */
-#define WoTing_searchHotKeys    (SKInterFaceServer@"searchHotKeys.do")
-
-/** 提交反馈 */
-#define WoTing_FanKui       (SKInterFaceServer@"opinion/app/commit.do")
-
-/** 举报接口 */
-#define WoTing_JuBao    (SKInterFaceServer@"content/accuse.do")
-
-/** 轮播图 */
-#define WoTing_LunBo    (SKInterFaceServer@"content/getLoopImgs.do")
-
-/** 点击订阅 */
-#define WoTing_DingYue      (SKInterFaceServer@"content/clickSubscribe.do")
-
-/** 订阅节目列表 */
-#define WoTing_DingYueList  (SKInterFaceServer@"content/getSubscribeList.do")
-
-/** 得到主播信息 */
-#define WoTing_ZhuBo    (SKInterFaceServer@"person/getPersonInfo.do")
-
-/** 得到主播内容 */
-#define WoTing_ZhuBoList    (SKInterFaceServer@"person/getPersonContents.do")
-
-/** 设置偏好 */
-#define WoTing_SetPreference   (SKInterFaceServer@"setPreference.do")
-
+/** 首页(打开即播放) */
+#define WoTing_ListeningPlayer    (SKInterFaceServer@"api/listenings/player")
 
 /*------------------------------讲部分接口----------------------------------*/
 

@@ -32,8 +32,7 @@
     // Do any additional setup after loading the view from its nib.
     
     dataFoundListArr = [NSMutableArray arrayWithCapacity:0];
-    [dataFoundListArr addObject:@"1"];
-    [dataFoundListArr addObject:@"1"];
+
     
     _FoundTableView.dataSource = self;
     _FoundTableView.delegate = self;
@@ -42,6 +41,7 @@
     
     [self CreatFouLunBo];  //轮播
     [self registerCell];
+    [self loadDataFound];
 }
 
 - (void)CreatFouLunBo{
@@ -74,14 +74,36 @@
     
 }
 
+- (void)loadDataFound{
+    
+    NSString *login_Str = WoTing_ListeningSelection;
+    
+    
+    [ZCBNetworking getWithUrl:login_Str refreshCache:YES success:^(id response) {
+        
+        NSDictionary *resultDict = (NSDictionary *)response;
+        
+        NSInteger  ReturnType = [[resultDict objectForKey:@"ret"] integerValue];
+        if (ReturnType == 0) {
+            
+            [dataFoundListArr addObjectsFromArray:[resultDict objectForKey:@"data"]];
+            [_FoundTableView reloadData];
+        }
+    } fail:^(NSError *error) {
+        
+        NSLog(@"%@", error);
+    }];
+}
+
 #pragma mark - TableViewDelegate and DataSource
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
+
     WTFoundCellView *FoundHeaderView = [[WTFoundCellView alloc] initWithFrame:CGRectMake(0, 0, K_Screen_Width, 54)];
-    FoundHeaderView.ContentLab.text = @"一路向北";
+    FoundHeaderView.ContentLab.text = dataFoundListArr[section][@"title"];
     FoundHeaderView.delegate = self;
     return FoundHeaderView;
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -103,14 +125,14 @@
         return 158 + ((K_Screen_Width - 12 * 2 - 10 * 2 )/3.000 - 92);
     }else if(indexPath.section == 2){
         
-        return 84;
+        return 104;
     }
     return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 3;
+    return dataFoundListArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -120,7 +142,8 @@
         return 1;
     }else if(section == 2){
         
-        return dataFoundListArr.count;
+        NSArray *Arr = dataFoundListArr[section][@"data"];
+        return Arr.count;
     }
     return 0;
 }
@@ -137,9 +160,38 @@
             cell = [[WTFoundContentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
         
+        NSArray *contentArr = dataFoundListArr[indexPath.section][@"data"];
+
+        if (contentArr.count == 1) {
+            
+            NSDictionary *contentDict = contentArr[0];
+            [cell.leftImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:contentDict[@"logo_url"]]]];
+            cell.leftLab.text = [NSString NULLToString:contentDict[@"title"]];
+        }else if (contentArr.count == 2){
+            
+            NSDictionary *leftDict = contentArr[0];
+            [cell.leftImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:leftDict[@"logo_url"]]]];
+            cell.leftLab.text = [NSString NULLToString:leftDict[@"title"]];
+            
+            NSDictionary *contentDict = contentArr[1];
+            [cell.CenterImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:contentDict[@"logo_url"]]]];
+            cell.centerLab.text = [NSString NULLToString:contentDict[@"title"]];
+        }else{
+            
+            NSDictionary *leftDict = contentArr[0];
+            [cell.leftImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:leftDict[@"logo_url"]]]];
+            cell.leftLab.text = [NSString NULLToString:leftDict[@"title"]];
+            
+            NSDictionary *contentDict = contentArr[1];
+            [cell.CenterImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:contentDict[@"logo_url"]]]];
+            cell.centerLab.text = [NSString NULLToString:contentDict[@"title"]];
+            
+            NSDictionary *rightDict = contentArr[2];
+            [cell.rightImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:rightDict[@"logo_url"]]]];
+            cell.rightLab.text = [NSString NULLToString:rightDict[@"title"]];
+        }
+        
         cell.delegate = self;   //cell代理
-        
-        
         
         return cell;
     }else if(indexPath.section == 2){
@@ -152,6 +204,13 @@
             cell = [[WTFoundListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
        
+        NSArray *ListArr = dataFoundListArr[indexPath.section][@"data"];
+        NSDictionary *ListDict = ListArr[indexPath.row];
+        
+        [cell.ContentImgV sd_setImageWithURL:[NSURL URLWithString:[NSString NULLToString:ListDict[@"logo_url"]]]];
+        cell.ContentLab.text = [NSString NULLToString:ListDict[@"title"]];
+        cell.ContentPlayLab.text = [NSString NULLToString:ListDict[@"lastest_news"]];
+        cell.ContentNumLab.text = [NSString stringWithFormat:@"%@次播放", [NSString NULLToString:[ListDict[@"play_count"] stringValue]]];
         
         return cell;
 
